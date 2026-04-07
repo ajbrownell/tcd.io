@@ -4,60 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Cultured Design — Intelligence-Driven Growth Framework</title>
-<style>
-/* System font stack — no external dependencies */
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#dcdcd6;--bg2:#d2d2cc;--surface:#e8e8e2;--surface2:#c8c8c2;--ink:#1a1a18;--ink2:#333330;--ink3:#666660;--ink4:#999990;--coral:#e8784a;--coral-dark:#c85f30;--r:6px;--nav-h:64px;--filter-h:48px;--c-identity:#7040b0;--c-alignment:#1858a8;--c-signal:#127858;--c-reinvention:#a04010;--c-adoption:#981848;
---tag-exec:#1858a8;--tag-product:#7040b0;--tag-engineering:#127858;--tag-gtm:#a04010;--tag-data:#0a6070;--tag-practitioners:#981848}
+:root{--bg:#dcdcd6;--bg2:#d2d2cc;--surface:#e8e8e2;--surface2:#c8c8c2;--ink:#1a1a18;--ink2:#333330;--ink3:#666660;--ink4:#999990;--coral:#e8784a;--coral-dark:#c85f30;--r:6px;--nav-h:64px;--c-identity:#7040b0;--c-alignment:#1858a8;--c-signal:#127858;--c-reinvention:#a04010;--c-adoption:#981848}
 html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.6;min-height:100vh;overflow-x:hidden}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.6;min-height:100vh;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='0 0 500 500'%3E%3Cg fill='none' stroke='%23888' stroke-width='0.7' opacity='0.15'%3E%3Ccircle cx='80' cy='80' r='42'/%3E%3Ccircle cx='80' cy='80' r='28'/%3E%3Ccircle cx='80' cy='80' r='10'/%3E%3Crect x='76' y='34' width='8' height='16' rx='2'/%3E%3Crect x='76' y='110' width='8' height='16' rx='2'/%3E%3Crect x='34' y='76' width='16' height='8' rx='2'/%3E%3Crect x='110' y='76' width='16' height='8' rx='2'/%3E%3Ccircle cx='350' cy='180' r='60'/%3E%3Ccircle cx='350' cy='180' r='40'/%3E%3Ccircle cx='350' cy='180' r='14'/%3E%3Crect x='345' y='114' width='10' height='22' rx='2'/%3E%3Crect x='345' y='244' width='10' height='22' rx='2'/%3E%3Crect x='284' y='175' width='22' height='10' rx='2'/%3E%3Crect x='414' y='175' width='22' height='10' rx='2'/%3E%3Ccircle cx='140' cy='380' r='38'/%3E%3Ccircle cx='140' cy='380' r='24'/%3E%3Ccircle cx='140' cy='380' r='9'/%3E%3Crect x='136' y='336' width='8' height='16' rx='2'/%3E%3Crect x='136' y='424' width='8' height='16' rx='2'/%3E%3Crect x='96' y='376' width='16' height='8' rx='2'/%3E%3Crect x='176' y='376' width='16' height='8' rx='2'/%3E%3Ccircle cx='430' cy='400' r='50'/%3E%3Ccircle cx='430' cy='400' r='34'/%3E%3Ccircle cx='430' cy='400' r='12'/%3E%3Crect x='425' y='344' width='10' height='20' rx='2'/%3E%3Crect x='425' y='436' width='10' height='20' rx='2'/%3E%3Crect x='374' y='395' width='20' height='10' rx='2'/%3E%3Crect x='456' y='395' width='20' height='10' rx='2'/%3E%3Cline x1='122' y1='80' x2='280' y2='180' stroke-dasharray='5,7'/%3E%3Cline x1='350' y1='240' x2='190' y2='380' stroke-dasharray='5,7'/%3E%3C/g%3E%3C/svg%3E");background-size:500px 500px;pointer-events:none;z-index:0}
-
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:var(--ink);z-index:200;display:flex;align-items:stretch}
-.nav-logo{display:flex;align-items:center;padding:0 24px;border-right:1px solid rgba(255,255,255,0.1);cursor:pointer}
-.nav-logo-text{color:#fff;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;line-height:1.2}
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:var(--ink);z-index:100;display:flex;align-items:stretch}
+.nav-logo{display:flex;align-items:center;padding:0 24px;border-right:1px solid rgba(255,255,255,0.1);cursor:pointer;gap:0}
+.nav-logo-text{color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;line-height:1.2}
 .nav-logo-text span{color:var(--coral);font-size:20px;letter-spacing:0.03em;display:block}
 .nav-links{display:flex;align-items:stretch;flex:1;overflow-x:auto}
-.nav-link{display:flex;align-items:center;padding:0 16px;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.42);cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap}
+.nav-link{display:flex;align-items:center;padding:0 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.42);cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap}
 .nav-link:hover{color:rgba(255,255,255,0.82)}
 .nav-link.active{color:#fff;border-bottom-color:var(--coral)}
-.nav-eng{display:flex;align-items:center;gap:10px;padding:0 20px;border-left:1px solid rgba(255,255,255,0.1);cursor:pointer;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.48);transition:color 0.2s;white-space:nowrap}
+.nav-eng{display:flex;align-items:center;gap:10px;padding:0 20px;border-left:1px solid rgba(255,255,255,0.1);cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.48);transition:color 0.2s;white-space:nowrap}
 .nav-eng:hover{color:#fff}
 .eng-badge{background:var(--coral);color:#fff;font-size:10px;font-weight:700;width:20px;height:20px;border-radius:50%;display:none;align-items:center;justify-content:center}
 .eng-badge.on{display:flex}
-
-/* GLOBAL FILTER BAR */
-.filter-bar{position:fixed;top:var(--nav-h);left:0;right:0;height:var(--filter-h);background:rgba(26,26,24,0.97);z-index:190;display:flex;align-items:center;padding:0 24px;gap:12px;border-bottom:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(8px)}
-.filter-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.35);white-space:nowrap;margin-right:4px}
-.filter-tags{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;flex:1}
-.ftag{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:5px 12px;border-radius:20px;cursor:pointer;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.45);transition:all 0.2s;white-space:nowrap}
-.ftag:hover{border-color:rgba(255,255,255,0.4);color:rgba(255,255,255,0.8)}
-.ftag.active{color:#fff;border-color:transparent}
-.ftag[data-tag="executive"].active{background:var(--tag-exec)}
-.ftag[data-tag="product"].active{background:var(--tag-product)}
-.ftag[data-tag="engineering"].active{background:var(--tag-engineering)}
-.ftag[data-tag="gtm"].active{background:var(--tag-gtm)}
-.ftag[data-tag="data"].active{background:var(--tag-data)}
-.ftag[data-tag="practitioners"].active{background:var(--tag-practitioners)}
-.filter-clear{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);cursor:pointer;padding:5px 10px;border-radius:4px;transition:opacity 0.2s;opacity:0;pointer-events:none;white-space:nowrap}
-.filter-clear.visible{opacity:1;pointer-events:all}
-.filter-active-note{font-size:11px;color:rgba(255,255,255,0.28);white-space:nowrap}
-.filter-active-note strong{color:rgba(255,255,255,0.55)}
-
-/* TRAY */
-.tray{position:fixed;bottom:0;left:0;right:0;background:var(--ink);z-index:195;transform:translateY(100%);transition:transform 0.3s;border-top:3px solid var(--coral)}
+.tray{position:fixed;bottom:0;left:0;right:0;background:var(--ink);z-index:99;transform:translateY(100%);transition:transform 0.3s;border-top:3px solid var(--coral)}
 .tray.open{transform:translateY(0)}
 .tray-hd{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid rgba(255,255,255,0.1)}
-.tray-htitle{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--coral)}
+.tray-htitle{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--coral)}
 .tray-hr{display:flex;gap:14px;align-items:center}
 .tray-clr{font-size:12px;color:rgba(255,255,255,0.32);cursor:pointer;transition:color 0.2s}
 .tray-clr:hover{color:rgba(255,255,255,0.7)}
 .tray-cls{font-size:22px;color:rgba(255,255,255,0.35);cursor:pointer}
 .tray-cls:hover{color:#fff}
-.tray-bd{padding:14px 28px;max-height:220px;overflow-y:auto}
+.tray-bd{padding:14px 28px;max-height:240px;overflow-y:auto}
 .tray-empty{font-size:13px;color:rgba(255,255,255,0.26);font-style:italic}
 .tray-chips{display:flex;flex-wrap:wrap;gap:8px}
 .tray-chip{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-left:3px solid var(--coral);border-radius:4px;padding:6px 10px 6px 12px}
@@ -68,107 +43,80 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .tray-ft{padding:12px 28px;border-top:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between}
 .tray-sum{font-size:12px;color:rgba(255,255,255,0.38)}
 .tray-sum strong{color:#fff}
-.tray-exp{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;background:var(--coral);color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;transition:background 0.2s}
+.tray-exp{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;background:var(--coral);color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;transition:background 0.2s}
 .tray-exp:hover{background:var(--coral-dark)}
-.tray-rdm{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.2);padding:8px 20px;border-radius:4px;cursor:pointer;transition:all 0.2s}
-.tray-rdm:hover{background:rgba(255,255,255,0.1);color:#fff}
-
-/* PAGES */
-.page{display:none;position:relative;z-index:1;padding-top:calc(var(--nav-h) + var(--filter-h));min-height:100vh}
+.page{display:none;position:relative;z-index:1;padding-top:var(--nav-h);min-height:100vh}
 .page.active{display:block}
-
-/* HOME */
-.home-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - var(--nav-h) - var(--filter-h))}
-.home-l{padding:56px 52px 56px 60px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(0,0,0,0.1)}
-.eyebrow{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.home-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - var(--nav-h))}
+.home-l{padding:64px 52px 64px 60px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(0,0,0,0.1)}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::after{content:'';flex:1;height:1px;background:var(--coral);opacity:0.25}
-.home-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:5.4rem;line-height:0.9;text-transform:uppercase;color:var(--ink);margin-bottom:22px;letter-spacing:-0.01em}
+.home-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:5.8rem;line-height:0.9;text-transform:uppercase;color:var(--ink);margin-bottom:24px;letter-spacing:-0.01em}
 .home-title em{color:var(--coral);font-style:normal}
 .home-desc{font-size:15px;color:var(--ink3);line-height:1.85;max-width:460px;font-weight:300}
-.home-cta{margin-top:24px;display:flex;gap:10px}
-.btn-p{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;background:var(--ink);color:#fff;padding:11px 26px;border:none;border-radius:4px;cursor:pointer;transition:background 0.2s}
+.home-cta{margin-top:28px;display:flex;gap:10px}
+.btn-p{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;background:var(--ink);color:#fff;padding:11px 26px;border:none;border-radius:4px;cursor:pointer;transition:background 0.2s}
 .btn-p:hover{background:var(--coral)}
-.btn-g{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;background:transparent;color:var(--ink3);padding:11px 18px;border:1px solid var(--bg2);border-radius:4px;cursor:pointer;transition:all 0.2s}
+.btn-g{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;background:transparent;color:var(--ink3);padding:11px 18px;border:1px solid var(--bg2);border-radius:4px;cursor:pointer;transition:all 0.2s}
 .btn-g:hover{border-color:var(--ink3);color:var(--ink)}
 .home-r{padding:52px 48px;display:flex;flex-direction:column;justify-content:center}
-.home-r-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink4);margin-bottom:16px}
+.home-r-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink4);margin-bottom:16px}
 .p-cards{display:flex;flex-direction:column;gap:1px}
-.pcard{display:flex;align-items:center;gap:14px;padding:14px 18px;cursor:pointer;transition:all 0.18s;border-left:3px solid transparent;border-radius:0 4px 4px 0}
+.pcard{display:flex;align-items:center;gap:14px;padding:15px 18px;cursor:pointer;transition:all 0.18s;border-left:3px solid transparent;border-radius:0 4px 4px 0}
 .pcard:hover{background:rgba(255,255,255,0.38)}
 .pcard.identity:hover{border-left-color:var(--c-identity)}
 .pcard.alignment:hover{border-left-color:var(--c-alignment)}
 .pcard.signal:hover{border-left-color:var(--c-signal)}
 .pcard.reinvention:hover{border-left-color:var(--c-reinvention)}
 .pcard.adoption:hover{border-left-color:var(--c-adoption)}
-.pc-n{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:26px;color:var(--bg2);min-width:32px;line-height:1;transition:color 0.18s}
+.pc-n{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;color:var(--bg2);min-width:32px;line-height:1;transition:color 0.18s}
 .pcard:hover .pc-n{color:var(--coral)}
 .pcard.identity:hover .pc-n{color:var(--c-identity)}
 .pcard.alignment:hover .pc-n{color:var(--c-alignment)}
 .pcard.signal:hover .pc-n{color:var(--c-signal)}
 .pcard.reinvention:hover .pc-n{color:var(--c-reinvention)}
 .pcard.adoption:hover .pc-n{color:var(--c-adoption)}
-.pc-t{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink);margin-bottom:2px}
+.pc-t{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink);margin-bottom:2px}
 .pc-s{font-size:12px;color:var(--ink3);font-style:italic}
 .pc-arr{font-size:15px;color:var(--ink4);margin-left:auto;opacity:0;transition:all 0.18s}
 .pcard:hover .pc-arr{opacity:1}
-
-/* HOME FILTER PREVIEW — module count per problem updates with active filter */
-.pc-count{font-size:11px;color:var(--ink4);font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:600;letter-spacing:0.06em;margin-left:auto;margin-right:8px;transition:color 0.2s}
-.pc-count.filtered{color:var(--coral)}
-
-.home-bottom{background:var(--ink);padding:40px 60px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px}
-.hb-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:8px}
-.hb-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.06em;color:#fff;margin-bottom:8px}
+.home-bottom{background:var(--ink);padding:44px 60px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px}
+.hb-item{}
+.hb-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:8px}
+.hb-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.06em;color:#fff;margin-bottom:8px}
 .hb-text{font-size:13px;color:rgba(255,255,255,0.46);line-height:1.75;font-weight:300}
-
-/* INNER PAGES */
 .inner{position:relative}
 .sidebar{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--coral)}
-.lbt{position:absolute;top:20px;right:32px;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink4);z-index:2}
-.inner-hero{padding:40px 56px 32px 72px;border-bottom:1px solid rgba(0,0,0,0.1)}
-.crumb{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:600;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink4);cursor:pointer;margin-bottom:12px;display:inline-flex;align-items:center;gap:6px;transition:color 0.2s}
+.lbt{position:absolute;top:calc(var(--nav-h) + 20px);right:32px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink4);z-index:2}
+.inner-hero{padding:44px 56px 36px 72px;border-bottom:1px solid rgba(0,0,0,0.1)}
+.crumb{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink4);cursor:pointer;margin-bottom:14px;display:inline-flex;align-items:center;gap:6px;transition:color 0.2s}
 .crumb:hover{color:var(--coral)}
-.prob-num{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:4px}
-.prob-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:3.6rem;text-transform:uppercase;color:var(--ink);line-height:0.93;margin-bottom:10px;letter-spacing:-0.01em}
+.prob-num{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:4px}
+.prob-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:3.8rem;text-transform:uppercase;color:var(--ink);line-height:0.93;margin-bottom:10px;letter-spacing:-0.01em}
 .prob-tagline{font-size:15px;color:var(--ink3);font-style:italic;margin-bottom:12px}
 .prob-desc{font-size:14px;color:var(--ink2);line-height:1.85;max-width:680px;font-weight:300}
-.prob-meta{display:flex;gap:24px;margin-top:16px;flex-wrap:wrap;align-items:center}
-.prob-meta-i{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:600;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink4)}
+.prob-meta{display:flex;gap:24px;margin-top:18px}
+.prob-meta-i{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink4)}
 .prob-meta-i strong{color:var(--ink2)}
-.filter-status{font-size:12px;color:var(--coral);font-style:italic}
-
-/* SUBPROBLEMS */
-.sp-wrap{padding:24px 56px 56px 72px}
+.sp-wrap{padding:28px 56px 56px 72px}
 .sp-block{margin-bottom:5px;background:rgba(255,255,255,0.28);border-radius:var(--r);overflow:hidden;border:1px solid rgba(0,0,0,0.06)}
-.sp-block.dimmed{opacity:0.35}
 .sp-trig{display:flex;align-items:center;gap:14px;padding:16px 22px;cursor:pointer;transition:background 0.15s;border-left:4px solid transparent}
 .sp-trig:hover,.sp-trig.open{background:rgba(255,255,255,0.5)}
-.sp-code{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink4);min-width:50px}
+.sp-code{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink4);min-width:50px}
 .sp-ttitle{font-size:13.5px;font-weight:500;color:var(--ink);flex:1;line-height:1.35}
-.sp-mc{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:600;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink4);white-space:nowrap}
+.sp-mc{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink4);white-space:nowrap}
 .sp-chv{font-size:12px;color:var(--ink4);transition:transform 0.22s;margin-left:8px}
 .sp-trig.open .sp-chv{transform:rotate(180deg)}
 .sp-bd{display:none;border-top:1px solid rgba(0,0,0,0.07);padding:18px 22px}
 .sp-bd.open{display:block}
 .sp-desc{font-size:13px;color:var(--ink3);line-height:1.8;font-weight:300;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid rgba(0,0,0,0.07)}
 .mods-stack{display:flex;flex-direction:column;gap:7px}
-
-/* MODULE CARDS */
-.mod-card{border-radius:var(--r);overflow:hidden;background:var(--bg);border:1px solid rgba(0,0,0,0.08);transition:opacity 0.25s}
-.mod-card.dimmed{opacity:0.28}
+.mod-card{border-radius:var(--r);overflow:hidden;background:var(--bg);border:1px solid rgba(0,0,0,0.08)}
 .mod-trig{display:flex;align-items:center;gap:11px;padding:13px 16px;cursor:pointer;transition:background 0.15s}
 .mod-trig:hover,.mod-trig.open{background:rgba(255,255,255,0.6)}
-.mod-id{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink4);min-width:30px}
-.mod-nm{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink);flex:1}
-.mod-badges{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
-.mod-tm{font-size:11px;color:var(--ink4);background:var(--surface2);padding:3px 10px;border-radius:20px;white-space:nowrap;font-weight:500}
-.aud-tag{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 8px;border-radius:20px;color:#fff;white-space:nowrap}
-.aud-tag.executive{background:var(--tag-exec)}
-.aud-tag.product{background:var(--tag-product)}
-.aud-tag.engineering{background:var(--tag-engineering)}
-.aud-tag.gtm{background:var(--tag-gtm)}
-.aud-tag.data{background:var(--tag-data)}
-.aud-tag.practitioners{background:var(--tag-practitioners)}
+.mod-id{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink4);min-width:30px}
+.mod-nm{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink);flex:1}
+.mod-tm{font-size:11px;color:var(--ink4);background:var(--surface2);padding:3px 11px;border-radius:20px;white-space:nowrap;font-weight:500}
 .mod-heart{font-size:19px;cursor:pointer;padding:4px 7px;border-radius:4px;color:var(--ink4);line-height:1;transition:all 0.14s;border:1px solid transparent}
 .mod-heart:hover{background:rgba(232,120,74,0.1);border-color:rgba(232,120,74,0.25)}
 .mod-heart.on{color:var(--coral)}
@@ -177,11 +125,11 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .mod-bd{display:none;border-top:1px solid rgba(0,0,0,0.07);padding:18px 16px}
 .mod-bd.open{display:block}
 .mod-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-bottom:14px}
-.mg-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral);margin-bottom:7px}
+.mg-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral);margin-bottom:7px}
 .mg-text{font-size:13px;color:var(--ink2);line-height:1.7;font-weight:300}
 .mg-text strong{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 .act-blk{background:rgba(0,0,0,0.04);border-radius:4px;padding:11px 14px;margin-top:2px}
-.act-tog{display:flex;align-items:center;gap:7px;cursor:pointer;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3)}
+.act-tog{display:flex;align-items:center;gap:7px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3)}
 .act-arr{font-size:10px;transition:transform 0.18s}
 .act-tog.open .act-arr{transform:rotate(90deg)}
 .act-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px;display:none}
@@ -190,93 +138,16 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .pairs-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;padding-top:11px;border-top:1px solid rgba(0,0,0,0.07)}
 .pair-i{font-size:11.5px;color:var(--ink4)}
 .pair-i strong{color:var(--ink3);font-weight:600}
-.pg-num{position:absolute;bottom:28px;right:28px;width:42px;height:42px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:15px;color:#fff;z-index:2}
-
-/* CAPS */
-.caps-wrap{padding:24px 56px 56px 72px}
+.pg-num{position:absolute;bottom:28px;right:28px;width:42px;height:42px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:15px;color:#fff;z-index:2}
+.caps-wrap{padding:28px 56px 56px 72px}
 .caps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .cap-card{background:rgba(255,255,255,0.32);border:1px solid rgba(0,0,0,0.07);border-radius:var(--r);padding:22px;border-top:3px solid var(--coral)}
-.cap-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink);margin-bottom:9px}
+.cap-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink);margin-bottom:9px}
 .cap-desc{font-size:13px;color:var(--ink3);line-height:1.75;font-weight:300}
-
-@media(max-width:760px){.home-wrap{grid-template-columns:1fr}.home-r{display:none}.home-title{font-size:3.6rem}.home-bottom{grid-template-columns:1fr}.mod-grid{grid-template-columns:1fr}.caps-grid{grid-template-columns:1fr 1fr}.inner-hero,.sp-wrap,.caps-wrap{padding-left:28px}.filter-bar{gap:8px;padding:0 12px}}
-
-
-/* PHASE OUTCOMES */
-.rdm-phase-outcomes{margin-top:12px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.08)}
-.rdm-phase-out-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink4);margin-bottom:7px}
-.rdm-phase-out-item{display:flex;gap:7px;align-items:flex-start;margin-bottom:5px}
-.rdm-phase-out-dot{width:4px;height:4px;background:var(--coral);border-radius:50%;margin-top:6px;flex-shrink:0}
-.rdm-phase-out-text{font-size:11px;color:var(--ink3);line-height:1.55;font-weight:300}
-
-/* ENGAGEMENT OUTCOMES sub-label */
-.rdm-outcomes-sub{font-size:12px;color:rgba(255,255,255,0.35);margin-bottom:16px;margin-top:-8px;font-style:italic}
-
-/* GAP ADD BUTTON */
-.rdm-gap-add{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;background:var(--coral);color:#fff;border:none;padding:7px 14px;border-radius:4px;cursor:pointer;transition:all 0.2s;white-space:nowrap;flex-shrink:0;align-self:center}
-.rdm-gap-add:hover{background:var(--coral-dark)}
-.rdm-gap-add.added{background:var(--c-signal);cursor:default}
-
-/* ROADMAP OVERLAY */
-.rdm-overlay{position:fixed;inset:0;background:var(--bg);z-index:300;display:none;flex-direction:column;overflow:hidden}
-.rdm-overlay.open{display:flex}
-.rdm-nav{height:var(--nav-h);background:var(--ink);display:flex;align-items:center;padding:0 28px;gap:16px;flex-shrink:0;border-bottom:3px solid var(--coral)}
-.rdm-nav-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:18px;letter-spacing:0.08em;text-transform:uppercase;color:#fff;flex:1}
-.rdm-nav-sub{font-size:12px;color:rgba(255,255,255,0.4);font-style:italic}
-.rdm-close{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);cursor:pointer;padding:8px 16px;border:1px solid rgba(255,255,255,0.2);border-radius:4px;transition:all 0.2s}
-.rdm-close:hover{color:#fff;border-color:rgba(255,255,255,0.5)}
-.rdm-body{flex:1;overflow-y:auto;padding:32px 40px 60px}
-
-/* SUMMARY ROW */
-.rdm-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:32px}
-.rdm-stat{background:var(--ink);border-radius:var(--r);padding:18px 20px}
-.rdm-stat-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:6px}
-.rdm-stat-val{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:26px;color:#fff;line-height:1}
-.rdm-stat-val span{font-size:13px;font-weight:400;color:rgba(255,255,255,0.4);margin-left:4px}
-.rdm-stat-note{font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px;line-height:1.4}
-
-/* DEPENDENCY GAPS */
-.rdm-gaps{margin-bottom:28px}
-.rdm-gaps-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.rdm-gap-item{background:rgba(232,120,74,0.08);border:1px solid rgba(232,120,74,0.25);border-left:3px solid var(--coral);border-radius:var(--r);padding:12px 16px;margin-bottom:6px;display:flex;align-items:flex-start;gap:12px}
-.rdm-gap-icon{font-size:14px;margin-top:1px;flex-shrink:0}
-.rdm-gap-content{}
-.rdm-gap-mod{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--coral);margin-bottom:3px}
-.rdm-gap-text{font-size:12.5px;color:var(--ink2);line-height:1.6}
-.rdm-gap-why{font-size:12.5px;color:var(--ink2);line-height:1.65;margin:6px 0 4px}
-.rdm-gap-rec{font-size:12px;color:var(--ink3);margin-top:4px;font-style:italic}
-
-/* ROADMAP TIMELINE */
-.rdm-timeline-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
-.rdm-phases{display:flex;gap:0;overflow-x:auto;padding-bottom:12px}
-.rdm-phase{flex-shrink:0;min-width:220px;max-width:260px;border-right:2px dashed rgba(0,0,0,0.1);padding-right:20px;margin-right:20px}
-.rdm-phase:last-child{border-right:none}
-.rdm-phase-header{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,0.1)}
-.rdm-phase-num{width:28px;height:28px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:13px;color:#fff;flex-shrink:0}
-.rdm-phase-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink)}
-.rdm-phase-weeks{font-size:11px;color:var(--ink4);margin-left:auto;white-space:nowrap}
-.rdm-phase-mods{display:flex;flex-direction:column;gap:8px}
-.rdm-mod-tile{background:var(--surface);border:1px solid rgba(0,0,0,0.08);border-radius:6px;padding:12px 14px;border-left:3px solid var(--coral);position:relative}
-.rdm-mod-tile.has-gap{border-left-color:var(--coral);opacity:0.7}
-.rdm-mod-id{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:3px}
-.rdm-mod-name{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink);margin-bottom:4px;line-height:1.2}
-.rdm-mod-time{font-size:11px;color:var(--ink4);margin-bottom:5px}
-.rdm-mod-aud{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:6px}
-.rdm-mod-out{font-size:11.5px;color:var(--ink3);line-height:1.55;font-weight:300}
-.rdm-phase-arrow{display:flex;align-items:center;justify-content:center;padding:0 4px;color:var(--ink4);font-size:22px;align-self:center;flex-shrink:0;margin-top:-20px}
-
-/* OUTCOMES */
-.rdm-outcomes{margin-top:32px;background:var(--ink);border-radius:var(--r);padding:28px 32px}
-.rdm-outcomes-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:16px}
-.rdm-outcomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.rdm-outcome-item{display:flex;gap:10px;align-items:flex-start}
-.rdm-outcome-dot{width:6px;height:6px;background:var(--coral);border-radius:50%;margin-top:6px;flex-shrink:0}
-.rdm-outcome-text{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.65;font-weight:300}
+@media(max-width:760px){.home-wrap{grid-template-columns:1fr}.home-r{display:none}.home-title{font-size:3.8rem}.home-bottom{grid-template-columns:1fr}.mod-grid{grid-template-columns:1fr}.caps-grid{grid-template-columns:1fr 1fr}.inner-hero,.sp-wrap,.caps-wrap{padding-left:28px}}
 </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-logo" onclick="showPage('home')">
     <div class="nav-logo-text">The Cultured<span>Design |</span></div>
@@ -295,28 +166,11 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="eng-badge" id="engBadge">0</div>
   </div>
 </nav>
-
-<!-- GLOBAL FILTER BAR -->
-<div class="filter-bar">
-  <div class="filter-label">Filter by audience</div>
-  <div class="filter-tags">
-    <div class="ftag" data-tag="executive" onclick="toggleFilter('executive')">Executive</div>
-    <div class="ftag" data-tag="product" onclick="toggleFilter('product')">Product</div>
-    <div class="ftag" data-tag="engineering" onclick="toggleFilter('engineering')">Engineering</div>
-    <div class="ftag" data-tag="gtm" onclick="toggleFilter('gtm')">GTM</div>
-    <div class="ftag" data-tag="data" onclick="toggleFilter('data')">Data</div>
-    <div class="ftag" data-tag="practitioners" onclick="toggleFilter('practitioners')">Practitioners</div>
-  </div>
-  <div class="filter-active-note" id="filterNote" style="display:none">Showing <strong id="filterMatchCount">0</strong> modules</div>
-  <div class="filter-clear" id="filterClear" onclick="clearFilters()">Clear filters ×</div>
-</div>
-
-<!-- TRAY -->
 <div class="tray" id="tray">
   <div class="tray-hd">
     <div class="tray-htitle">Engagement Builder</div>
     <div class="tray-hr">
-      <div class="tray-clr" onclick="clearEng()">Clear all</div>
+      <div class="tray-clr" onclick="clearAll()">Clear all</div>
       <div class="tray-cls" onclick="toggleTray()">×</div>
     </div>
   </div>
@@ -326,20 +180,16 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   </div>
   <div class="tray-ft">
     <div class="tray-sum" id="traySum"><strong>0</strong> modules · <strong>0+</strong> weeks estimated</div>
-    <div style="display:flex;gap:8px">
-      <button class="tray-rdm" onclick="openRoadmap()">View Roadmap →</button>
-      <button class="tray-exp" onclick="exportEng()">Export →</button>
-    </div>
+    <button class="tray-exp" onclick="exportEng()">Export Engagement →</button>
   </div>
 </div>
 
-<!-- HOME -->
 <div class="page active" id="page-home">
   <div class="home-wrap">
     <div class="home-l">
       <div class="eyebrow">Intelligence-Driven Growth Framework</div>
       <div class="home-title">Five<br>Problems.<br><em>One</em><br>Framework.</div>
-      <div class="home-desc">Every organization is navigating the same five failure modes. The Intelligence-Driven Growth Framework maps every TCD engagement to one of five problem jobs: knowing who you are, knowing where you're going, knowing what you know, scaling what you've built, and earning your own people.<br><br>Filter by audience above to find the modules most relevant to your situation.</div>
+      <div class="home-desc">Every organization is navigating the same five failure modes — whether they know it or not. The Intelligence-Driven Growth Framework maps every TCD engagement to one of five problem jobs: knowing who you are, knowing where you're going, knowing what you know, scaling what you've built, and earning your own people.</div>
       <div class="home-cta">
         <button class="btn-p" onclick="showPage('identity')">Start with Problem 01</button>
         <button class="btn-g" onclick="showPage('capabilities')">View Capabilities</button>
@@ -348,131 +198,78 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="home-r">
       <div class="home-r-label">The Five Problems — select to explore</div>
       <div class="p-cards">
-        <div class="pcard identity" onclick="showPage('identity')"><div class="pc-n">01</div><div><div class="pc-t">The Identity Problem</div><div class="pc-s">Who you are before you can go anywhere</div></div><div class="pc-count" id="hcount-identity">6 modules</div><div class="pc-arr">→</div></div>
-        <div class="pcard alignment" onclick="showPage('alignment')"><div class="pc-n">02</div><div><div class="pc-t">The Alignment Problem</div><div class="pc-s">Where you're going and how everyone gets there</div></div><div class="pc-count" id="hcount-alignment">6 modules</div><div class="pc-arr">→</div></div>
-        <div class="pcard signal" onclick="showPage('signal')"><div class="pc-n">03</div><div><div class="pc-t">The Signal Problem</div><div class="pc-s">What you know and how it compounds</div></div><div class="pc-count" id="hcount-signal">7 modules</div><div class="pc-arr">→</div></div>
-        <div class="pcard reinvention" onclick="showPage('reinvention')"><div class="pc-n">04</div><div><div class="pc-t">The Reinvention Problem</div><div class="pc-s">What you've built and how it scales</div></div><div class="pc-count" id="hcount-reinvention">7 modules</div><div class="pc-arr">→</div></div>
-        <div class="pcard adoption" onclick="showPage('adoption')"><div class="pc-n">05</div><div><div class="pc-t">The Adoption Problem</div><div class="pc-s">How you earn the organization</div></div><div class="pc-count" id="hcount-adoption">4 modules</div><div class="pc-arr">→</div></div>
+        <div class="pcard identity" onclick="showPage('identity')"><div class="pc-n">01</div><div><div class="pc-t">The Identity Problem</div><div class="pc-s">Who you are before you can go anywhere</div></div><div class="pc-arr">→</div></div>
+        <div class="pcard alignment" onclick="showPage('alignment')"><div class="pc-n">02</div><div><div class="pc-t">The Alignment Problem</div><div class="pc-s">Where you're going and how everyone gets there</div></div><div class="pc-arr">→</div></div>
+        <div class="pcard signal" onclick="showPage('signal')"><div class="pc-n">03</div><div><div class="pc-t">The Signal Problem</div><div class="pc-s">What you know and how it compounds</div></div><div class="pc-arr">→</div></div>
+        <div class="pcard reinvention" onclick="showPage('reinvention')"><div class="pc-n">04</div><div><div class="pc-t">The Reinvention Problem</div><div class="pc-s">What you've built and how it scales</div></div><div class="pc-arr">→</div></div>
+        <div class="pcard adoption" onclick="showPage('adoption')"><div class="pc-n">05</div><div><div class="pc-t">The Adoption Problem</div><div class="pc-s">How you earn the organization</div></div><div class="pc-arr">→</div></div>
       </div>
     </div>
   </div>
   <div class="home-bottom">
-    <div><div class="hb-label">The Organizing Idea</div><div class="hb-title">Problems Compound</div><div class="hb-text">An organization that can't align can't build shared intelligence. Without intelligence it reinvents what it already knows. Reinvention without adoption leaves systems on the shelf. The five problems are sequential — and all active simultaneously.</div></div>
-    <div><div class="hb-label">How To Use This</div><div class="hb-title">Find Your Problem</div><div class="hb-text">Filter by your audience above. Read the sub-problems inside each problem. When one sounds like your organization, open it. Heart the modules that match your situation. Your selections build a live engagement in real time.</div></div>
-    <div><div class="hb-label">The Model</div><div class="hb-title">Modules Are Modular</div><div class="hb-text">Each module stands alone and delivers a concrete outcome. Most engagements combine 4–8 modules across two or three problems. Some sequence naturally — none require each other. TCD helps configure the right set.</div></div>
+    <div class="hb-item"><div class="hb-label">The Organizing Idea</div><div class="hb-title">Problems Compound</div><div class="hb-text">An organization that can't align can't build shared intelligence. Without intelligence it reinvents what it already knows. Reinvention without adoption leaves systems on the shelf. The five problems are sequential — and all active simultaneously.</div></div>
+    <div class="hb-item"><div class="hb-label">How To Use This</div><div class="hb-title">Find Your Problem</div><div class="hb-text">Read the sub-problems inside each problem. When one sounds like your organization, open it. Browse the modules. Heart the ones that match your situation. Your selections build a live engagement in real time.</div></div>
+    <div class="hb-item"><div class="hb-label">The Model</div><div class="hb-title">Modules Are Modular</div><div class="hb-text">Each module stands alone and delivers a concrete outcome. Most engagements combine 4–8 modules across two or three problems. Some sequence naturally — none require each other. TCD helps configure the right set.</div></div>
   </div>
 </div>
 
-<!-- PROBLEM PAGES -->
-<div class="page inner" id="page-identity"><div class="sidebar" style="background:var(--c-identity)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-identity)">Problem 01</div><div class="prob-title">The Identity<br>Problem</div><div class="prob-tagline">Who you are before you can go anywhere</div><div class="prob-desc">You can't align what you haven't defined. Identity is the foundation every other problem sits on — strategy, operating models, OKRs, GTM motions. Without a clear, shared answer to who you are and how you grow, every downstream system is built on assumption.</div><div class="prob-meta"><div class="prob-meta-i"><strong>6</strong> modules</div><div class="prob-meta-i"><strong>2–5 weeks</strong> per module</div><div class="filter-status" id="fstatus-identity" style="display:none"></div></div></div><div class="sp-wrap" id="sp-identity"></div><div class="pg-num">01</div></div>
+<div class="page inner" id="page-identity"><div class="sidebar" style="background:var(--c-identity)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-identity)">Problem 01</div><div class="prob-title">The Identity<br>Problem</div><div class="prob-tagline">Who you are before you can go anywhere</div><div class="prob-desc">You can't align what you haven't defined. Identity is the foundation every other problem sits on — strategy, operating models, OKRs, GTM motions. Without a clear, shared answer to who you are and how you grow, every downstream system is built on assumption. Most organizations believe these questions are settled. The evidence — misaligned leadership, drifting strategy, unclear differentiation — says otherwise.</div><div class="prob-meta"><div class="prob-meta-i"><strong>6</strong> sub-problems</div><div class="prob-meta-i"><strong>6</strong> modules</div><div class="prob-meta-i"><strong>2–5 weeks</strong> per module</div></div></div><div class="sp-wrap" id="sp-identity"></div><div class="pg-num">01</div></div>
 
-<div class="page inner" id="page-alignment"><div class="sidebar" style="background:var(--c-alignment)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-alignment)">Problem 02</div><div class="prob-title">The Alignment<br>Problem</div><div class="prob-tagline">Where you're going and how everyone gets there</div><div class="prob-desc">Strategy exists. Work is happening. But the connection between them is implicit — built on assumptions about shared understanding that evaporate under organizational complexity. The alignment problem isn't a culture problem. It's a systems problem.</div><div class="prob-meta"><div class="prob-meta-i"><strong>6</strong> modules</div><div class="prob-meta-i"><strong>2–6 weeks</strong> per module</div><div class="filter-status" id="fstatus-alignment" style="display:none"></div></div></div><div class="sp-wrap" id="sp-alignment"></div><div class="pg-num">02</div></div>
+<div class="page inner" id="page-alignment"><div class="sidebar" style="background:var(--c-alignment)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-alignment)">Problem 02</div><div class="prob-title">The Alignment<br>Problem</div><div class="prob-tagline">Where you're going and how everyone gets there</div><div class="prob-desc">Strategy exists. Work is happening. But the connection between them is implicit — built on assumptions about shared understanding that evaporate under organizational complexity. Work drifts from strategy. Investment accumulates in things that don't compound. Leadership tells slightly different stories about where the organization is going. The alignment problem isn't a culture problem. It's a systems problem.</div><div class="prob-meta"><div class="prob-meta-i"><strong>6</strong> sub-problems</div><div class="prob-meta-i"><strong>6</strong> modules</div><div class="prob-meta-i"><strong>2–6 weeks</strong> per module</div></div></div><div class="sp-wrap" id="sp-alignment"></div><div class="pg-num">02</div></div>
 
-<div class="page inner" id="page-signal"><div class="sidebar" style="background:var(--c-signal)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-signal)">Problem 03</div><div class="prob-title">The Signal<br>Problem</div><div class="prob-tagline">What you know and how it compounds</div><div class="prob-desc">Every team is running discovery. Almost none of it accumulates. The signal problem isn't about having more data — it's about designing the architecture that makes what you learn compound over time.</div><div class="prob-meta"><div class="prob-meta-i"><strong>7</strong> modules</div><div class="prob-meta-i"><strong>2–10 weeks</strong> per module</div><div class="filter-status" id="fstatus-signal" style="display:none"></div></div></div><div class="sp-wrap" id="sp-signal"></div><div class="pg-num">03</div></div>
+<div class="page inner" id="page-signal"><div class="sidebar" style="background:var(--c-signal)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-signal)">Problem 03</div><div class="prob-title">The Signal<br>Problem</div><div class="prob-tagline">What you know and how it compounds</div><div class="prob-desc">Every team is running discovery. Almost none of it accumulates. What one team learns disappears at the end of the quarter because the operating model was never designed to make intelligence cumulative. The organization keeps paying for the same insight cycle after cycle and never gets smarter. The signal problem isn't about having more data — it's about designing the architecture that makes what you learn compound over time.</div><div class="prob-meta"><div class="prob-meta-i"><strong>6</strong> sub-problems</div><div class="prob-meta-i"><strong>7</strong> modules</div><div class="prob-meta-i"><strong>2–10 weeks</strong> per module</div></div></div><div class="sp-wrap" id="sp-signal"></div><div class="pg-num">03</div></div>
 
-<div class="page inner" id="page-reinvention"><div class="sidebar" style="background:var(--c-reinvention)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-reinvention)">Problem 04</div><div class="prob-title">The Reinvention<br>Problem</div><div class="prob-tagline">What you've built and how it scales</div><div class="prob-desc">Teams are solving the same problems from scratch — not because they're unaware of what's been built, but because what's been built was never designed to be reused. The reinvention problem is an architecture problem.</div><div class="prob-meta"><div class="prob-meta-i"><strong>7</strong> modules</div><div class="prob-meta-i"><strong>2–10 weeks</strong> per module</div><div class="filter-status" id="fstatus-reinvention" style="display:none"></div></div></div><div class="sp-wrap" id="sp-reinvention"></div><div class="pg-num">04</div></div>
+<div class="page inner" id="page-reinvention"><div class="sidebar" style="background:var(--c-reinvention)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-reinvention)">Problem 04</div><div class="prob-title">The Reinvention<br>Problem</div><div class="prob-tagline">What you've built and how it scales</div><div class="prob-desc">Teams are solving the same problems from scratch — not because they're unaware of what's been built, but because what's been built was never designed to be reused. The reinvention problem is an architecture problem. Accumulated work sits in documents, presentations, and tribal knowledge — undiscoverable, non-composable, and invisible to the next team that needs it.</div><div class="prob-meta"><div class="prob-meta-i"><strong>5</strong> sub-problems</div><div class="prob-meta-i"><strong>7</strong> modules</div><div class="prob-meta-i"><strong>2–10 weeks</strong> per module</div></div></div><div class="sp-wrap" id="sp-reinvention"></div><div class="pg-num">04</div></div>
 
-<div class="page inner" id="page-adoption"><div class="sidebar" style="background:var(--c-adoption)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-adoption)">Problem 05</div><div class="prob-title">The Adoption<br>Problem</div><div class="prob-tagline">How you earn the organization</div><div class="prob-desc">The system is designed. The rollout is planned. Six weeks later, nobody's using it. Mandated adoption is borrowed trust. It runs out the moment the mandate author leaves the room. The only durable adoption is earned.</div><div class="prob-meta"><div class="prob-meta-i"><strong>4</strong> modules</div><div class="prob-meta-i"><strong>2–4 weeks</strong> per module</div><div class="filter-status" id="fstatus-adoption" style="display:none"></div></div></div><div class="sp-wrap" id="sp-adoption"></div><div class="pg-num">05</div></div>
+<div class="page inner" id="page-adoption"><div class="sidebar" style="background:var(--c-adoption)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-adoption)">Problem 05</div><div class="prob-title">The Adoption<br>Problem</div><div class="prob-tagline">How you earn the organization</div><div class="prob-desc">The system is designed. The rollout is planned. Six weeks later, nobody's using it. Not because the system is wrong — but because the organization was never designed into it. Mandated adoption is borrowed trust. It runs out the moment the mandate author leaves the room. The only durable adoption is earned — where practitioners use the system because it makes their work better, not because someone is watching.</div><div class="prob-meta"><div class="prob-meta-i"><strong>4</strong> sub-problems</div><div class="prob-meta-i"><strong>4</strong> modules</div><div class="prob-meta-i"><strong>2–4 weeks</strong> per module</div></div></div><div class="sp-wrap" id="sp-adoption"></div><div class="pg-num">05</div></div>
 
-<div class="page inner" id="page-capabilities"><div class="sidebar" style="background:var(--coral)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--coral)">TCD · How We Deliver</div><div class="prob-title">Cross-Cutting<br>Capabilities</div><div class="prob-tagline">The disciplines and methods behind every engagement</div><div class="prob-desc">These are not modules — they are the functional capabilities TCD applies across all five problems. Every engagement draws from a subset of these disciplines. They are the methods and the muscle behind every deliverable.</div></div><div class="caps-wrap"><div class="caps-grid" id="capsGrid"></div></div><div class="pg-num">06</div></div>
+<div class="page inner" id="page-capabilities"><div class="sidebar" style="background:var(--coral)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--coral)">TCD · How We Deliver</div><div class="prob-title">Cross-Cutting<br>Capabilities</div><div class="prob-tagline">The disciplines and methods behind every engagement</div><div class="prob-desc">These are not modules — they are the functional capabilities TCD applies across all five problems. Every engagement draws from a subset of these disciplines depending on the work. They are the methods and the muscle behind every deliverable.</div></div><div class="caps-wrap"><div class="caps-grid" id="capsGrid"></div></div><div class="pg-num">06</div></div>
 
 <script>
-// ── DATA ─────────────────────────────────────────────────────────────────────
-// audience tags: executive, product, engineering, gtm, data, practitioners
 const D={
 identity:{c:'var(--c-identity)',sps:[
-{code:'SP 1.1',t:"Your business model hasn't been made explicit, stress-tested, or shared across leadership",d:"Leadership is operating from different assumptions about how the business creates and captures value — without a shared, explicit model to align against.",mods:[
-{id:'I-1',n:'The Business Model Canvas',tm:'2–3 weeks',aud:['executive'],sp:"Leadership is operating from different assumptions about how the business creates and captures value.",dl:"<strong>Completed BMC</strong> — nine-block model documented and validated<br><strong>Assumption log</strong> — highest-risk assumptions ranked and flagged<br><strong>Leadership alignment session</strong> — shared mental model across the team<br><strong>Gap analysis</strong> — where the model is weak, untested, or contested",out:"Leadership operates from one explicit model of how the business works — with a shared understanding of where the assumptions are and what needs to be proven.",acts:['Leadership interviews','BMC facilitation workshop','Assumption mapping','Risk ranking','Model documentation','Alignment session','Gap analysis writeup'],pre:'',pw:'I-3 Growth Design',ns:'I-2 Vision & Strategy Sprint'}
-]},
-{code:'SP 1.2',t:"You have a direction but not a documented strategy that governs decisions",d:"The organization is moving but not from a shared, documented strategy — vision is implied, not explicit, and decisions drift because there's no governing document to resolve trade-offs against.",mods:[
-{id:'I-2',n:'The Vision & Strategy Sprint',tm:'3–4 weeks',aud:['executive'],sp:"Direction exists but isn't documented — decisions default to whoever argues loudest.",dl:"<strong>Vision statement</strong> — where you're going and why it matters<br><strong>Strategy document</strong> — the choices that define how you get there<br><strong>Strategic priorities</strong> — ranked, time-bound, owner-assigned<br><strong>Decision filter</strong> — a framework for resolving trade-offs against strategy",out:"A documented strategy that leadership can use to resolve decisions, align teams, and communicate direction — without requiring a meeting every time a trade-off surfaces.",acts:['Executive discovery sessions','Vision articulation workshop','Strategic choice mapping','Priority ranking facilitation','Decision filter design','Strategy document production','Leadership review and sign-off'],pre:'I-1 Business Model Canvas (recommended)',pw:'',ns:'I-3 Growth Design · A-1 Outcomes Architecture'}
-]},
-{code:'SP 1.3',t:"You don't have a defined growth model — how you win isn't explicit",d:"Decisions are being made without a clear model for how the business grows — runway assumptions, market expansion bets, and differentiation levers aren't connected to daily prioritization.",mods:[
-{id:'I-3',n:'The Growth Design',tm:'3–5 weeks',aud:['executive','gtm'],sp:"The growth model exists in the founder's head — investment decisions are made inconsistently and differentiation erodes under execution pressure.",dl:"<strong>Growth model</strong> — explicit map of how the business creates compounding value<br><strong>Runway analysis</strong> — current trajectory against strategic bets<br><strong>Market differentiation framework</strong> — where and how you win<br><strong>Growth prioritization filter</strong> — connects daily decisions to growth bets",out:"A growth model that makes the economic logic of the business explicit — so every major investment decision can be evaluated against a shared understanding of what generates compounding returns.",acts:['Market analysis','Competitive landscape mapping','Growth model design workshop','Runway modeling','Differentiation lever identification','Expansion bet evaluation','Prioritization filter design','Growth narrative documentation'],pre:'I-1 BMC · I-2 Vision & Strategy Sprint',pw:'',ns:'I-6 Capabilities Inventory · A-3 Portfolio Map'}
-]},
-{code:'SP 1.4',t:"You haven't named what you stand for in a way the organization can act on",d:"Mission, values, and purpose exist on paper but don't govern behavior — the organization can't point to a shared identity that shapes how decisions get made or how culture gets built.",mods:[
-{id:'I-4',n:'The Identity Sprint',tm:'2–3 weeks',aud:['executive','practitioners'],sp:"Identity is assumed, not designed — it's inconsistently expressed and easily overridden by short-term pressure.",dl:"<strong>Mission statement</strong> — why the organization exists, in language that governs<br><strong>Values architecture</strong> — named, defined, connected to observable behaviors<br><strong>Purpose narrative</strong> — the story leadership tells internally and externally<br><strong>Culture operating principles</strong> — how identity translates into daily decisions",out:"An identity the organization can act from — not a values poster, but a governing framework that shapes hiring, prioritization, and how leadership resolves hard calls.",acts:['Leadership and team discovery sessions','Values elicitation workshop','Mission articulation facilitation','Behavioral anchoring','Culture principles design','Narrative documentation','Internal communication design'],pre:'',pw:'I-5 Market Position',ns:'AD-1 Co-Creation Sprint'}
-]},
-{code:'SP 1.5',t:"You're competing in a category someone else defined — or can't articulate why you win",d:"The organization is operating on terms set by others — competing in a category it didn't define, against criteria it didn't choose. Nobody can say why you win the same way twice.",mods:[
-{id:'I-5',n:'The Market Position',tm:'3–4 weeks',aud:['executive','gtm'],sp:"Without a defined market position, sales start from education, marketing spreads thin, and product lacks a forcing function for what to build and what to ignore.",dl:"<strong>Category definition</strong> — the market frame you own or create<br><strong>Competitive differentiation statement</strong> — why you win, in one sentence<br><strong>Target customer profile</strong> — who you are for and who you are not for<br><strong>Positioning document</strong> — single source of truth for all market-facing language",out:"A market position the organization owns — a category frame, a competitive wedge, and language that travels consistently from sales to marketing to product to leadership.",acts:['Competitive landscape analysis','Category mapping','Customer and prospect interviews','Differentiation workshop','Positioning statement development','Message testing','Positioning document production'],pre:'I-3 Growth Design (recommended)',pw:'I-4 Identity Sprint',ns:'R-3 Platform Narrative · R-5 Offer Design'}
-]},
-{code:'SP 1.6',t:"You don't have a clear picture of what you actually have to offer against your growth model",d:"The organization is making growth bets without a clear map of what it actually has — capabilities are assumed, not inventoried, and the gap between what exists and what the strategy requires is invisible.",mods:[
-{id:'I-6',n:'The Capabilities Inventory',tm:'2–3 weeks',aud:['executive','product'],sp:"Investment decisions are made from assumption — leading to duplicate builds, missed reuse opportunities, and growth strategies requiring capabilities the organization doesn't have.",dl:"<strong>Capabilities map</strong> — full inventory of what the organization can deliver<br><strong>Capability-to-strategy alignment</strong> — what supports the growth model and what doesn't<br><strong>Gap analysis</strong> — capabilities required but not yet built<br><strong>Investment signal</strong> — where to build, buy, or partner",out:"A clear, honest inventory of organizational capability mapped against the growth model — so investment decisions are grounded in what exists, not what's assumed.",acts:['Capability discovery interviews','Cross-functional capability mapping','Strategy alignment mapping','Gap analysis','Build/buy/partner assessment','Capabilities document production'],pre:'I-3 Growth Design',pw:'R-1 Capability Audit',ns:'A-3 Portfolio Map'}
-]}
+{code:'SP 1.1',t:"Your business model hasn't been made explicit, stress-tested, or shared across leadership",d:"Leadership is operating from different assumptions about how the business creates and captures value — without a shared, explicit model to align against.",mods:[{id:'I-1',n:'The Business Model Canvas',tm:'2–3 weeks',sp:"Leadership is operating from different assumptions about how the business creates and captures value.",dl:"<strong>Completed BMC</strong> — nine-block model documented and validated<br><strong>Assumption log</strong> — highest-risk assumptions ranked and flagged<br><strong>Leadership alignment session</strong> — shared mental model across the team<br><strong>Gap analysis</strong> — where the model is weak, untested, or contested",out:"Leadership operates from one explicit model of how the business works — with a shared understanding of where the assumptions are and what needs to be proven.",acts:['Leadership interviews','BMC facilitation workshop','Assumption mapping','Risk ranking','Model documentation','Alignment session','Gap analysis writeup'],pre:'',pw:'I-3 Growth Design',ns:'I-2 Vision & Strategy Sprint'}]},
+{code:'SP 1.2',t:"You have a direction but not a documented strategy that governs decisions",d:"The organization is moving but not from a shared, documented strategy — vision is implied, not explicit, and decisions drift because there's no governing document to resolve trade-offs against.",mods:[{id:'I-2',n:'The Vision & Strategy Sprint',tm:'3–4 weeks',sp:"Direction exists but isn't documented — decisions default to whoever argues loudest.",dl:"<strong>Vision statement</strong> — where you're going and why it matters<br><strong>Strategy document</strong> — the choices that define how you get there<br><strong>Strategic priorities</strong> — ranked, time-bound, owner-assigned<br><strong>Decision filter</strong> — a framework for resolving trade-offs against strategy",out:"A documented strategy that leadership can use to resolve decisions, align teams, and communicate direction — without requiring a meeting every time a trade-off surfaces.",acts:['Executive discovery sessions','Vision articulation workshop','Strategic choice mapping','Priority ranking facilitation','Decision filter design','Strategy document production','Leadership review and sign-off'],pre:'I-1 Business Model Canvas (recommended)',pw:'',ns:'I-3 Growth Design · A-1 Outcomes Architecture'}]},
+{code:'SP 1.3',t:"You don't have a defined growth model — how you win isn't explicit",d:"Decisions are being made without a clear model for how the business grows — runway assumptions, market expansion bets, and differentiation levers aren't connected to daily prioritization.",mods:[{id:'I-3',n:'The Growth Design',tm:'3–5 weeks',sp:"The growth model exists in the founder's head — investment decisions are made inconsistently and differentiation erodes under execution pressure.",dl:"<strong>Growth model</strong> — explicit map of how the business creates compounding value<br><strong>Runway analysis</strong> — current trajectory against strategic bets<br><strong>Market differentiation framework</strong> — where and how you win<br><strong>Growth prioritization filter</strong> — connects daily decisions to growth bets",out:"A growth model that makes the economic logic of the business explicit — so every major investment decision can be evaluated against a shared understanding of what generates compounding returns.",acts:['Market analysis','Competitive landscape mapping','Growth model design workshop','Runway modeling','Differentiation lever identification','Expansion bet evaluation','Prioritization filter design','Growth narrative documentation'],pre:'I-1 BMC · I-2 Vision & Strategy Sprint',pw:'',ns:'I-6 Capabilities Inventory · A-3 Portfolio Map'}]},
+{code:'SP 1.4',t:"You haven't named what you stand for in a way the organization can act on",d:"Mission, values, and purpose exist on paper but don't govern behavior — the organization can't point to a shared identity that shapes how decisions get made or how culture gets built.",mods:[{id:'I-4',n:'The Identity Sprint',tm:'2–3 weeks',sp:"Identity is assumed, not designed — it's inconsistently expressed and easily overridden by short-term pressure.",dl:"<strong>Mission statement</strong> — why the organization exists, in language that governs<br><strong>Values architecture</strong> — named, defined, connected to observable behaviors<br><strong>Purpose narrative</strong> — the story leadership tells internally and externally<br><strong>Culture operating principles</strong> — how identity translates into daily decisions",out:"An identity the organization can act from — not a values poster, but a governing framework that shapes hiring, prioritization, and how leadership resolves hard calls.",acts:['Leadership and team discovery sessions','Values elicitation workshop','Mission articulation facilitation','Behavioral anchoring','Culture principles design','Narrative documentation','Internal communication design'],pre:'',pw:'I-5 Market Position',ns:'AD-1 Co-Creation Sprint'}]},
+{code:'SP 1.5',t:"You're competing in a category someone else defined — or can't articulate why you win",d:"The organization is operating on terms set by others — competing in a category it didn't define, against criteria it didn't choose. Nobody can say why you win the same way twice.",mods:[{id:'I-5',n:'The Market Position',tm:'3–4 weeks',sp:"Without a defined market position, sales start from education, marketing spreads thin, and product lacks a forcing function for what to build and what to ignore.",dl:"<strong>Category definition</strong> — the market frame you own or create<br><strong>Competitive differentiation statement</strong> — why you win, in one sentence<br><strong>Target customer profile</strong> — who you are for and who you are not for<br><strong>Positioning document</strong> — single source of truth for all market-facing language",out:"A market position the organization owns — a category frame, a competitive wedge, and language that travels consistently from sales to marketing to product to leadership.",acts:['Competitive landscape analysis','Category mapping','Customer and prospect interviews','Differentiation workshop','Positioning statement development','Message testing','Positioning document production'],pre:'I-3 Growth Design (recommended)',pw:'I-4 Identity Sprint',ns:'R-3 Platform Narrative · R-5 Offer Design'}]},
+{code:'SP 1.6',t:"You don't have a clear picture of what you actually have to offer against your growth model",d:"The organization is making growth bets without a clear map of what it actually has — capabilities are assumed, not inventoried, and the gap between what exists and what the strategy requires is invisible.",mods:[{id:'I-6',n:'The Capabilities Inventory',tm:'2–3 weeks',sp:"Investment decisions are made from assumption — leading to duplicate builds, missed reuse opportunities, and growth strategies requiring capabilities the organization doesn't have.",dl:"<strong>Capabilities map</strong> — full inventory of what the organization can deliver<br><strong>Capability-to-strategy alignment</strong> — what supports the growth model and what doesn't<br><strong>Gap analysis</strong> — capabilities required but not yet built<br><strong>Investment signal</strong> — where to build, buy, or partner",out:"A clear, honest inventory of organizational capability mapped against the growth model — so investment decisions are grounded in what exists, not what's assumed.",acts:['Capability discovery interviews','Cross-functional capability mapping','Strategy alignment mapping','Gap analysis','Build/buy/partner assessment','Capabilities document production'],pre:'I-3 Growth Design',pw:'R-1 Capability Audit',ns:'A-3 Portfolio Map'}]}
 ]},
 alignment:{c:'var(--c-alignment)',sps:[
-{code:'SP 2.1',t:"Work isn't traceable to strategy — and there's no shared bar for what justifies prioritization",d:"Teams are working hard on things that don't advance the strategy — because no mechanism requires tracing a capability to a strategic outcome before work begins.",mods:[
-{id:'A-1',n:'The Outcomes & Evidence Architecture',tm:'4–6 weeks',aud:['executive','product','engineering'],sp:"Prioritization is political, not evidence-driven — the loudest voice wins because there's no shared framework for sufficient justification.",dl:"<strong>Outcomes hierarchy</strong> — macro and micro outcomes mapped to strategic priorities<br><strong>Capabilities-to-outcomes template</strong> — the forcing function for traceability<br><strong>Evidence standard</strong> — shared definition of what justifies prioritization<br><strong>Governance rhythm</strong> — how outcomes are reviewed and updated",out:"Every capability in flight is traceable to a strategic outcome. Prioritization becomes evidence-driven, not political.",acts:['Strategy intake and analysis','Outcomes hierarchy design','Template design and build','Evidence standard definition','Outcomes mapping workshop','Governance rhythm design','Team onboarding and rollout'],pre:'I-2 Vision & Strategy Sprint (recommended)',pw:'A-2 OKR Engine',ns:'A-2 OKR Engine · A-3 Portfolio Map'}
-]},
-{code:'SP 2.2',t:"OKRs exist but don't govern decisions or drive behavior",d:"OKRs are written every quarter but don't change how work gets prioritized, resourced, or stopped — they're a reporting ritual, not a governing mechanism.",mods:[
-{id:'A-2',n:'The OKR Engine',tm:'3–4 weeks',aud:['executive','product','engineering'],sp:"OKRs are written, reviewed, and filed — but they don't resolve conflicts, stop low-value work, or connect daily decisions to quarterly commitments.",dl:"<strong>OKR architecture</strong> — company, team, and individual levels properly cascaded<br><strong>OKR design standards</strong> — what makes a good objective and a measurable key result<br><strong>Governance cadence</strong> — how OKRs are reviewed and used to resolve trade-offs<br><strong>First cycle facilitation</strong> — facilitated OKR-setting session for leadership",out:"OKRs that actually govern — used to resolve prioritization conflicts, stop low-value work, and connect daily decisions to quarterly commitments.",acts:['Current OKR audit','OKR architecture design','Standards and criteria definition','Cascade mapping','Leadership OKR-setting facilitation','Governance cadence design','Review rhythm documentation'],pre:'A-1 Outcomes & Evidence Architecture',pw:'A-3 Portfolio Map',ns:'A-3 Portfolio Map · A-4 Horizon Plan'}
-]},
-{code:'SP 2.3',t:"You don't know what you're investing in or why",d:"Investment is distributed across initiatives without a portfolio-level view — no one knows the full picture of what's in flight, what it costs, what outcome it's tied to.",mods:[
-{id:'A-3',n:'The Portfolio Map',tm:'2–4 weeks',aud:['executive','product'],sp:"Leadership is making investment decisions without visibility into what's already in flight — leading to duplication, misallocation, and a portfolio that reflects inertia rather than strategy.",dl:"<strong>Portfolio inventory</strong> — all initiatives mapped, sized, and tagged to outcomes<br><strong>Investment allocation view</strong> — where resources are going vs where strategy says they should<br><strong>Portfolio health assessment</strong> — what's on track, at risk, and misaligned<br><strong>Rationalization recommendations</strong> — what to stop, consolidate, or accelerate",out:"A portfolio view that makes investment visible — so leadership can see the full picture and ensure allocation reflects strategic priorities rather than inertia.",acts:['Initiative discovery and cataloging','Resource and investment mapping','Outcome tagging','Portfolio health scoring','Allocation analysis','Rationalization workshop','Portfolio dashboard design'],pre:'A-1 Outcomes & Evidence Architecture',pw:'',ns:'A-4 Horizon Plan · S-6 Executive Intelligence Dashboard'}
-]},
-{code:'SP 2.4',t:"You're planning one quarter at a time with no view across horizons",d:"Planning is reactive and short-horizon — the organization can see the next 90 days clearly but has no structured view of 6, 12, or 18 months.",mods:[
-{id:'A-4',n:'The Horizon Plan',tm:'3–4 weeks',aud:['executive','product'],sp:"Near-term execution is disconnected from long-term bets — every quarter is planned in isolation, making it impossible to sequence commitments intelligently.",dl:"<strong>Horizon map</strong> — 30/60/90/180/365 view of commitments and bets<br><strong>Three horizons framework</strong> — H1 execution, H2 build, H3 explore mapped to current work<br><strong>Planning cadence design</strong> — how annual, quarterly, and sprint planning connect<br><strong>Planning templates</strong> — standardized artifacts for each horizon",out:"A planning architecture that connects near-term execution to long-term bets — so the organization can act on today's commitments without losing sight of where it's trying to be in 18 months.",acts:['Current planning audit','Three horizons mapping workshop','Horizon plan design','Planning cadence architecture','Template design and build','Leadership alignment session','First cycle facilitation'],pre:'I-2 Vision & Strategy Sprint · A-3 Portfolio Map',pw:'',ns:'A-2 OKR Engine'}
-]},
-{code:'SP 2.5',t:"Leadership isn't telling the same story about where the organization is going",d:"Every leader tells a slightly different version of where the organization is going and why — creating confusion, misalignment, and a credibility gap with teams, customers, and investors.",mods:[
-{id:'A-5',n:'The Strategic Narrative',tm:'2–3 weeks',aud:['executive','gtm'],sp:"The strategy exists as a slide deck but doesn't travel as a story — every retelling drifts and the cumulative effect is an organization that doesn't know what it's building toward.",dl:"<strong>Strategic narrative document</strong> — the single story leadership tells, consistently<br><strong>Board-level narrative</strong> — adapted for investors and governance audiences<br><strong>Internal narrative</strong> — adapted for teams and all-hands<br><strong>Talk track</strong> — key messages, proof points, and answers to hard questions",out:"One story, told consistently. Leadership speaks with a single voice about where the organization is going — internally and externally.",acts:['Leadership narrative discovery','Story architecture design','Message development workshop','Narrative document production','Board deck narrative adaptation','Internal communication design','Talk track development'],pre:'I-2 Vision & Strategy Sprint · I-5 Market Position',pw:'',ns:'R-3 Platform Narrative'}
-]},
-{code:'SP 2.6',t:"Decisions are made by whoever is loudest, not by whoever has the mandate",d:"There are no clear decision rights — who decides what, at what level, with what information, and who gets consulted vs informed.",mods:[
-{id:'A-6',n:'The Decision Architecture',tm:'2–3 weeks',aud:['executive','practitioners'],sp:"Without explicit decision rights, every significant decision escalates — to the most senior person available, not the most appropriate one.",dl:"<strong>Decision rights framework</strong> — who decides what, at every level<br><strong>RACI mapping</strong> — applied to key decision types<br><strong>Escalation paths</strong> — when and how decisions move up<br><strong>Decision log design</strong> — how decisions are recorded and communicated",out:"Decisions are made faster, at the right level, by the right people — with clarity on who is accountable and who is consulted.",acts:['Decision inventory and mapping','Decision rights design workshop','RACI development','Escalation path design','Decision log design','Leadership alignment session','Communication and rollout design'],pre:'',pw:'A-1 Outcomes Architecture · A-2 OKR Engine',ns:'AD-1 Co-Creation Sprint'}
-]}
+{code:'SP 2.1',t:"Work isn't traceable to strategy — and there's no shared bar for what justifies prioritization",d:"Teams are working hard on things that don't advance the strategy — because no mechanism requires tracing a capability to a strategic outcome before work begins.",mods:[{id:'A-1',n:'The Outcomes & Evidence Architecture',tm:'4–6 weeks',sp:"Prioritization is political, not evidence-driven — the loudest voice wins because there's no shared framework for sufficient justification.",dl:"<strong>Outcomes hierarchy</strong> — macro and micro outcomes mapped to strategic priorities<br><strong>Capabilities-to-outcomes template</strong> — the forcing function for traceability<br><strong>Evidence standard</strong> — shared definition of what justifies prioritization<br><strong>Governance rhythm</strong> — how outcomes are reviewed and updated",out:"Every capability in flight is traceable to a strategic outcome. Prioritization becomes evidence-driven, not political.",acts:['Strategy intake and analysis','Outcomes hierarchy design','Template design and build','Evidence standard definition','Outcomes mapping workshop','Governance rhythm design','Team onboarding and rollout'],pre:'I-2 Vision & Strategy Sprint (recommended)',pw:'A-2 OKR Engine',ns:'A-2 OKR Engine · A-3 Portfolio Map'}]},
+{code:'SP 2.2',t:"OKRs exist but don't govern decisions or drive behavior",d:"OKRs are written every quarter but don't change how work gets prioritized, resourced, or stopped — they're a reporting ritual, not a governing mechanism.",mods:[{id:'A-2',n:'The OKR Engine',tm:'3–4 weeks',sp:"OKRs are written, reviewed, and filed — but they don't resolve conflicts, stop low-value work, or connect daily decisions to quarterly commitments.",dl:"<strong>OKR architecture</strong> — company, team, and individual levels properly cascaded<br><strong>OKR design standards</strong> — what makes a good objective and a measurable key result<br><strong>Governance cadence</strong> — how OKRs are reviewed and used to resolve trade-offs<br><strong>First cycle facilitation</strong> — facilitated OKR-setting session for leadership",out:"OKRs that actually govern — used to resolve prioritization conflicts, stop low-value work, and connect daily decisions to quarterly commitments.",acts:['Current OKR audit','OKR architecture design','Standards and criteria definition','Cascade mapping','Leadership OKR-setting facilitation','Governance cadence design','Review rhythm documentation'],pre:'A-1 Outcomes & Evidence Architecture',pw:'A-3 Portfolio Map',ns:'A-3 Portfolio Map · A-4 Horizon Plan'}]},
+{code:'SP 2.3',t:"You don't know what you're investing in or why",d:"Investment is distributed across initiatives without a portfolio-level view — no one knows the full picture of what's in flight, what it costs, what outcome it's tied to.",mods:[{id:'A-3',n:'The Portfolio Map',tm:'2–4 weeks',sp:"Leadership is making investment decisions without visibility into what's already in flight — leading to duplication, misallocation, and a portfolio that reflects inertia rather than strategy.",dl:"<strong>Portfolio inventory</strong> — all initiatives mapped, sized, and tagged to outcomes<br><strong>Investment allocation view</strong> — where resources are going vs where strategy says they should<br><strong>Portfolio health assessment</strong> — what's on track, at risk, and misaligned<br><strong>Rationalization recommendations</strong> — what to stop, consolidate, or accelerate",out:"A portfolio view that makes investment visible — so leadership can see the full picture and ensure allocation reflects strategic priorities rather than inertia.",acts:['Initiative discovery and cataloging','Resource and investment mapping','Outcome tagging','Portfolio health scoring','Allocation analysis','Rationalization workshop','Portfolio dashboard design'],pre:'A-1 Outcomes & Evidence Architecture',pw:'',ns:'A-4 Horizon Plan · S-6 Executive Intelligence Dashboard'}]},
+{code:'SP 2.4',t:"You're planning one quarter at a time with no view across horizons",d:"Planning is reactive and short-horizon — the organization can see the next 90 days clearly but has no structured view of 6, 12, or 18 months, leaving strategic bets unconnected to near-term execution.",mods:[{id:'A-4',n:'The Horizon Plan',tm:'3–4 weeks',sp:"Near-term execution is disconnected from long-term bets — every quarter is planned in isolation, making it impossible to sequence commitments intelligently.",dl:"<strong>Horizon map</strong> — 30/60/90/180/365 view of commitments and bets<br><strong>Three horizons framework</strong> — H1 execution, H2 build, H3 explore mapped to current work<br><strong>Planning cadence design</strong> — how annual, quarterly, and sprint planning connect<br><strong>Planning templates</strong> — standardized artifacts for each horizon",out:"A planning architecture that connects near-term execution to long-term bets — so the organization can act on today's commitments without losing sight of where it's trying to be in 18 months.",acts:['Current planning audit','Three horizons mapping workshop','Horizon plan design','Planning cadence architecture','Template design and build','Leadership alignment session','First cycle facilitation'],pre:'I-2 Vision & Strategy Sprint · A-3 Portfolio Map',pw:'',ns:'A-2 OKR Engine'}]},
+{code:'SP 2.5',t:"Leadership isn't telling the same story about where the organization is going",d:"Every leader tells a slightly different version of where the organization is going and why — creating confusion, misalignment, and a credibility gap with teams, customers, and investors.",mods:[{id:'A-5',n:'The Strategic Narrative',tm:'2–3 weeks',sp:"The strategy exists as a slide deck but doesn't travel as a story — every retelling drifts and the cumulative effect is an organization that doesn't know what it's building toward.",dl:"<strong>Strategic narrative document</strong> — the single story leadership tells, consistently<br><strong>Board-level narrative</strong> — adapted for investors and governance audiences<br><strong>Internal narrative</strong> — adapted for teams and all-hands<br><strong>Talk track</strong> — key messages, proof points, and answers to hard questions",out:"One story, told consistently. Leadership speaks with a single voice about where the organization is going — internally and externally.",acts:['Leadership narrative discovery','Story architecture design','Message development workshop','Narrative document production','Board deck narrative adaptation','Internal communication design','Talk track development'],pre:'I-2 Vision & Strategy Sprint · I-5 Market Position',pw:'',ns:'R-3 Platform Narrative'}]},
+{code:'SP 2.6',t:"Decisions are made by whoever is loudest, not by whoever has the mandate",d:"There are no clear decision rights — who decides what, at what level, with what information, and who gets consulted vs informed. This creates bottlenecks at the top and slow execution everywhere.",mods:[{id:'A-6',n:'The Decision Architecture',tm:'2–3 weeks',sp:"Without explicit decision rights, every significant decision escalates — to the most senior person available, not the most appropriate one.",dl:"<strong>Decision rights framework</strong> — who decides what, at every level<br><strong>RACI mapping</strong> — applied to key decision types<br><strong>Escalation paths</strong> — when and how decisions move up<br><strong>Decision log design</strong> — how decisions are recorded and communicated",out:"Decisions are made faster, at the right level, by the right people — with clarity on who is accountable and who is consulted.",acts:['Decision inventory and mapping','Decision rights design workshop','RACI development','Escalation path design','Decision log design','Leadership alignment session','Communication and rollout design'],pre:'',pw:'A-1 Outcomes Architecture · A-2 OKR Engine',ns:'AD-1 Co-Creation Sprint'}]}
 ]},
 signal:{c:'var(--c-signal)',sps:[
-{code:'SP 3.1',t:"You don't know what intelligence you have, where it lives, or who owns it",d:"The organization is making decisions without knowing what intelligence it already has — data sources are undiscovered, ownership is unclear, quality is unverified, and duplication is invisible.",mods:[
-{id:'S-1',n:'The Signal & Data Audit',tm:'2–3 weeks',aud:['data','executive'],sp:"Intelligence investment decisions are made without a clear picture of what already exists — leading to duplication, missed assets, and a false sense of starting from scratch.",dl:"<strong>Signal inventory</strong> — complete map of intelligence sources, coverage, and gaps<br><strong>Data source catalog</strong> — ownership, quality, freshness, and accessibility<br><strong>Coverage assessment</strong> — where signal is strong, weak, or missing<br><strong>Priority gap list</strong> — highest-value missing signals ranked for action",out:"A complete picture of what the organization knows, where it lives, and what's missing — the foundation every intelligence investment decision should be made from.",acts:['Stakeholder interviews','Data source discovery','Signal coverage mapping','Ownership and governance audit','Data quality assessment','Gap analysis and prioritization','Audit report production'],pre:'',pw:'R-7 Stack & Integration Assessment',ns:'S-2 Intelligence Engine · S-3 The Commons Build'}
-]},
+{code:'SP 3.1',t:"You don't know what intelligence you have, where it lives, or who owns it",d:"The organization is making decisions without knowing what intelligence it already has — data sources are undiscovered, ownership is unclear, quality is unverified, and duplication is invisible.",mods:[{id:'S-1',n:'The Signal & Data Audit',tm:'2–3 weeks',sp:"Intelligence investment decisions are made without a clear picture of what already exists — leading to duplication, missed assets, and a false sense of starting from scratch.",dl:"<strong>Signal inventory</strong> — complete map of intelligence sources, coverage, and gaps<br><strong>Data source catalog</strong> — ownership, quality, freshness, and accessibility<br><strong>Coverage assessment</strong> — where signal is strong, weak, or missing<br><strong>Priority gap list</strong> — highest-value missing signals ranked for action",out:"A complete picture of what the organization knows, where it lives, and what's missing — the foundation every intelligence investment decision should be made from.",acts:['Stakeholder interviews','Data source discovery','Signal coverage mapping','Ownership and governance audit','Data quality assessment','Gap analysis and prioritization','Audit report production'],pre:'',pw:'R-7 Stack & Integration Assessment',ns:'S-2 Intelligence Engine · S-3 The Commons Build'}]},
 {code:'SP 3.2',t:"Discovery starts from scratch every cycle — intelligence is not cumulative",d:"The operating model was never designed to make intelligence cumulative — there is no mechanism that captures what one team learns and makes it available to the next.",mods:[
-{id:'S-2',n:'The Intelligence Engine',tm:'4–6 weeks',aud:['data','product'],sp:"There's no architecture for cumulative intelligence — discovery is isolated by team and by quarter, and the organization pays for the same insights repeatedly.",dl:"<strong>Intelligence architecture design</strong> — the system that makes discovery cumulative<br><strong>Tool stack recommendation</strong> — selected against specific jobs-to-be-done<br><strong>Insight taxonomy</strong> — tagging and categorization framework<br><strong>Operating model</strong> — roles, rhythms, and governance<br><strong>Implementation roadmap</strong> — phased plan for building and rolling out",out:"An intelligence architecture that compounds — every team's discovery becomes available to every other team, and the organization gets smarter with every cycle.",acts:['Current state discovery','Intelligence architecture design','Tool evaluation and selection','Taxonomy design','Operating model design','Governance framework','Implementation roadmap','Pilot design'],pre:'S-1 Signal & Data Audit',pw:'',ns:'S-3 The Commons Build'},
-{id:'S-3',n:'The Commons Build',tm:'6–10 weeks',aud:['data','product','practitioners'],sp:"The intelligence architecture is designed but not built — what one team learns still disappears at the end of the quarter.",dl:"<strong>Shared intelligence commons</strong> — live, accessible, cross-functional<br><strong>Curated insight objects</strong> — tagged, themed, deduplicated, linked to evidence<br><strong>Retrieval layer</strong> — natural language search across all validated findings<br><strong>Contribution workflow</strong> — how teams add to and draw from the commons<br><strong>Adoption plan</strong> — rollout, training, and sustained usage design",out:"A living intelligence commons that every function draws from and contributes to — zero parallel research cycles, cumulative organizational intelligence.",acts:['Tool configuration and build','Data migration and ingestion','AI-assisted tagging setup','Human-in-the-loop review design','Retrieval layer configuration','Contribution workflow build','Pilot with early adopters','Training and onboarding'],pre:'S-2 Intelligence Engine',pw:'',ns:'S-4 Intelligence Loop · S-5 Foresight Loop'}
+{id:'S-2',n:'The Intelligence Engine',tm:'4–6 weeks',sp:"There's no architecture for cumulative intelligence — discovery is isolated by team and by quarter, and the organization pays for the same insights repeatedly.",dl:"<strong>Intelligence architecture design</strong> — the system that makes discovery cumulative<br><strong>Tool stack recommendation</strong> — selected against specific jobs-to-be-done<br><strong>Insight taxonomy</strong> — tagging and categorization framework<br><strong>Operating model</strong> — roles, rhythms, and governance<br><strong>Implementation roadmap</strong> — phased plan for building and rolling out",out:"An intelligence architecture that compounds — every team's discovery becomes available to every other team, and the organization gets smarter with every cycle.",acts:['Current state discovery','Intelligence architecture design','Tool evaluation and selection','Taxonomy design','Operating model design','Governance framework','Implementation roadmap','Pilot design'],pre:'S-1 Signal & Data Audit',pw:'',ns:'S-3 The Commons Build'},
+{id:'S-3',n:'The Commons Build',tm:'6–10 weeks',sp:"The intelligence architecture is designed but not built — what one team learns still disappears at the end of the quarter.",dl:"<strong>Shared intelligence commons</strong> — live, accessible, cross-functional<br><strong>Curated insight objects</strong> — tagged, themed, deduplicated, linked to evidence<br><strong>Retrieval layer</strong> — natural language search across all validated findings<br><strong>Contribution workflow</strong> — how teams add to and draw from the commons<br><strong>Adoption plan</strong> — rollout, training, and sustained usage design",out:"A living intelligence commons that every function draws from and contributes to — zero parallel research cycles, cumulative organizational intelligence.",acts:['Tool configuration and build','Data migration and ingestion','AI-assisted tagging setup','Human-in-the-loop review design','Retrieval layer configuration','Contribution workflow build','Pilot with early adopters','Training and onboarding'],pre:'S-2 Intelligence Engine',pw:'',ns:'S-4 Intelligence Loop · S-5 Foresight Loop'}
 ]},
-{code:'SP 3.3',t:"Customer signal isn't reaching product decisions — the feedback loop is broken",d:"Customer and market signals are being captured but not reaching product decisions — there is no architecture connecting what customers are experiencing to what gets built.",mods:[
-{id:'S-4',n:'The Intelligence Loop',tm:'4–6 weeks',aud:['product','gtm','data'],sp:"Customer experience and product direction are disconnected — what customers feel doesn't reliably shape what gets built next.",dl:"<strong>Feedback architecture</strong> — structured capture from customer, GTM, and usage sources<br><strong>Signal-to-roadmap connection</strong> — how insights flow to prioritization<br><strong>Evidence-based roadmap process</strong> — product decisions linked to validated signal<br><strong>Loop closure design</strong> — how outcomes feed back as new signal",out:"Product decisions are continuously informed by a live intelligence layer — roadmaps are updated by evidence, not assumption.",acts:['Feedback source mapping','Signal capture design','GTM feedback integration','Roadmap connection design','Evidence standard definition','Loop closure workflow build','Measurement framework design','Tool configuration'],pre:'S-2 Intelligence Engine (recommended)',pw:'A-1 Outcomes Architecture',ns:'S-5 Foresight Loop'}
-]},
-{code:'SP 3.4',t:"You're reacting to markets instead of anticipating them",d:"The intelligence system captures what's happening now but has no architecture for synthesizing weak signals into emerging patterns — market shifts are visible only after they've peaked.",mods:[
-{id:'S-5',n:'The Foresight Loop',tm:'4–6 weeks',aud:['executive','data'],sp:"Intelligence is backward-looking — the organization knows what happened last quarter but has no system for seeing where markets are moving 12–18 months ahead.",dl:"<strong>Foresight signal architecture</strong> — sources and cadence for anticipatory intelligence<br><strong>Pattern synthesis process</strong> — how disparate signals get connected and interpreted<br><strong>Emerging opportunity framework</strong> — how to evaluate and act on early signals<br><strong>Foresight rhythm</strong> — cadence for reviewing anticipatory intelligence",out:"The organization starts to see where markets are going before demand peaks — positioning ahead of the curve rather than behind it.",acts:['Signal source identification','Weak signal capture design','Pattern synthesis workshop','Opportunity evaluation framework','Market monitoring setup','Foresight rhythm design','Scenario planning facilitation'],pre:'S-3 The Commons Build',pw:'',ns:'I-3 Growth Design · A-4 Horizon Plan'}
-]},
-{code:'SP 3.5',t:"Leadership is making decisions without a live view of what's actually happening",d:"Leadership is making portfolio, investment, and strategic decisions from stale reports, anecdotal updates, and disconnected data — there is no live, unified view.",mods:[
-{id:'S-6',n:'The Executive Intelligence Dashboard',tm:'3–5 weeks',aud:['executive','data'],sp:"Decision quality is limited by information latency — leadership is always acting on a picture of the organization that is weeks or months out of date.",dl:"<strong>Executive dashboard</strong> — live view of portfolio health, delivery, and outcomes<br><strong>KPI framework</strong> — metrics that signal what matters, not just what's measurable<br><strong>Risk and decision surface</strong> — what's at risk and what decisions are needed<br><strong>Data pipeline design</strong> — how the dashboard stays current without manual effort",out:"Leadership has a live, honest view of what's happening — enabling faster decisions and earlier risk identification.",acts:['Leadership decision needs assessment','KPI definition and prioritization','Data source mapping','Dashboard architecture design','Data pipeline design and build','Dashboard build','Iteration and leadership review'],pre:'A-3 Portfolio Map · S-1 Signal & Data Audit',pw:'',ns:'S-4 Intelligence Loop'}
-]},
-{code:'SP 3.6',t:"Signal capture and synthesis is still manual — no automated workflows exist",d:"Intelligence work is labor-intensive and inconsistent — people are manually pulling signals, copying between tools, and synthesizing insights by hand.",mods:[
-{id:'S-7',n:'The Agentic Signal Layer',tm:'6–10 weeks',aud:['data','engineering'],sp:"The intelligence system requires constant manual effort — it runs inconsistently and degrades when attention shifts.",dl:"<strong>Agentic workflow design</strong> — automated signal capture across sources<br><strong>AI-assisted synthesis</strong> — pattern detection, clustering, and tagging at scale<br><strong>Human-in-the-loop checkpoints</strong> — where human judgment is preserved<br><strong>Governance and reliability framework</strong> — how the system is monitored<br><strong>Deployed workflows</strong> — running automations with measurement in place",out:"The intelligence system runs continuously in the background — capturing, synthesizing, and routing signals without manual effort.",acts:['Workflow audit and opportunity mapping','Agentic workflow design','Tool and API integration','AI model configuration','Human review checkpoint design','Workflow build and testing','Governance framework','Monitoring and iteration design'],pre:'S-3 The Commons Build',pw:'R-7 Stack & Integration Assessment',ns:'S-4 Intelligence Loop · S-5 Foresight Loop'}
-]}
+{code:'SP 3.3',t:"Customer signal isn't reaching product decisions — the feedback loop is broken",d:"Customer and market signals are being captured but not reaching product decisions — there is no architecture connecting what customers are experiencing to what gets built.",mods:[{id:'S-4',n:'The Intelligence Loop',tm:'4–6 weeks',sp:"Customer experience and product direction are disconnected — what customers feel doesn't reliably shape what gets built next.",dl:"<strong>Feedback architecture</strong> — structured capture from customer, GTM, and usage sources<br><strong>Signal-to-roadmap connection</strong> — how insights flow to prioritization<br><strong>Evidence-based roadmap process</strong> — product decisions linked to validated signal<br><strong>Loop closure design</strong> — how outcomes feed back as new signal",out:"Product decisions are continuously informed by a live intelligence layer — roadmaps are updated by evidence, not assumption.",acts:['Feedback source mapping','Signal capture design','GTM feedback integration','Roadmap connection design','Evidence standard definition','Loop closure workflow build','Measurement framework design','Tool configuration'],pre:'S-2 Intelligence Engine (recommended)',pw:'A-1 Outcomes Architecture',ns:'S-5 Foresight Loop'}]},
+{code:'SP 3.4',t:"You're reacting to markets instead of anticipating them",d:"The intelligence system captures what's happening now but has no architecture for synthesizing weak signals into emerging patterns — market shifts are visible only after they've peaked.",mods:[{id:'S-5',n:'The Foresight Loop',tm:'4–6 weeks',sp:"Intelligence is backward-looking — the organization knows what happened last quarter but has no system for seeing where markets are moving 12–18 months ahead.",dl:"<strong>Foresight signal architecture</strong> — sources and cadence for anticipatory intelligence<br><strong>Pattern synthesis process</strong> — how disparate signals get connected and interpreted<br><strong>Emerging opportunity framework</strong> — how to evaluate and act on early signals<br><strong>Foresight rhythm</strong> — cadence for reviewing anticipatory intelligence",out:"The organization starts to see where markets are going before demand peaks — positioning ahead of the curve rather than behind it.",acts:['Signal source identification','Weak signal capture design','Pattern synthesis workshop','Opportunity evaluation framework','Market monitoring setup','Foresight rhythm design','Scenario planning facilitation'],pre:'S-3 The Commons Build',pw:'',ns:'I-3 Growth Design · A-4 Horizon Plan'}]},
+{code:'SP 3.5',t:"Leadership is making decisions without a live view of what's actually happening",d:"Leadership is making portfolio, investment, and strategic decisions from stale reports, anecdotal updates, and disconnected data — there is no live, unified view.",mods:[{id:'S-6',n:'The Executive Intelligence Dashboard',tm:'3–5 weeks',sp:"Decision quality is limited by information latency — leadership is always acting on a picture of the organization that is weeks or months out of date.",dl:"<strong>Executive dashboard</strong> — live view of portfolio health, delivery, and outcomes<br><strong>KPI framework</strong> — metrics that signal what matters, not just what's measurable<br><strong>Risk and decision surface</strong> — what's at risk and what decisions are needed<br><strong>Data pipeline design</strong> — how the dashboard stays current without manual effort",out:"Leadership has a live, honest view of what's happening — enabling faster decisions and earlier risk identification.",acts:['Leadership decision needs assessment','KPI definition and prioritization','Data source mapping','Dashboard architecture design','Data pipeline design and build','Dashboard build','Iteration and leadership review'],pre:'A-3 Portfolio Map · S-1 Signal & Data Audit',pw:'',ns:'S-4 Intelligence Loop'}]},
+{code:'SP 3.6',t:"Signal capture and synthesis is still manual — no automated workflows exist",d:"Intelligence work is labor-intensive and inconsistent — people are manually pulling signals, copying between tools, and synthesizing insights by hand.",mods:[{id:'S-7',n:'The Agentic Signal Layer',tm:'6–10 weeks',sp:"The intelligence system requires constant manual effort — it runs inconsistently and degrades when attention shifts.",dl:"<strong>Agentic workflow design</strong> — automated signal capture across sources<br><strong>AI-assisted synthesis</strong> — pattern detection, clustering, and tagging at scale<br><strong>Human-in-the-loop checkpoints</strong> — where human judgment is preserved<br><strong>Governance and reliability framework</strong> — how the system is monitored<br><strong>Deployed workflows</strong> — running automations with measurement in place",out:"The intelligence system runs continuously in the background — capturing, synthesizing, and routing signals without manual effort.",acts:['Workflow audit and opportunity mapping','Agentic workflow design','Tool and API integration','AI model configuration','Human review checkpoint design','Workflow build and testing','Governance framework','Monitoring and iteration design'],pre:'S-3 The Commons Build',pw:'R-7 Stack & Integration Assessment',ns:'S-4 Intelligence Loop · S-5 Foresight Loop'}]}
 ]},
 reinvention:{c:'var(--c-reinvention)',sps:[
-{code:'SP 4.1',t:"You don't have a clear inventory of what you've built or how it fits together",d:"The organization is rebuilding what it already has — because no one has a complete, accurate inventory of what's been built, what's in use, what's redundant, and what's worth composing from.",mods:[
-{id:'R-1',n:'The Capability Audit',tm:'2–3 weeks',aud:['product','engineering'],sp:"Teams start new builds without checking what exists — because what exists isn't discoverable. The result is duplication and wasted investment.",dl:"<strong>Product capability inventory</strong> — complete, tagged, searchable<br><strong>Redundancy map</strong> — where parallel builds exist across teams<br><strong>Reuse assessment</strong> — what is composable and what isn't<br><strong>Priority consolidation list</strong> — highest-value rationalization opportunities",out:"Leadership and teams have a shared, accurate view of what exists — so the next investment decision starts from what's been built, not from scratch.",acts:['Cross-team capability discovery','Inventory documentation','Redundancy mapping','Reuse assessment','Tagging and categorization','Consolidation prioritization','Audit report production'],pre:'',pw:'I-6 Capabilities Inventory',ns:'R-2 Component System'}
+{code:'SP 4.1',t:"You don't have a clear inventory of what you've built or how it fits together",d:"The organization is rebuilding what it already has — because no one has a complete, accurate inventory of what's been built, what's in use, what's redundant, and what's worth composing from.",mods:[{id:'R-1',n:'The Capability Audit',tm:'2–3 weeks',sp:"Teams start new builds without checking what exists — because what exists isn't discoverable. The result is duplication and wasted investment.",dl:"<strong>Product capability inventory</strong> — complete, tagged, searchable<br><strong>Redundancy map</strong> — where parallel builds exist across teams<br><strong>Reuse assessment</strong> — what is composable and what isn't<br><strong>Priority consolidation list</strong> — highest-value rationalization opportunities",out:"Leadership and teams have a shared, accurate view of what exists — so the next investment decision starts from what's been built, not from scratch.",acts:['Cross-team capability discovery','Inventory documentation','Redundancy mapping','Reuse assessment','Tagging and categorization','Consolidation prioritization','Audit report production'],pre:'',pw:'I-6 Capabilities Inventory',ns:'R-2 Component System'}]},
+{code:'SP 4.2',t:"Teams are solving the same problems from scratch — the organization doesn't reuse what it builds",d:"The problem isn't that knowledge isn't shared — it's that solutions aren't designed to be composable. A document describing how something was built is not a component that can be used again.",mods:[{id:'R-2',n:'The Component System',tm:'6–10 weeks',sp:"The organization builds from first principles because there's no architecture for composition — every new problem triggers a new solution.",dl:"<strong>Modular architecture design</strong> — components, frameworks, packages, shipped capabilities<br><strong>Component repository</strong> — centralized, tagged, searchable, built for retrieval not storage<br><strong>Reuse standards and governance</strong> — what qualifies as a component and who owns it<br><strong>Composition patterns</strong> — how teams assemble from existing rather than building from scratch",out:"The organization's accumulated work becomes a building material, not a historical record. Teams stop designing from first principles and start composing from a shared foundation.",acts:['Architecture design workshop','Component identification and classification','Repository design and build','Tagging and metadata design','Governance and ownership model','Reuse standards documentation','Pilot with early adopting teams','Adoption rollout design'],pre:'R-1 Capability Audit',pw:'',ns:'R-3 Platform Narrative · AD-1 Co-Creation Sprint'}]},
+{code:'SP 4.3',t:"You have capabilities but no coherent story about what they add up to",d:"Individual capabilities are strong but the organization can't tell a coherent story about what they add up to — internally or externally. Teams, customers, and investors each understand a different piece.",mods:[{id:'R-3',n:'The Platform Narrative',tm:'2–3 weeks',sp:"Capabilities are real but invisible as a platform — customers buy features, not systems, and internal teams build without a shared understanding of the architecture they're contributing to.",dl:"<strong>Platform narrative</strong> — the story that connects all capabilities into one coherent offering<br><strong>Capability map</strong> — visual architecture of how capabilities relate and compound<br><strong>Internal narrative</strong> — how teams understand what they're building toward<br><strong>External narrative</strong> — how customers and partners understand the platform",out:"A coherent platform story that travels — from engineering to sales to leadership to the market — making individual capabilities more valuable as part of something larger.",acts:['Capability architecture mapping','Narrative design workshop','Story architecture development','Visual capability map design','Internal narrative documentation','External narrative adaptation','Leadership alignment session'],pre:'R-1 Capability Audit · I-5 Market Position',pw:'A-5 Strategic Narrative',ns:'R-4 GTM Architecture · R-5 Offer Design'}]},
+{code:'SP 4.4',t:"You have a product but not a repeatable motion to sell and deliver it",d:"The product exists but there's no repeatable commercial motion — how you find, qualify, sell, and deliver is different every time, creating unpredictable results and preventing scale.",mods:[
+{id:'R-4',n:'The GTM Architecture',tm:'4–6 weeks',sp:"Every deal is improvised — without a defined go-to-market motion, commercial results are inconsistent and scale requires adding headcount rather than improving the system.",dl:"<strong>GTM model design</strong> — channels, motions, and sequencing<br><strong>ICP definition</strong> — who you sell to and why they buy<br><strong>Sales motion design</strong> — stages, criteria, and handoffs<br><strong>Delivery model</strong> — how you execute after the sale<br><strong>GTM metrics framework</strong> — what success looks like at each stage",out:"A repeatable commercial motion — consistent enough to scale, flexible enough to adapt.",acts:['Current GTM audit','ICP definition workshop','GTM model design','Sales motion mapping','Delivery model design','Metrics framework design','GTM documentation production'],pre:'R-3 Platform Narrative · R-5 Offer Design',pw:'',ns:'R-6 The Playbook'},
+{id:'R-5',n:'The Offer Design',tm:'3–4 weeks',sp:"The value proposition isn't landing — buyers don't immediately understand what they're getting, why it matters, or how it's different from the alternatives.",dl:"<strong>Offer architecture</strong> — what you sell, how it's packaged, and how it's priced<br><strong>Value proposition</strong> — buyer-specific, outcome-forward, differentiated<br><strong>Pricing model</strong> — structure and rationale<br><strong>Offer collateral</strong> — one-pager, deck, and leave-behind",out:"An offer that lands immediately — buyers understand what they're getting, why it matters, and why you're the right choice.",acts:['Buyer research and interviews','Value proposition design workshop','Offer architecture design','Pricing model development','Message testing','Collateral production'],pre:'I-5 Market Position · R-3 Platform Narrative',pw:'R-4 GTM Architecture',ns:'R-4 GTM Architecture · R-6 The Playbook'},
+{id:'R-6',n:'The Playbook',tm:'4–6 weeks',sp:"Every deal, engagement, or delivery starts from zero — there's no repeatable framework that captures what works and makes success reproducible.",dl:"<strong>Sales playbook</strong> — repeatable framework for every stage of the commercial process<br><strong>Proposal framework</strong> — structure and standards for every client proposal<br><strong>Delivery playbook</strong> — how engagements are set up, run, and closed<br><strong>Lessons learned system</strong> — how wins and losses improve the playbook over time",out:"A repeatable commercial and delivery framework that makes success reproducible — new team members ramp faster and every engagement improves the next one.",acts:['Win/loss analysis','Sales process mapping','Playbook design and documentation','Proposal framework design','Delivery model documentation','Lessons learned system design','Team training and rollout'],pre:'R-4 GTM Architecture · R-5 Offer Design',pw:'',ns:'AD-2 Champion Network'}
 ]},
-{code:'SP 4.2',t:"Teams are solving the same problems from scratch — the organization doesn't reuse what it builds",d:"The problem isn't that knowledge isn't shared — it's that solutions aren't designed to be composable.",mods:[
-{id:'R-2',n:'The Component System',tm:'6–10 weeks',aud:['product','engineering','practitioners'],sp:"The organization builds from first principles because there's no architecture for composition — every new problem triggers a new solution.",dl:"<strong>Modular architecture design</strong> — components, frameworks, packages, shipped capabilities<br><strong>Component repository</strong> — centralized, tagged, searchable, built for retrieval not storage<br><strong>Reuse standards and governance</strong> — what qualifies as a component and who owns it<br><strong>Composition patterns</strong> — how teams assemble from existing rather than building from scratch",out:"The organization's accumulated work becomes a building material, not a historical record. Teams stop designing from first principles and start composing from a shared foundation.",acts:['Architecture design workshop','Component identification and classification','Repository design and build','Tagging and metadata design','Governance and ownership model','Reuse standards documentation','Pilot with early adopting teams','Adoption rollout design'],pre:'R-1 Capability Audit',pw:'',ns:'R-3 Platform Narrative · AD-1 Co-Creation Sprint'}
-]},
-{code:'SP 4.3',t:"You have capabilities but no coherent story about what they add up to",d:"Individual capabilities are strong but the organization can't tell a coherent story about what they add up to — internally or externally.",mods:[
-{id:'R-3',n:'The Platform Narrative',tm:'2–3 weeks',aud:['executive','gtm','product'],sp:"Capabilities are real but invisible as a platform — customers buy features, not systems, and internal teams build without a shared understanding of the architecture they're contributing to.",dl:"<strong>Platform narrative</strong> — the story that connects all capabilities into one coherent offering<br><strong>Capability map</strong> — visual architecture of how capabilities relate and compound<br><strong>Internal narrative</strong> — how teams understand what they're building toward<br><strong>External narrative</strong> — how customers and partners understand the platform",out:"A coherent platform story that travels — from engineering to sales to leadership to the market.",acts:['Capability architecture mapping','Narrative design workshop','Story architecture development','Visual capability map design','Internal narrative documentation','External narrative adaptation','Leadership alignment session'],pre:'R-1 Capability Audit · I-5 Market Position',pw:'A-5 Strategic Narrative',ns:'R-4 GTM Architecture · R-5 Offer Design'}
-]},
-{code:'SP 4.4',t:"You have a product but not a repeatable motion to sell and deliver it",d:"The product exists but there's no repeatable commercial motion — how you find, qualify, sell, and deliver is different every time.",mods:[
-{id:'R-4',n:'The GTM Architecture',tm:'4–6 weeks',aud:['gtm','executive'],sp:"Every deal is improvised — without a defined go-to-market motion, commercial results are inconsistent and scale requires adding headcount rather than improving the system.",dl:"<strong>GTM model design</strong> — channels, motions, and sequencing<br><strong>ICP definition</strong> — who you sell to and why they buy<br><strong>Sales motion design</strong> — stages, criteria, and handoffs<br><strong>Delivery model</strong> — how you execute after the sale<br><strong>GTM metrics framework</strong> — what success looks like at each stage",out:"A repeatable commercial motion — consistent enough to scale, flexible enough to adapt.",acts:['Current GTM audit','ICP definition workshop','GTM model design','Sales motion mapping','Delivery model design','Metrics framework design','GTM documentation production'],pre:'R-3 Platform Narrative · R-5 Offer Design',pw:'',ns:'R-6 The Playbook'},
-{id:'R-5',n:'The Offer Design',tm:'3–4 weeks',aud:['gtm','executive'],sp:"The value proposition isn't landing — buyers don't immediately understand what they're getting, why it matters, or how it's different from the alternatives.",dl:"<strong>Offer architecture</strong> — what you sell, how it's packaged, and how it's priced<br><strong>Value proposition</strong> — buyer-specific, outcome-forward, differentiated<br><strong>Pricing model</strong> — structure and rationale<br><strong>Offer collateral</strong> — one-pager, deck, and leave-behind",out:"An offer that lands immediately — buyers understand what they're getting, why it matters, and why you're the right choice.",acts:['Buyer research and interviews','Value proposition design workshop','Offer architecture design','Pricing model development','Message testing','Collateral production'],pre:'I-5 Market Position · R-3 Platform Narrative',pw:'R-4 GTM Architecture',ns:'R-4 GTM Architecture · R-6 The Playbook'},
-{id:'R-6',n:'The Playbook',tm:'4–6 weeks',aud:['gtm','practitioners'],sp:"Every deal, engagement, or delivery starts from zero — there's no repeatable framework that captures what works and makes success reproducible.",dl:"<strong>Sales playbook</strong> — repeatable framework for every stage of the commercial process<br><strong>Proposal framework</strong> — structure and standards for every client proposal<br><strong>Delivery playbook</strong> — how engagements are set up, run, and closed<br><strong>Lessons learned system</strong> — how wins and losses improve the playbook over time",out:"A repeatable commercial and delivery framework that makes success reproducible — new team members ramp faster and every engagement improves the next one.",acts:['Win/loss analysis','Sales process mapping','Playbook design and documentation','Proposal framework design','Delivery model documentation','Lessons learned system design','Team training and rollout'],pre:'R-4 GTM Architecture · R-5 Offer Design',pw:'',ns:'AD-2 Champion Network'}
-]},
-{code:'SP 4.5',t:"Your tooling has outgrown your strategy — creating drag, redundancy, and integration debt",d:"Tools have been added faster than strategy — creating redundancy, integration gaps, and technical debt that slows teams down.",mods:[
-{id:'R-7',n:'The Stack & Integration Assessment',tm:'2–4 weeks',aud:['engineering','data'],sp:"The tool stack is a historical artifact of individual decisions — it costs more than it should and creates friction the operating model was designed to eliminate.",dl:"<strong>Tool inventory</strong> — complete map of current stack, cost, usage, and overlap<br><strong>Redundancy analysis</strong> — where multiple tools serve the same job<br><strong>Integration gap map</strong> — where tools don't talk to each other and should<br><strong>Rationalization roadmap</strong> — what to consolidate, retire, or integrate<br><strong>Integration architecture</strong> — how the rationalized stack supports the operating model",out:"A tool stack that serves the operating model rather than working against it — rationalized, integrated, and aligned to the jobs teams actually need to do.",acts:['Tool discovery and cataloging','Usage and cost analysis','Job-to-be-done mapping','Redundancy assessment','Integration gap analysis','Rationalization workshop','Integration architecture design','Roadmap production'],pre:'',pw:'S-1 Signal & Data Audit · R-1 Capability Audit',ns:'S-7 Agentic Signal Layer'}
-]}
+{code:'SP 4.5',t:"Your tooling has outgrown your strategy — creating drag, redundancy, and integration debt",d:"Tools have been added faster than strategy — creating redundancy, integration gaps, and technical debt that slows teams down and prevents the operating model from functioning as designed.",mods:[{id:'R-7',n:'The Stack & Integration Assessment',tm:'2–4 weeks',sp:"The tool stack is a historical artifact of individual decisions — it costs more than it should and creates friction the operating model was designed to eliminate.",dl:"<strong>Tool inventory</strong> — complete map of current stack, cost, usage, and overlap<br><strong>Redundancy analysis</strong> — where multiple tools serve the same job<br><strong>Integration gap map</strong> — where tools don't talk to each other and should<br><strong>Rationalization roadmap</strong> — what to consolidate, retire, or integrate<br><strong>Integration architecture</strong> — how the rationalized stack supports the operating model",out:"A tool stack that serves the operating model rather than working against it — rationalized, integrated, and aligned to the jobs teams actually need to do.",acts:['Tool discovery and cataloging','Usage and cost analysis','Job-to-be-done mapping','Redundancy assessment','Integration gap analysis','Rationalization workshop','Integration architecture design','Roadmap production'],pre:'',pw:'S-1 Signal & Data Audit · R-1 Capability Audit',ns:'S-7 Agentic Signal Layer'}]}
 ]},
 adoption:{c:'var(--c-adoption)',sps:[
-{code:'SP 5.1',t:"You're designing systems for problems you've assumed, not diagnosed",d:"Systems are being designed for assumed pain — and practitioners are receiving the output rather than shaping it.",mods:[
-{id:'AD-1',n:'The Co-Creation Sprint',tm:'2–3 weeks',aud:['practitioners','product'],sp:"The system is being designed by people who don't use it, for problems they've assumed rather than diagnosed — creating a solution with no natural constituency.",dl:"<strong>Felt pain diagnosis</strong> — what practitioners actually experience, not what leadership assumes<br><strong>Incentive map</strong> — current structures that will support or resist the system<br><strong>Champion identification</strong> — natural adopters whose peers watch and follow<br><strong>Co-created system design</strong> — practitioners as architects, not recipients<br><strong>Coalition</strong> — a group of practitioners with ownership before rollout begins",out:"A system designed from real pain by the people who will use it — with a coalition of practitioners who own it before it launches.",acts:['Practitioner interviews and pain diagnosis','Incentive mapping','Stakeholder mapping','Champion identification','Co-creation workshop facilitation','System design with practitioners','Coalition formation'],pre:'',pw:'Any module requiring organizational adoption',ns:'AD-2 Champion Network · AD-3 Rollout Architecture'}
-]},
-{code:'SP 5.2',t:"Adoption is top-down and fragile — it doesn't survive leadership change",d:"Adoption is driven by mandate — and mandated adoption is borrowed trust. The moment the mandate author leaves the room, compliance drops.",mods:[
-{id:'AD-2',n:'The Champion Network',tm:'3–4 weeks',aud:['practitioners','executive'],sp:"The system relies on executive mandate — which means it holds while that executive is watching and erodes the moment attention shifts.",dl:"<strong>Champion identification framework</strong> — how to find the people whose peers watch and follow<br><strong>Champion network design</strong> — structure, roles, and rhythm<br><strong>Peer adoption playbook</strong> — how champions seed adoption horizontally<br><strong>Recognition and support model</strong> — what champions get in return<br><strong>Network activation plan</strong> — sequencing for maximum peer influence",out:"Adoption that travels peer-to-peer and holds without mandate — practitioners defend the system because it makes their work better.",acts:['Influence network mapping','Champion identification and recruitment','Champion network design','Peer playbook development','Champion onboarding and enablement','Recognition model design','Network activation sequencing'],pre:'AD-1 Co-Creation Sprint',pw:'',ns:'AD-3 Rollout Architecture'}
-]},
-{code:'SP 5.3',t:"You have a system but no plan for how it scales across the organization",d:"The system is ready but there's no structured plan for how it scales — who gets it first, in what sequence, with what support.",mods:[
-{id:'AD-3',n:'The Rollout Architecture',tm:'2–3 weeks',aud:['practitioners','product'],sp:"Rollout is happening all at once or without a plan — the system is underresourced at every stage and there's no feedback loop to catch drift.",dl:"<strong>Rollout sequencing plan</strong> — who gets it first and why<br><strong>Pilot design</strong> — one clean before/after story before broad rollout<br><strong>Onboarding and enablement design</strong> — how practitioners get up to speed<br><strong>Stage gates</strong> — what success looks like before moving to the next cohort<br><strong>Institutionalization plan</strong> — how the system gets embedded in process",out:"A rollout that builds durably — sequenced for maximum peer influence, supported at each stage, and designed to compound rather than collapse under scale.",acts:['Stakeholder and cohort mapping','Sequencing design','Pilot design and facilitation','Onboarding program design','Stage gate definition','Institutionalization plan','Communication strategy'],pre:'AD-1 Co-Creation Sprint · AD-2 Champion Network',pw:'',ns:'AD-4 Adoption Pulse'}
-]},
-{code:'SP 5.4',t:"You can't tell the difference between compliance and adoption — and they're diverging",d:"Compliance and adoption produce identical-looking metrics for about six weeks — then they diverge completely.",mods:[
-{id:'AD-4',n:'The Adoption Pulse',tm:'Ongoing · 4-week cycles',aud:['executive','practitioners'],sp:"There's no mechanism to detect the difference between genuine adoption and surface compliance — problems compound invisibly until they're expensive to correct.",dl:"<strong>Adoption measurement framework</strong> — metrics that distinguish adoption from compliance<br><strong>Pulse check design</strong> — lightweight, high-frequency feedback mechanism<br><strong>Early warning indicators</strong> — signals that drift is forming before it compounds<br><strong>Iteration rhythm</strong> — how feedback drives system improvement<br><strong>Adoption health dashboard</strong> — live view by cohort",out:"Real adoption — visible, measurable, and actively managed. The organization can see where the system is holding and where it's drifting before drift becomes entrenchment.",acts:['Adoption metric design','Compliance vs adoption distinction framework','Pulse check design and deployment','Early warning indicator definition','Dashboard design and build','Iteration rhythm design','Ongoing pulse facilitation'],pre:'AD-3 Rollout Architecture',pw:'Any module in active rollout',ns:''}
-]}
+{code:'SP 5.1',t:"You're designing systems for problems you've assumed, not diagnosed",d:"Systems are being designed for assumed pain — and practitioners are receiving the output rather than shaping it. The result is a system that solves the wrong problem.",mods:[{id:'AD-1',n:'The Co-Creation Sprint',tm:'2–3 weeks',sp:"The system is being designed by people who don't use it, for problems they've assumed rather than diagnosed — creating a solution with no natural constituency.",dl:"<strong>Felt pain diagnosis</strong> — what practitioners actually experience, not what leadership assumes<br><strong>Incentive map</strong> — current structures that will support or resist the system<br><strong>Champion identification</strong> — natural adopters whose peers watch and follow<br><strong>Co-created system design</strong> — practitioners as architects, not recipients<br><strong>Coalition</strong> — a group of practitioners with ownership before rollout begins",out:"A system designed from real pain by the people who will use it — with a coalition of practitioners who own it before it launches.",acts:['Practitioner interviews and pain diagnosis','Incentive mapping','Stakeholder mapping','Champion identification','Co-creation workshop facilitation','System design with practitioners','Coalition formation'],pre:'',pw:'Any module requiring organizational adoption',ns:'AD-2 Champion Network · AD-3 Rollout Architecture'}]},
+{code:'SP 5.2',t:"Adoption is top-down and fragile — it doesn't survive leadership change",d:"Adoption is driven by mandate — and mandated adoption is borrowed trust. The moment the mandate author leaves the room, compliance drops.",mods:[{id:'AD-2',n:'The Champion Network',tm:'3–4 weeks',sp:"The system relies on executive mandate — which means it holds while that executive is watching and erodes the moment attention shifts.",dl:"<strong>Champion identification framework</strong> — how to find the people whose peers watch and follow<br><strong>Champion network design</strong> — structure, roles, and rhythm<br><strong>Peer adoption playbook</strong> — how champions seed adoption horizontally<br><strong>Recognition and support model</strong> — what champions get in return<br><strong>Network activation plan</strong> — sequencing for maximum peer influence",out:"Adoption that travels peer-to-peer and holds without mandate — practitioners defend the system because it makes their work better.",acts:['Influence network mapping','Champion identification and recruitment','Champion network design','Peer playbook development','Champion onboarding and enablement','Recognition model design','Network activation sequencing'],pre:'AD-1 Co-Creation Sprint',pw:'',ns:'AD-3 Rollout Architecture'}]},
+{code:'SP 5.3',t:"You have a system but no plan for how it scales across the organization",d:"The system is ready but there's no structured plan for how it scales — who gets it first, in what sequence, with what support, and how success is defined at each stage.",mods:[{id:'AD-3',n:'The Rollout Architecture',tm:'2–3 weeks',sp:"Rollout is happening all at once or without a plan — the system is underresourced at every stage and there's no feedback loop to catch drift.",dl:"<strong>Rollout sequencing plan</strong> — who gets it first and why<br><strong>Pilot design</strong> — one clean before/after story before broad rollout<br><strong>Onboarding and enablement design</strong> — how practitioners get up to speed<br><strong>Stage gates</strong> — what success looks like before moving to the next cohort<br><strong>Institutionalization plan</strong> — how the system gets embedded in process",out:"A rollout that builds durably — sequenced for maximum peer influence, supported at each stage, and designed to compound rather than collapse under scale.",acts:['Stakeholder and cohort mapping','Sequencing design','Pilot design and facilitation','Onboarding program design','Stage gate definition','Institutionalization plan','Communication strategy'],pre:'AD-1 Co-Creation Sprint · AD-2 Champion Network',pw:'',ns:'AD-4 Adoption Pulse'}]},
+{code:'SP 5.4',t:"You can't tell the difference between compliance and adoption — and they're diverging",d:"Compliance and adoption produce identical-looking metrics for about six weeks — then they diverge completely. By the time the difference is visible, patterns are entrenched.",mods:[{id:'AD-4',n:'The Adoption Pulse',tm:'Ongoing · 4-week cycles',sp:"There's no mechanism to detect the difference between genuine adoption and surface compliance — problems compound invisibly until they're expensive to correct.",dl:"<strong>Adoption measurement framework</strong> — metrics that distinguish adoption from compliance<br><strong>Pulse check design</strong> — lightweight, high-frequency feedback mechanism<br><strong>Early warning indicators</strong> — signals that drift is forming before it compounds<br><strong>Iteration rhythm</strong> — how feedback drives system improvement<br><strong>Adoption health dashboard</strong> — live view by cohort",out:"Real adoption — visible, measurable, and actively managed. The organization can see where the system is holding and where it's drifting before drift becomes entrenchment.",acts:['Adoption metric design','Compliance vs adoption distinction framework','Pulse check design and deployment','Early warning indicator definition','Dashboard design and build','Iteration rhythm design','Ongoing pulse facilitation'],pre:'AD-3 Rollout Architecture',pw:'Any module in active rollout',ns:''}]}
 ]}
 };
 
@@ -480,7 +277,7 @@ const CAPS=[
 {c:'var(--c-identity)',t:'Strategy & Vision',d:'Vision articulation, strategic choice mapping, growth model design, scenario planning, and competitive positioning. The intellectual architecture that makes strategic intent actionable.'},
 {c:'var(--c-alignment)',t:'Service Design & Blueprinting',d:'End-to-end service design, journey mapping, stakeholder persona development, and service blueprinting. Surfaces the gap between intended and actual experience before systems are designed around the wrong problem.'},
 {c:'var(--c-signal)',t:'Human-Centered Research',d:'Qualitative research, practitioner interviews, pain diagnosis, behavioral observation, and synthesis. The intelligence behind every co-creation session and adoption design.'},
-{c:'var(--c-signal)',t:'Intelligence Architecture & Data',d:'Signal infrastructure design, knowledge commons build, insight taxonomy, data source mapping, analytics pipeline design, dashboard design and visualization. Makes organizational learning cumulative and visible.'},
+{c:'var(--c-signal)',t:'Intelligence Architecture & Data',d:'Signal infrastructure design, knowledge commons build, insight taxonomy, data source mapping, analytics pipeline design, and dashboard build. Makes organizational learning cumulative.'},
 {c:'var(--c-reinvention)',t:'Agentic AI Workflow Design',d:"Agentic workflow design and deployment, AI governance framework, human-in-the-loop design, evaluation framework, and responsible AI operating model. Automates repetitive intelligence work without losing human judgment where it matters."},
 {c:'var(--c-reinvention)',t:'Technical Architecture & Build',d:"Integration architecture, tool rationalization, reference architecture, front-end development, UX and interaction design, and prototype build. Delivered through TCD's technical build partnership."},
 {c:'var(--c-adoption)',t:'Strategic Facilitation',d:'Workshop design and facilitation, executive alignment sessions, co-creation facilitation, stakeholder mapping, and leadership enablement. The craft of making groups think, decide, and commit together.'},
@@ -488,1062 +285,79 @@ const CAPS=[
 {c:'var(--coral)',t:'Operating Model Design',d:'EPD operating model architecture, governance design, planning cadence design, artifact standards, and delivery rhythm design. The connective tissue between every other capability.'}
 ];
 
-// ── STATE ────────────────────────────────────────────────────────────────────
-const eng = new Map();
-const rendered = new Set();
-let activeFilters = new Set(); // global persistent filter state
+const eng=new Map();
+const rendered=new Set();
 
-// ── FILTER LOGIC ─────────────────────────────────────────────────────────────
-function toggleFilter(tag) {
-  if (activeFilters.has(tag)) {
-    activeFilters.delete(tag);
-  } else {
-    activeFilters.add(tag);
-  }
-  updateFilterUI();
-  applyFilters();
-}
-
-function clearFilters() {
-  activeFilters.clear();
-  updateFilterUI();
-  applyFilters();
-}
-
-function modMatchesFilter(mod) {
-  if (activeFilters.size === 0) return true;
-  return mod.aud.some(a => activeFilters.has(a));
-}
-
-function updateFilterUI() {
-  // Update tag active states
-  document.querySelectorAll('.ftag').forEach(el => {
-    el.classList.toggle('active', activeFilters.has(el.dataset.tag));
-  });
-
-  const hasFilters = activeFilters.size > 0;
-
-  // Show/hide clear button
-  document.getElementById('filterClear').classList.toggle('visible', hasFilters);
-
-  // Update match count
-  const noteEl = document.getElementById('filterNote');
-  if (hasFilters) {
-    let total = 0;
-    Object.values(D).forEach(prob => {
-      prob.sps.forEach(sp => {
-        sp.mods.forEach(m => { if (modMatchesFilter(m)) total++; });
-      });
-    });
-    document.getElementById('filterMatchCount').textContent = total;
-    noteEl.style.display = 'block';
-  } else {
-    noteEl.style.display = 'none';
-  }
-
-  // Update home page problem card counts
-  Object.keys(D).forEach(key => {
-    const el = document.getElementById('hcount-' + key);
-    if (!el) return;
-    const prob = D[key];
-    let total = 0;
-    prob.sps.forEach(sp => sp.mods.forEach(m => total++));
-    if (activeFilters.size === 0) {
-      el.textContent = total + ' module' + (total !== 1 ? 's' : '');
-      el.classList.remove('filtered');
-    } else {
-      let matched = 0;
-      prob.sps.forEach(sp => sp.mods.forEach(m => { if (modMatchesFilter(m)) matched++; }));
-      el.textContent = matched + ' of ' + total + ' modules';
-      el.classList.toggle('filtered', matched < total);
-    }
-  });
-}
-
-function applyFilters() {
-  // Apply to all rendered problem pages
-  Object.keys(D).forEach(key => {
-    if (!rendered.has(key)) return;
-    applyFilterToProblem(key);
-  });
-}
-
-function applyFilterToProblem(key) {
-  const prob = D[key];
-  const wrap = document.getElementById('sp-' + key);
-  if (!wrap) return;
-
-  const hasFilter = activeFilters.size > 0;
-
-  // Update filter status on problem page
-  const statusEl = document.getElementById('fstatus-' + key);
-  if (statusEl) {
-    if (hasFilter) {
-      let matched = 0;
-      prob.sps.forEach(sp => sp.mods.forEach(m => { if (modMatchesFilter(m)) matched++; }));
-      let total = 0;
-      prob.sps.forEach(sp => total += sp.mods.length);
-      statusEl.textContent = matched + ' of ' + total + ' modules match current filter';
-      statusEl.style.display = 'block';
-    } else {
-      statusEl.style.display = 'none';
-    }
-  }
-
-  // Dim/show module cards
-  prob.sps.forEach((sp, spIdx) => {
-    const spBlocks = wrap.querySelectorAll('.sp-block');
-    const spBlock = spBlocks[spIdx];
-    if (!spBlock) return;
-
-    let spHasMatch = false;
-    const modCards = spBlock.querySelectorAll('.mod-card');
-
-    sp.mods.forEach((m, mIdx) => {
-      const card = modCards[mIdx];
-      if (!card) return;
-      const matches = modMatchesFilter(m);
-      card.classList.toggle('dimmed', hasFilter && !matches);
-      if (matches) spHasMatch = true;
-    });
-
-    // Dim entire sub-problem block if no modules match
-    spBlock.classList.toggle('dimmed', hasFilter && !spHasMatch);
-
-    // Auto-expand sub-problems that have matches when filter is active
-    if (hasFilter && spHasMatch) {
-      const trig = spBlock.querySelector('.sp-trig');
-      const bd = spBlock.querySelector('.sp-bd');
-      if (trig && bd && !bd.classList.contains('open')) {
-        trig.classList.add('open');
-        bd.classList.add('open');
-      }
-    }
-  });
-}
-
-// ── RENDER ────────────────────────────────────────────────────────────────────
-function renderProb(key) {
-  if (rendered.has(key)) return;
+function renderProb(key){
+  if(rendered.has(key))return;
   rendered.add(key);
-  const prob = D[key];
-  const wrap = document.getElementById('sp-' + key);
-  if (!wrap) return;
-
-  prob.sps.forEach(sp => {
-    const blk = document.createElement('div');
-    blk.className = 'sp-block';
-    const mc = sp.mods.length;
-    const trig = document.createElement('div');
-    trig.className = 'sp-trig';
-    trig.style.borderLeftColor = prob.c;
-    trig.innerHTML = `<div class="sp-code">${sp.code}</div><div class="sp-ttitle">${sp.t}</div><div class="sp-mc">${mc} module${mc>1?'s':''}</div><div class="sp-chv">▾</div>`;
-    const bd = document.createElement('div');
-    bd.className = 'sp-bd';
-    bd.innerHTML = `<div class="sp-desc">${sp.d}</div><div class="mods-stack"></div>`;
-    const stk = bd.querySelector('.mods-stack');
-    sp.mods.forEach(m => stk.appendChild(buildMod(m, prob.c)));
-    trig.onclick = () => { trig.classList.toggle('open'); bd.classList.toggle('open'); };
-    blk.appendChild(trig); blk.appendChild(bd); wrap.appendChild(blk);
+  const prob=D[key];
+  const wrap=document.getElementById('sp-'+key);
+  if(!wrap)return;
+  prob.sps.forEach(sp=>{
+    const blk=document.createElement('div');
+    blk.className='sp-block';
+    const mc=sp.mods.length;
+    const trig=document.createElement('div');
+    trig.className='sp-trig';
+    trig.style.borderLeftColor=prob.c;
+    trig.innerHTML=`<div class="sp-code">${sp.code}</div><div class="sp-ttitle">${sp.t}</div><div class="sp-mc">${mc} module${mc>1?'s':''}</div><div class="sp-chv">▾</div>`;
+    const bd=document.createElement('div');
+    bd.className='sp-bd';
+    bd.innerHTML=`<div class="sp-desc">${sp.d}</div><div class="mods-stack"></div>`;
+    const stk=bd.querySelector('.mods-stack');
+    sp.mods.forEach(m=>stk.appendChild(buildMod(m,prob.c)));
+    trig.onclick=()=>{trig.classList.toggle('open');bd.classList.toggle('open');};
+    blk.appendChild(trig);blk.appendChild(bd);wrap.appendChild(blk);
   });
-
-  // Apply current filter state to newly rendered problem
-  if (activeFilters.size > 0) applyFilterToProblem(key);
 }
 
-function buildMod(m, color) {
-  const card = document.createElement('div');
-  card.className = 'mod-card';
-  const on = eng.has(m.id);
-
-  // Build audience badges HTML
-  const audHTML = m.aud.map(a => `<span class="aud-tag ${a}">${a}</span>`).join('');
-
-  card.innerHTML = `
-    <div class="mod-trig">
-      <div class="mod-id">${m.id}</div>
-      <div class="mod-nm">${m.n}</div>
-      <div class="mod-badges">
-        <div class="mod-tm">${m.tm}</div>
-        ${audHTML}
-      </div>
-      <div class="mod-heart${on?' on':''}" data-id="${m.id}">${on?'♥':'♡'}</div>
-      <div class="mod-chv">▾</div>
-    </div>
-    <div class="mod-bd">
-      <div class="mod-grid">
-        <div><div class="mg-label">Sub-Problem Solved</div><div class="mg-text">${m.sp}</div></div>
-        <div><div class="mg-label">What You Walk Away With</div><div class="mg-text">${m.dl}</div></div>
-        <div><div class="mg-label">The Outcome</div><div class="mg-text">${m.out}</div></div>
-      </div>
-      <div class="act-blk">
-        <div class="act-tog" onclick="togAct(this)"><span class="act-arr">▶</span><span>Activities (${m.acts.length})</span></div>
-        <div class="act-pills">${m.acts.map(a=>`<span class="act-pill">${a}</span>`).join('')}</div>
-      </div>
-      <div class="pairs-row">
-        ${m.pre?`<div class="pair-i"><strong>Prerequisite:</strong> ${m.pre}</div>`:''}
-        ${m.pw?`<div class="pair-i"><strong>Pairs well with:</strong> ${m.pw}</div>`:''}
-        ${m.ns?`<div class="pair-i"><strong>Natural next step:</strong> ${m.ns}</div>`:''}
-      </div>
-    </div>`;
-
-  const trig = card.querySelector('.mod-trig');
-  const body = card.querySelector('.mod-bd');
-  const heart = card.querySelector('.mod-heart');
-
-  trig.onclick = e => {
-    if (e.target.classList.contains('mod-heart')) return;
-    trig.classList.toggle('open');
-    body.classList.toggle('open');
-  };
-
-  heart.onclick = e => {
-    e.stopPropagation();
-    if (eng.has(m.id)) {
-      eng.delete(m.id);
-      heart.textContent = '♡';
-      heart.classList.remove('on');
-    } else {
-      eng.set(m.id, {...m, color});
-      heart.textContent = '♥';
-      heart.classList.add('on');
-    }
-    updateTray();
-  };
-
+function buildMod(m,color){
+  const card=document.createElement('div');
+  card.className='mod-card';
+  const on=eng.has(m.id);
+  card.innerHTML=`<div class="mod-trig"><div class="mod-id">${m.id}</div><div class="mod-nm">${m.n}</div><div class="mod-tm">${m.tm}</div><div class="mod-heart${on?' on':''}" data-id="${m.id}">${on?'♥':'♡'}</div><div class="mod-chv">▾</div></div><div class="mod-bd"><div class="mod-grid"><div><div class="mg-label">Sub-Problem Solved</div><div class="mg-text">${m.sp}</div></div><div><div class="mg-label">What You Walk Away With</div><div class="mg-text">${m.dl}</div></div><div><div class="mg-label">The Outcome</div><div class="mg-text">${m.out}</div></div></div><div class="act-blk"><div class="act-tog" onclick="togAct(this)"><span class="act-arr">▶</span><span>Activities (${m.acts.length})</span></div><div class="act-pills">${m.acts.map(a=>`<span class="act-pill">${a}</span>`).join('')}</div></div><div class="pairs-row">${m.pre?`<div class="pair-i"><strong>Prerequisite:</strong> ${m.pre}</div>`:''}${m.pw?`<div class="pair-i"><strong>Pairs well with:</strong> ${m.pw}</div>`:''}${m.ns?`<div class="pair-i"><strong>Natural next step:</strong> ${m.ns}</div>`:''}</div></div>`;
+  const trig=card.querySelector('.mod-trig');
+  const body=card.querySelector('.mod-bd');
+  const heart=card.querySelector('.mod-heart');
+  trig.onclick=e=>{if(e.target.classList.contains('mod-heart'))return;trig.classList.toggle('open');body.classList.toggle('open');};
+  heart.onclick=e=>{e.stopPropagation();if(eng.has(m.id)){eng.delete(m.id);heart.textContent='♡';heart.classList.remove('on');}else{eng.set(m.id,{...m,color});heart.textContent='♥';heart.classList.add('on');}updateTray();};
   return card;
 }
 
-function togAct(el) { el.classList.toggle('open'); el.nextElementSibling.classList.toggle('open'); }
+function togAct(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('open');}
 
-function renderCaps() {
-  const g = document.getElementById('capsGrid');
-  if (!g || g.children.length) return;
-  CAPS.forEach(cap => {
-    const c = document.createElement('div');
-    c.className = 'cap-card';
-    c.style.borderTopColor = cap.c;
-    c.innerHTML = `<div class="cap-title">${cap.t}</div><div class="cap-desc">${cap.d}</div>`;
-    g.appendChild(c);
-  });
+function renderCaps(){
+  const g=document.getElementById('capsGrid');
+  if(!g||g.children.length)return;
+  CAPS.forEach(cap=>{const c=document.createElement('div');c.className='cap-card';c.style.borderTopColor=cap.c;c.innerHTML=`<div class="cap-title">${cap.t}</div><div class="cap-desc">${cap.d}</div>`;g.appendChild(c);});
 }
 
-// ── TRAY ─────────────────────────────────────────────────────────────────────
-function updateTray() {
-  const n = eng.size;
-  const badge = document.getElementById('engBadge');
-  badge.textContent = n;
-  badge.classList.toggle('on', n > 0);
-  document.getElementById('trayEmpty').style.display = n ? 'none' : 'block';
-  const chips = document.getElementById('trayChips');
-  chips.innerHTML = '';
-  let wks = 0;
-  eng.forEach(m => {
-    const x = m.tm.match(/(\d+)/); if (x) wks += parseInt(x[1]);
-    const c = document.createElement('div');
-    c.className = 'tray-chip';
-    c.style.borderLeftColor = m.color;
-    c.innerHTML = `<div><div class="chip-name">${m.n}</div><div class="chip-sub">${m.id} · ${m.tm}</div></div><div class="chip-rm" data-id="${m.id}">×</div>`;
-    c.querySelector('.chip-rm').onclick = () => {
-      eng.delete(m.id);
-      const h = document.querySelector('.mod-heart[data-id="'+m.id+'"]');
-      if (h) { h.textContent='♡'; h.classList.remove('on'); }
-      updateTray();
-    };
-    chips.appendChild(c);
-  });
-  document.getElementById('traySum').innerHTML = `<strong>${n}</strong> module${n!==1?'s':''} · <strong>${wks}+</strong> weeks estimated`;
+function updateTray(){
+  const n=eng.size;
+  const badge=document.getElementById('engBadge');
+  badge.textContent=n;badge.classList.toggle('on',n>0);
+  document.getElementById('trayEmpty').style.display=n?'none':'block';
+  const chips=document.getElementById('trayChips');chips.innerHTML='';
+  let wks=0;
+  eng.forEach(m=>{const x=m.tm.match(/(\d+)/);if(x)wks+=parseInt(x[1]);const c=document.createElement('div');c.className='tray-chip';c.style.borderLeftColor=m.color;c.innerHTML=`<div><div class="chip-name">${m.n}</div><div class="chip-sub">${m.id} · ${m.tm}</div></div><div class="chip-rm" data-id="${m.id}">×</div>`;c.querySelector('.chip-rm').onclick=()=>{eng.delete(m.id);const h=document.querySelector('.mod-heart[data-id="'+m.id+'"]');if(h){h.textContent='♡';h.classList.remove('on');}updateTray();};chips.appendChild(c);});
+  document.getElementById('traySum').innerHTML=`<strong>${n}</strong> module${n!==1?'s':''} · <strong>${wks}+</strong> weeks estimated`;
 }
 
-function clearEng() {
-  eng.forEach((_, id) => {
-    const h = document.querySelector('.mod-heart[data-id="'+id+'"]');
-    if (h) { h.textContent='♡'; h.classList.remove('on'); }
-  });
-  eng.clear();
-  updateTray();
-}
+function clearAll(){eng.forEach((_,id)=>{const h=document.querySelector('.mod-heart[data-id="'+id+'"]');if(h){h.textContent='♡';h.classList.remove('on');}});eng.clear();updateTray();}
+function toggleTray(){document.getElementById('tray').classList.toggle('open');}
+function exportEng(){if(!eng.size){alert('No modules selected. Heart modules to build your engagement.');return;}let out='The Cultured Design — Intelligence-Driven Growth Framework\nSelected Engagement\n\n';eng.forEach(m=>{out+=`${m.id} · ${m.n} (${m.tm})\n  Outcome: ${m.out.replace(/<[^>]+>/g,'')}\n\n`;});const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([out],{type:'text/plain'}));a.download='TCD_Engagement.txt';a.click();}
 
-function toggleTray() { document.getElementById('tray').classList.toggle('open'); }
-
-function exportEng() {
-  if (!eng.size) { alert('No modules selected. Heart modules to build your engagement.'); return; }
-  let out = 'The Cultured Design — Intelligence-Driven Growth Framework\nSelected Engagement\n\n';
-  eng.forEach(m => { out += `${m.id} · ${m.n} (${m.tm})\nAudience: ${m.aud.join(', ')}\nOutcome: ${m.out.replace(/<[^>]+>/g,'')}\n\n`; });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([out],{type:'text/plain'}));
-  a.download = 'TCD_Engagement.txt';
-  a.click();
-}
-
-// ── NAV ───────────────────────────────────────────────────────────────────────
-function showPage(key) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-  document.getElementById('page-' + key)?.classList.add('active');
+function showPage(key){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
+  document.getElementById('page-'+key)?.classList.add('active');
   document.querySelector('.nav-link[data-page="'+key+'"]')?.classList.add('active');
-  if (D[key]) renderProb(key);
-  if (key === 'capabilities') renderCaps();
-  window.scrollTo(0, 0);
+  if(D[key])renderProb(key);
+  if(key==='capabilities')renderCaps();
+  window.scrollTo(0,0);
 }
-
-
-// ── ROADMAP ──────────────────────────────────────────────────────────────────
-
-// All module IDs that exist in the framework, for prerequisite lookup
-function getAllModules() {
-  const all = {};
-  Object.values(D).forEach(prob => {
-    prob.sps.forEach(sp => {
-      sp.mods.forEach(m => { all[m.id] = m; });
-    });
-  });
-  return all;
-}
-
-// Parse prerequisite string into array of module IDs
-function parsePrereqs(preStr) {
-  if (!preStr) return [];
-  // Extract module ID patterns like I-1, A-2, S-3 etc
-  const matches = preStr.match(/[A-Z]+-[0-9]+/g);
-  return matches || [];
-}
-
-// Build dependency-aware phases for sequencing
-function buildPhases(selectedMods) {
-  const ids = new Set(selectedMods.map(m => m.id));
-  const allMods = getAllModules();
-
-  // Build dependency graph from selected modules only
-  const deps = {}; // id -> set of selected prereq ids
-  selectedMods.forEach(m => {
-    const prereqs = parsePrereqs(m.pre).filter(p => ids.has(p));
-    deps[m.id] = new Set(prereqs);
-  });
-
-  // Topological sort with parallel grouping (Kahn's algorithm)
-  const phases = [];
-  const placed = new Set();
-
-  let remaining = selectedMods.map(m => m.id);
-  let safety = 0;
-
-  while (remaining.length > 0 && safety < 20) {
-    safety++;
-    // Find all modules whose dependencies are satisfied
-    const ready = remaining.filter(id => {
-      return [...deps[id]].every(dep => placed.has(dep));
-    });
-
-    if (ready.length === 0) {
-      // Circular or unresolvable — put remaining in last phase
-      phases.push(remaining.map(id => selectedMods.find(m => m.id === id)));
-      break;
-    }
-
-    phases.push(ready.map(id => selectedMods.find(m => m.id === id)));
-    ready.forEach(id => placed.add(id));
-    remaining = remaining.filter(id => !ready.includes(id));
-  }
-
-  return phases;
-}
-
-// Find dependency gaps — prerequisites not in engagement
-function findGaps(selectedMods) {
-  const ids = new Set(selectedMods.map(m => m.id));
-  const allMods = getAllModules();
-  const gaps = [];
-
-  selectedMods.forEach(m => {
-    const prereqs = parsePrereqs(m.pre);
-    prereqs.forEach(preId => {
-      if (!ids.has(preId) && allMods[preId]) {
-        const premod = allMods[preId];
-        gaps.push({
-          module: m,
-          missingId: preId,
-          missingName: premod.n,
-          rec: `Consider adding ${premod.n} (${preId}) to your engagement, or confirm it has already been completed.`
-        });
-      }
-    });
-  });
-
-  return gaps;
-}
-
-// Phase labels based on position
-function phaseLabel(idx, total) {
-  if (total === 1) return 'Full Engagement';
-  const labels = ['Foundation','Discovery','Design','Build','Activate','Sustain','Optimize'];
-  return labels[idx] || `Phase ${idx + 1}`;
-}
-
-// Get problem color for a module
-function getModColor(modId) {
-  for (const [key, prob] of Object.entries(D)) {
-    for (const sp of prob.sps) {
-      for (const m of sp.mods) {
-        if (m.id === modId) return prob.c;
-      }
-    }
-  }
-  return 'var(--coral)';
-}
-
-
-// Gap reasons — why each prerequisite matters to the dependent module
-const GAP_REASONS = {
-  'I-2:I-1': "The Business Model Canvas establishes how the business creates and captures value — the explicit model that a Vision & Strategy Sprint needs to push against. Without it, the strategy is built on assumed business logic that may not survive scrutiny.",
-  'I-3:I-1': "The Business Model Canvas makes the current economic model explicit. Growth Design builds on top of that — defining how you win from a foundation you've already agreed on. Without it, growth bets are made against an implicit model that leadership may not actually share.",
-  'I-3:I-2': "The Vision & Strategy Sprint defines where you're going and the choices that get you there. Growth Design translates that direction into an economic model — runway, differentiation, and expansion bets. Without a documented strategy, the growth model has no direction to compound against.",
-  'I-5:I-3': "Growth Design defines where and how you win. Market Position articulates that to the outside world. Without a clear growth model, the positioning work lacks an economic anchor — you can write a positioning statement, but it won't be constrained by how the business actually needs to compete.",
-  'I-6:I-3': "Growth Design establishes what the business needs to be true to win. The Capabilities Inventory maps what actually exists against that standard. Without the growth model as the measuring stick, the inventory produces a list — not a gap analysis.",
-  'A-1:I-2': "The Vision & Strategy Sprint produces the strategy document and strategic priorities that the Outcomes Architecture maps work against. Without a documented strategy, the outcomes hierarchy has nothing to trace to — you end up building a traceability system with no destination.",
-  'A-2:A-1': "The Outcomes & Evidence Architecture defines what success looks like and what evidence justifies investment. The OKR Engine operationalizes that — turning the outcomes hierarchy into quarterly governing commitments. Without it, OKRs are written in a vacuum and default to activity tracking rather than outcome governance.",
-  'A-3:A-1': "The Outcomes & Evidence Architecture defines the strategic outcomes that investment should be traceable to. The Portfolio Map tags every initiative against those outcomes. Without a defined outcomes hierarchy, the portfolio inventory produces a list of initiatives — not a view of whether investment reflects strategy.",
-  'A-4:I-2': "The Vision & Strategy Sprint establishes where the organization is going at 18–24 months. The Horizon Plan makes that destination concrete by working backward — mapping 30/60/90/180/365 commitments against a known destination. Without a documented strategy, the horizon plan maps execution with no strategic endpoint to align toward.",
-  'A-4:A-3': "The Portfolio Map surfaces what's actually in flight and what it costs. The Horizon Plan sequences that work across time horizons. Without a portfolio view, the horizon plan is built on assumed capacity — you can't sequence what you haven't inventoried.",
-  'A-5:I-2': "The Vision & Strategy Sprint produces the documented direction and strategic priorities the narrative is built around. Without it, the Strategic Narrative has no governing document to anchor to — you're writing a story about a strategy that hasn't been formally agreed on.",
-  'A-5:I-5': "The Market Position defines who you are for, why you win, and in what category. The Strategic Narrative takes that positioning and makes it travel internally and externally. Without a defined market position, the narrative is a leadership story without a commercial edge.",
-  'A-6:S-1': "Note: this prerequisite pairing appears to be a data mapping issue — Decision Architecture does not require Signal & Data Audit. No gap action needed.",
-  'S-2:S-1': "The Signal & Data Audit produces the complete map of what intelligence exists, where it lives, and what's missing. The Intelligence Engine is designed against that map — it defines the architecture for making discovery cumulative. Without the audit, the engine is designed for an assumed intelligence landscape that may not reflect reality.",
-  'S-3:S-2': "The Intelligence Engine produces the architecture design, tool recommendation, taxonomy, and operating model that the Commons Build implements. Without it, you're building infrastructure without a blueprint — the commons will be under-designed and likely require expensive rework.",
-  'S-4:S-2': "The Intelligence Engine establishes the architecture that connects discovery to organizational knowledge. The Intelligence Loop extends that architecture to close the feedback loop between customer signal and product decisions. Without the engine, the loop has no intelligence layer to route signal through — it becomes a point solution rather than a compounding system.",
-  'S-5:S-3': "The Commons Build creates the shared intelligence infrastructure — the live pool of curated, tagged, cross-functional findings. The Foresight Loop synthesizes patterns across that pool to generate anticipatory intelligence. Without a populated commons, foresight work is pattern-seeking in fragmented, siloed data — the same problem it's designed to solve.",
-  'S-6:A-3': "The Portfolio Map produces the inventory of what's in flight, what it costs, and what outcome each initiative is tied to. The Executive Intelligence Dashboard surfaces that portfolio view in real time. Without the portfolio map, the dashboard has no structured data to display — it becomes a reporting exercise rather than a decision-support system.",
-  'S-6:S-1': "The Signal & Data Audit maps what data exists, who owns it, and what quality it's at. The Executive Intelligence Dashboard is built on top of that data. Without the audit, the dashboard is connected to data sources whose reliability, ownership, and coverage are unknown.",
-  'S-7:S-3': "The Commons Build creates the shared intelligence infrastructure the Agentic Signal Layer automates against. Without a functioning commons, automated signal capture has nowhere to route findings — the workflows are building automation for a system that doesn't exist yet.",
-  'R-2:R-1': "The Capability Audit produces the inventory of what's been built — the complete, tagged map of existing capabilities that the Component System is designed to make composable. Without the audit, the component architecture is designed against an assumed capability landscape. The result is a reuse system built on incomplete knowledge of what actually exists.",
-  'R-3:R-1': "The Capability Audit establishes what capabilities exist and how they relate. The Platform Narrative builds the coherent story of what those capabilities add up to. Without the audit, the narrative is aspirational — it describes a platform that hasn't been fully mapped, which creates credibility risk when customers or teams probe the details.",
-  'R-3:I-5': "The Market Position defines how the organization competes and why it wins. The Platform Narrative is the product expression of that position — the story of what's been built as evidence of the competitive wedge. Without a defined market position, the platform narrative has no external anchor and reads as a capability list rather than a competitive story.",
-  'R-4:R-3': "The Platform Narrative is the coherent story of what's been built. The GTM Architecture designs the repeatable motion to sell it. Without a platform narrative, the GTM motion is built around feature-level selling rather than platform-level value — harder to sell, harder to scale, and harder to train.",
-  'R-4:R-5': "The Offer Design defines what's being sold, how it's packaged, and what value it delivers to which buyer. The GTM Architecture designs the motion to sell that offer. Without a defined offer, the GTM motion is directing a selling system at an undefined target — stages and criteria can be mapped, but they'll require rework when the offer gets defined.",
-  'R-5:I-5': "The Market Position defines who you're for, why you win, and in what category. The Offer Design translates that position into a purchasable unit — a specific package, value proposition, and price. Without a defined market position, the offer design has no competitive constraint and risks being priced and positioned against the wrong alternatives.",
-  'R-5:R-3': "The Platform Narrative establishes the coherent story of what's been built. The Offer Design takes that story and makes it purchasable — packaging, pricing, and value proposition. Without a platform narrative, the offer is disconnected from the broader capability story and is harder to defend when buyers ask how it fits into something larger.",
-  'R-6:R-4': "The GTM Architecture defines the repeatable commercial motion — channels, stages, criteria, and handoffs. The Playbook codifies that motion so it can be executed consistently across the team. Without a defined GTM architecture, the playbook is documenting improvisation rather than a system — it captures what happened rather than what should happen.",
-  'R-6:R-5': "The Offer Design defines what's being sold and how it's positioned. The Playbook operationalizes the sales and delivery of that offer. Without a defined offer, the playbook has no anchor — the proposal framework, talk tracks, and delivery model are all written for an offer that may change.",
-  'AD-3:AD-1': "The Co-Creation Sprint diagnoses real pain, maps incentives, and builds a coalition of practitioners who own the system before rollout begins. The Rollout Architecture sequences how that system reaches the broader organization. Without co-creation, the rollout plan is sequencing adoption for a system that practitioners didn't shape — the adoption architecture is sound but the foundation is fragile.",
-  'AD-3:AD-2': "The Champion Network identifies and activates the practitioners whose peers watch and follow them — the peer credibility layer that makes adoption hold without mandate. The Rollout Architecture sequences that network's activation. Without a champion network, the rollout plan relies on top-down communication rather than peer-to-peer spread — structurally correct but behaviorally fragile.",
-  'AD-4:AD-3': "The Rollout Architecture defines the sequencing, stage gates, and institutionalization plan for how the system reaches the organization. The Adoption Pulse monitors whether that rollout is producing genuine adoption or surface compliance. Without a rollout architecture, there's no defined cohort structure to measure against — the pulse check has no baseline to compare to and no stage gates to validate.",
-};
-
-function openRoadmap() {
-  if (eng.size === 0) {
-    alert('No modules selected. Heart modules to build your engagement first.');
-    return;
-  }
-
-  // Close tray
-  document.getElementById('tray').classList.remove('open');
-
-  const selectedMods = [...eng.values()];
-  const phases = buildPhases(selectedMods);
-  const gaps = findGaps(selectedMods);
-
-  // Total time — sum of lower bounds
-  let minWeeks = 0;
-  selectedMods.forEach(m => {
-    const match = m.tm.match(/(\d+)/);
-    if (match) minWeeks += parseInt(match[1]);
-  });
-
-  // Parallel time — longest critical path
-  let parallelWeeks = 0;
-  phases.forEach(phase => {
-    let maxPhaseWeeks = 0;
-    phase.forEach(m => {
-      const match = m.tm.match(/(\d+)/);
-      const w = match ? parseInt(match[1]) : 0;
-      if (w > maxPhaseWeeks) maxPhaseWeeks = w;
-    });
-    parallelWeeks += maxPhaseWeeks;
-  });
-
-  // Collect all unique outcomes
-  const outcomes = selectedMods.map(m => m.out.replace(/<[^>]+>/g,''));
-
-  // Update nav sub
-  document.getElementById('rdmNavSub').textContent =
-    `${selectedMods.length} modules · ${phases.length} phases · ${parallelWeeks}+ weeks`;
-
-  // Build body
-  const body = document.getElementById('rdmBody');
-  body.innerHTML = '';
-
-  // ── SUMMARY STATS ──
-  const summary = document.createElement('div');
-  summary.className = 'rdm-summary';
-  const problems = new Set();
-  selectedMods.forEach(m => {
-    Object.entries(D).forEach(([k,prob]) => {
-      prob.sps.forEach(sp => sp.mods.forEach(mm => { if(mm.id===m.id) problems.add(k); }));
-    });
-  });
-  const audiences = new Set();
-  selectedMods.forEach(m => m.aud.forEach(a => audiences.add(a)));
-
-  summary.innerHTML = `
-    <div class="rdm-stat">
-      <div class="rdm-stat-label">Total Modules</div>
-      <div class="rdm-stat-val">${selectedMods.length}</div>
-      <div class="rdm-stat-note">Across ${problems.size} problem area${problems.size!==1?'s':''}</div>
-    </div>
-    <div class="rdm-stat">
-      <div class="rdm-stat-label">Phases</div>
-      <div class="rdm-stat-val">${phases.length}</div>
-      <div class="rdm-stat-note">With parallel tracks where possible</div>
-    </div>
-    <div class="rdm-stat">
-      <div class="rdm-stat-label">Est. Calendar Time</div>
-      <div class="rdm-stat-val">${parallelWeeks}<span>+ weeks</span></div>
-      <div class="rdm-stat-note">Sequential max: ${minWeeks}+ weeks</div>
-    </div>
-    <div class="rdm-stat">
-      <div class="rdm-stat-label">Audiences Served</div>
-      <div class="rdm-stat-val">${audiences.size}</div>
-      <div class="rdm-stat-note">${[...audiences].join(', ')}</div>
-    </div>`;
-  body.appendChild(summary);
-
-  // ── DEPENDENCY GAPS ──
-  if (gaps.length > 0) {
-    const gapSection = document.createElement('div');
-    gapSection.className = 'rdm-gaps';
-    gapSection.innerHTML = `<div class="rdm-gaps-title">⚠ Dependency Gaps (${gaps.length})</div>`;
-    gaps.forEach(g => {
-      const item = document.createElement('div');
-      item.className = 'rdm-gap-item';
-      const gapKey = g.module.id + ':' + g.missingId;
-      const gapReason = GAP_REASONS[gapKey] || '';
-      item.innerHTML = `
-        <div class="rdm-gap-icon">⚠</div>
-        <div class="rdm-gap-content">
-          <div class="rdm-gap-mod">${g.module.id} · ${g.module.n} <span style="color:var(--ink4);font-weight:400;font-size:10px">requires</span> ${g.missingId} · ${g.missingName}</div>
-          ${gapReason ? `<div class="rdm-gap-why">${gapReason}</div>` : ''}
-          <div class="rdm-gap-rec">→ ${g.rec}</div>
-        </div>
-        <button class="rdm-gap-add" data-id="${g.missingId}" onclick="addGapModule('${g.missingId}', this)">+ Add</button>`;
-      gapSection.appendChild(item);
-    });
-    body.appendChild(gapSection);
-  }
-
-  // ── TIMELINE ──
-  const tlLabel = document.createElement('div');
-  tlLabel.className = 'rdm-timeline-label';
-  tlLabel.textContent = 'Engagement Timeline';
-  body.appendChild(tlLabel);
-
-  const phasesWrap = document.createElement('div');
-  phasesWrap.className = 'rdm-phases';
-
-  phases.forEach((phase, idx) => {
-    // Phase weeks = max of modules in phase
-    let phaseWeeks = 0;
-    phase.forEach(m => {
-      const match = m.tm.match(/(\d+)/);
-      const w = match ? parseInt(match[1]) : 0;
-      if (w > phaseWeeks) phaseWeeks = w;
-    });
-
-    const phaseEl = document.createElement('div');
-    phaseEl.className = 'rdm-phase';
-
-    const header = document.createElement('div');
-    header.className = 'rdm-phase-header';
-    header.innerHTML = `
-      <div class="rdm-phase-num" style="background:var(--coral)">${idx+1}</div>
-      <div class="rdm-phase-label">${phaseLabel(idx, phases.length)}</div>
-      <div class="rdm-phase-weeks">${phaseWeeks}+ wks</div>`;
-
-    const modsEl = document.createElement('div');
-    modsEl.className = 'rdm-phase-mods';
-
-    phase.forEach(m => {
-      const hasGap = gaps.some(g => g.module.id === m.id);
-      const color = getModColor(m.id);
-      const audHTML = m.aud.map(a=>`<span class="aud-tag ${a}" style="font-size:9px;padding:2px 6px">${a}</span>`).join('');
-      const tile = document.createElement('div');
-      tile.className = 'rdm-mod-tile' + (hasGap ? ' has-gap' : '');
-      tile.style.borderLeftColor = color.replace('var(','').replace(')','').trim();
-      // Use inline style for CSS variable colors
-      tile.style.cssText += `;border-left-color:${color}`;
-      tile.innerHTML = `
-        <div class="rdm-mod-id">${m.id}</div>
-        <div class="rdm-mod-name">${m.n}</div>
-        <div class="rdm-mod-time">${m.tm}</div>
-        <div class="rdm-mod-aud">${audHTML}</div>
-        <div class="rdm-mod-out">${m.out.replace(/<[^>]+>/g,'').substring(0,100)}${m.out.length>100?'…':''}</div>
-        ${hasGap ? '<div style="font-size:10px;color:var(--coral);margin-top:6px;font-weight:600">⚠ See dependency gap above</div>' : ''}`;
-      modsEl.appendChild(tile);
-    });
-
-    // Phase outcomes
-    const phaseOutEl = document.createElement('div');
-    phaseOutEl.className = 'rdm-phase-outcomes';
-    const phaseOutTitle = document.createElement('div');
-    phaseOutTitle.className = 'rdm-phase-out-title';
-    phaseOutTitle.textContent = 'Phase outcomes';
-    phaseOutEl.appendChild(phaseOutTitle);
-    phase.forEach(m => {
-      const oi = document.createElement('div');
-      oi.className = 'rdm-phase-out-item';
-      oi.innerHTML = `<div class="rdm-phase-out-dot"></div><div class="rdm-phase-out-text">${m.out.replace(/<[^>]+>/g,'')}</div>`;
-      phaseOutEl.appendChild(oi);
-    });
-
-    phaseEl.appendChild(header);
-    phaseEl.appendChild(modsEl);
-    phaseEl.appendChild(phaseOutEl);
-    phasesWrap.appendChild(phaseEl);
-
-    // Add arrow between phases
-    if (idx < phases.length - 1) {
-      const arrow = document.createElement('div');
-      arrow.className = 'rdm-phase-arrow';
-      arrow.textContent = '→';
-      phasesWrap.appendChild(arrow);
-    }
-  });
-
-  body.appendChild(phasesWrap);
-
-  // ── PHASE OUTCOMES (add to each phase) ──
-  // (handled inline in phase build below — see rdm-phase-outcomes)
-
-  // ── ENGAGEMENT-LEVEL OUTCOMES ──
-  const outSection = document.createElement('div');
-  outSection.className = 'rdm-outcomes';
-  outSection.innerHTML = `
-    <div class="rdm-outcomes-title">What This Engagement Produces</div>
-    <div class="rdm-outcomes-sub">Across all ${phases.length} phases</div>
-    <div class="rdm-outcomes-grid" id="rdmOutGrid"></div>`;
-  body.appendChild(outSection);
-
-  const grid = outSection.querySelector('#rdmOutGrid');
-  outcomes.forEach(o => {
-    const item = document.createElement('div');
-    item.className = 'rdm-outcome-item';
-    item.innerHTML = `<div class="rdm-outcome-dot"></div><div class="rdm-outcome-text">${o}</div>`;
-    grid.appendChild(item);
-  });
-
-  // Show overlay
-  document.getElementById('rdmOverlay').classList.add('open');
-  document.getElementById('rdmOverlay').scrollTop = 0;
-}
-
-
-function addGapModule(modId, btn) {
-  // Find module in data
-  const allMods = getAllModules();
-  const mod = allMods[modId];
-  if (!mod) return;
-  if (eng.has(modId)) {
-    btn.textContent = '✓ Added';
-    btn.classList.add('added');
-    return;
-  }
-
-  // Find problem color
-  const color = getModColor(modId);
-  eng.set(modId, {...mod, color});
-
-  // Update heart in DOM if rendered
-  const heartEl = document.querySelector('.mod-heart[data-id="' + modId + '"]');
-  if (heartEl) {
-    heartEl.textContent = '♥';
-    heartEl.classList.add('on');
-  }
-
-  // Update tray
-  updateTray();
-
-  // Update button state
-  btn.textContent = '✓ Added';
-  btn.classList.add('added');
-
-  // Re-render roadmap to reflect new state
-  // Small delay so user sees the button change first
-  setTimeout(() => {
-    openRoadmap();
-  }, 400);
-}
-
-
-function phaseLabel(idx, total) {
-  if (total === 1) return 'Full Engagement';
-  const labels = ['Foundation','Discovery','Design','Build','Activate','Sustain','Optimize'];
-  return labels[idx] || ('Phase ' + (idx + 1));
-}
-
-function exportProposal() {
-  if (eng.size === 0) { alert('No modules selected.'); return; }
-
-  const clientName = document.getElementById('clientNameInput').value.trim() || 'Prospective Client';
-  const today = new Date().toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric'});
-  const selectedMods = [...eng.values()];
-  const phases = buildPhases(selectedMods);
-  const gaps = findGaps(selectedMods);
-
-  let minWeeks = 0;
-  selectedMods.forEach(m => { const x = m.tm.match(/(\d+)/); if(x) minWeeks += parseInt(x[1]); });
-  let parallelWeeks = 0;
-  phases.forEach(phase => {
-    let mx = 0;
-    phase.forEach(m => { const x = m.tm.match(/(\d+)/); const w = x?parseInt(x[1]):0; if(w>mx) mx=w; });
-    parallelWeeks += mx;
-  });
-
-  const problems = new Set();
-  selectedMods.forEach(m => {
-    Object.entries(D).forEach(([k,prob]) => {
-      prob.sps.forEach(sp => sp.mods.forEach(mm => { if(mm.id===m.id) problems.add(k); }));
-    });
-  });
-
-  const probNames = {identity:'The Identity Problem',alignment:'The Alignment Problem',signal:'The Signal Problem',reinvention:'The Reinvention Problem',adoption:'The Adoption Problem'};
-  const probColors = {identity:'#7040b0',alignment:'#1858a8',signal:'#127858',reinvention:'#a04010',adoption:'#981848'};
-
-  const situationLines = [...problems].map(k => `<span class="sit-prob" style="border-left:3px solid ${probColors[k]}">${probNames[k]}</span>`).join('');
-
-  // Build phases HTML
-  let phasesHtml = '';
-  phases.forEach((phase, idx) => {
-    let mx = 0;
-    phase.forEach(m => { const x = m.tm.match(/(\d+)/); const w = x?parseInt(x[1]):0; if(w>mx) mx=w; });
-    const label = phaseLabel(idx, phases.length);
-
-    let modTiles = '';
-    phase.forEach(m => {
-      const color = getModColor(m.id);
-      const hasGap = gaps.some(g => g.module.id === m.id);
-      const audStr = m.aud.map(a => `<span class="p-aud-tag p-aud-${a}">${a}</span>`).join('');
-      const dlClean = m.dl.replace(/<strong>/g,'').replace(/<\/strong>/g,'').replace(/<br>/g,'\n').split('\n').filter(Boolean);
-      const dlHtml = dlClean.map(d => `<div class="p-deliv-item">${d.replace(/^—\s*/,'').trim()}</div>`).join('');
-      modTiles += `
-        <div class="p-mod-tile" style="border-left-color:${color}">
-          <div class="p-mod-header">
-            <div>
-              <div class="p-mod-id">${m.id}</div>
-              <div class="p-mod-name">${m.n}</div>
-            </div>
-            <div class="p-mod-right">
-              <div class="p-mod-tm">${m.tm}</div>
-              <div class="p-mod-auds">${audStr}</div>
-            </div>
-          </div>
-          <div class="p-mod-sp">${m.sp}</div>
-          <div class="p-deliv-label">Deliverables</div>
-          <div class="p-delivs">${dlHtml}</div>
-          <div class="p-mod-out-label">Outcome</div>
-          <div class="p-mod-out">${m.out.replace(/<[^>]+>/g,'')}</div>
-          ${hasGap ? '<div class="p-mod-gap-flag">⚠ Prerequisite gap — see dependency notes</div>' : ''}
-        </div>`;
-    });
-
-    const phaseOutcomes = phase.map(m => `<div class="p-phase-out-item"><div class="p-phase-out-dot"></div><div>${m.out.replace(/<[^>]+>/g,'')}</div></div>`).join('');
-
-    phasesHtml += `
-      <div class="p-phase">
-        <div class="p-phase-header">
-          <div class="p-phase-num">${idx+1}</div>
-          <div>
-            <div class="p-phase-label">${label}</div>
-            <div class="p-phase-weeks">${mx}+ weeks · ${phase.length} module${phase.length!==1?'s':''}</div>
-          </div>
-        </div>
-        <div class="p-phase-mods">${modTiles}</div>
-        <div class="p-phase-outcomes">
-          <div class="p-phase-out-title">What phase ${idx+1} produces</div>
-          ${phaseOutcomes}
-        </div>
-      </div>`;
-  });
-
-  // Gaps HTML
-  let gapsHtml = '';
-  if (gaps.length > 0) {
-    const gapItems = gaps.map(g => {
-      const gapKey = g.module.id + ':' + g.missingId;
-      const reason = GAP_REASONS[gapKey] || '';
-      return `<div class="p-gap-item">
-        <div class="p-gap-flag">Dependency Note</div>
-        <div class="p-gap-title">${g.module.id} · ${g.module.n} <span class="p-gap-req">requires</span> ${g.missingId} · ${g.missingName}</div>
-        ${reason ? `<div class="p-gap-reason">${reason}</div>` : ''}
-        <div class="p-gap-rec">Recommendation: ${g.rec}</div>
-      </div>`;
-    }).join('');
-    gapsHtml = `
-      <section class="p-section">
-        <div class="p-section-label">Dependency Notes</div>
-        <div class="p-section-title">Prerequisites Not Currently Selected</div>
-        <div class="p-gaps">${gapItems}</div>
-      </section>`;
-  }
-
-  // All outcomes
-  const allOutcomes = selectedMods.map(m => `<div class="p-out-item"><div class="p-out-dot"></div><div>${m.out.replace(/<[^>]+>/g,'')}</div></div>`).join('');
-
-  const html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>TCD Engagement Proposal — ${clientName}</title>
-<style>
-/* System font stack — no external dependencies */
-</style>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{--ink:#1a1a18;--ink2:#333330;--ink3:#666660;--ink4:#999990;--coral:#e8784a;--bg:#f5f3ef;--surface:#fff;--r:6px}
-body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;font-size:13px;line-height:1.6}
-
-/* COVER PAGE */
-.cover{min-height:100vh;display:flex;flex-direction:column;background:var(--ink);page-break-after:always;position:relative;overflow:hidden}
-.cover-bg{position:absolute;inset:0;opacity:0.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='0 0 500 500'%3E%3Cg fill='none' stroke='%23fff' stroke-width='1'%3E%3Ccircle cx='80' cy='80' r='42'/%3E%3Ccircle cx='80' cy='80' r='28'/%3E%3Ccircle cx='350' cy='180' r='60'/%3E%3Ccircle cx='350' cy='180' r='40'/%3E%3Ccircle cx='140' cy='380' r='38'/%3E%3Ccircle cx='430' cy='400' r='50'/%3E%3C/g%3E%3C/svg%3E");background-size:500px}
-.cover-sidebar{position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--coral)}
-.cover-inner{position:relative;z-index:1;padding:72px 64px;display:flex;flex-direction:column;flex:1}
-.cover-tcd{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:4px}
-.cover-tcd span{color:var(--coral)}
-.cover-divider{width:48px;height:2px;background:var(--coral);margin:32px 0}
-.cover-prep{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.38);margin-bottom:8px}
-.cover-client{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:3.2rem;text-transform:uppercase;color:#fff;line-height:1;letter-spacing:-0.01em;margin-bottom:24px}
-.cover-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:1.1rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--coral);margin-bottom:8px}
-.cover-sub{font-size:15px;color:rgba(255,255,255,0.5);font-weight:300;max-width:480px;line-height:1.75}
-.cover-stats{display:flex;gap:40px;margin-top:auto;padding-top:48px;border-top:1px solid rgba(255,255,255,0.1)}
-.cover-stat-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:4px}
-.cover-stat-val{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:2rem;color:#fff;line-height:1}
-.cover-stat-unit{font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px}
-.cover-date{font-size:11px;color:rgba(255,255,255,0.28);margin-top:32px}
-.cover-lbt{position:absolute;top:28px;right:40px;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.2)}
-
-/* INNER PAGES */
-.page-inner{padding:52px 60px;background:#fff;min-height:100vh;position:relative}
-.page-sidebar{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--coral)}
-.page-logo{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:40px}
-.page-logo span{color:var(--coral)}
-.page-lbt{position:absolute;top:28px;right:40px;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink4)}
-
-/* SECTIONS */
-.p-section{margin-bottom:48px;page-break-inside:avoid}
-.p-section-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:6px}
-.p-section-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:2rem;text-transform:uppercase;color:var(--ink);line-height:1;margin-bottom:16px;letter-spacing:-0.01em}
-.p-section-desc{font-size:14px;color:var(--ink3);line-height:1.85;font-weight:300;max-width:640px;margin-bottom:20px}
-
-/* SITUATION */
-.sit-probs{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
-.sit-prob{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;padding:6px 14px;background:rgba(0,0,0,0.03);border-left:3px solid var(--coral);color:var(--ink2)}
-
-/* SUMMARY BAR */
-.p-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:32px}
-.p-stat{background:var(--ink);border-radius:var(--r);padding:16px 18px}
-.p-stat-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:5px}
-.p-stat-val{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:22px;color:#fff;line-height:1}
-.p-stat-note{font-size:10px;color:rgba(255,255,255,0.3);margin-top:3px}
-
-/* PHASES */
-.p-phase{margin-bottom:36px;border:1px solid rgba(0,0,0,0.07);border-radius:var(--r);overflow:hidden;page-break-inside:avoid}
-.p-phase-header{display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--ink)}
-.p-phase-num{width:32px;height:32px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:14px;color:#fff;flex-shrink:0}
-.p-phase-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.08em;color:#fff}
-.p-phase-weeks{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}
-.p-phase-mods{padding:16px;display:flex;flex-direction:column;gap:10px;background:#f9f8f6}
-.p-mod-tile{background:#fff;border-radius:6px;border:1px solid rgba(0,0,0,0.07);border-left:3px solid var(--coral);padding:14px 16px;page-break-inside:avoid}
-.p-mod-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px}
-.p-mod-id{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink4);margin-bottom:2px}
-.p-mod-name{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink)}
-.p-mod-right{text-align:right}
-.p-mod-tm{font-size:11px;color:var(--ink4);background:rgba(0,0,0,0.05);padding:3px 10px;border-radius:20px;white-space:nowrap;margin-bottom:4px;display:inline-block}
-.p-mod-auds{display:flex;gap:3px;flex-wrap:wrap;justify-content:flex-end}
-.p-aud-tag{font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:2px 7px;border-radius:20px;color:#fff}
-.p-aud-executive{background:#1858a8}.p-aud-product{background:#7040b0}.p-aud-engineering{background:#127858}.p-aud-gtm{background:#a04010}.p-aud-data{background:#0a6070}.p-aud-practitioners{background:#981848}
-.p-mod-sp{font-size:12px;color:var(--ink3);line-height:1.65;font-weight:300;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,0.06)}
-.p-deliv-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral);margin-bottom:6px}
-.p-delivs{margin-bottom:10px;display:flex;flex-direction:column;gap:3px}
-.p-deliv-item{font-size:12px;color:var(--ink2);line-height:1.55;padding-left:10px;position:relative}
-.p-deliv-item::before{content:'—';position:absolute;left:0;color:var(--coral);font-size:10px}
-.p-mod-out-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink4);margin-bottom:5px}
-.p-mod-out{font-size:12px;color:var(--ink2);line-height:1.65;font-weight:400;font-style:italic}
-.p-mod-gap-flag{font-size:10px;color:var(--coral);font-weight:600;margin-top:8px}
-.p-phase-outcomes{padding:14px 20px;background:var(--ink);border-top:1px solid rgba(255,255,255,0.06)}
-.p-phase-out-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:8px}
-.p-phase-out-item{display:flex;gap:8px;align-items:flex-start;margin-bottom:5px}
-.p-phase-out-dot{width:4px;height:4px;background:var(--coral);border-radius:50%;margin-top:5px;flex-shrink:0}
-.p-phase-out-item div:last-child{font-size:11px;color:rgba(255,255,255,0.55);line-height:1.55;font-weight:300}
-
-/* GAPS */
-.p-gaps{display:flex;flex-direction:column;gap:12px}
-.p-gap-item{background:rgba(232,120,74,0.05);border:1px solid rgba(232,120,74,0.2);border-left:3px solid var(--coral);border-radius:var(--r);padding:14px 16px}
-.p-gap-flag{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral);margin-bottom:5px}
-.p-gap-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
-.p-gap-req{color:var(--ink4);font-weight:400;font-size:11px}
-.p-gap-reason{font-size:12.5px;color:var(--ink2);line-height:1.65;margin-bottom:6px;font-weight:300}
-.p-gap-rec{font-size:12px;color:var(--ink3);font-style:italic}
-
-/* OUTCOMES */
-.p-outcomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.p-out-item{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:rgba(0,0,0,0.02);border-radius:4px}
-.p-out-dot{width:5px;height:5px;background:var(--coral);border-radius:50%;margin-top:5px;flex-shrink:0}
-.p-out-item div:last-child{font-size:12.5px;color:var(--ink2);line-height:1.65;font-weight:300}
-
-/* ABOUT */
-.p-about{background:var(--ink);border-radius:var(--r);padding:28px 32px;margin-bottom:32px}
-.p-about-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.08em;color:#fff;margin-bottom:10px}
-.p-about-text{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;font-weight:300;max-width:600px}
-.p-contact{margin-top:16px;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral)}
-
-/* PRINT */
-@media print{
-  body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .cover{min-height:100vh}
-  .page-inner{min-height:100vh}
-  .p-phase{page-break-inside:avoid}
-  .p-mod-tile{page-break-inside:avoid}
-}
-@page{margin:0;size:letter}
-</style>
-</head>
-<body>
-
-<!-- COVER -->
-<div class="cover">
-  <div class="cover-bg"></div>
-  <div class="cover-sidebar"></div>
-  <div class="cover-lbt">Let's Build Together</div>
-  <div class="cover-inner">
-    <div class="cover-tcd">The Cultured <span>Design |</span></div>
-    <div class="cover-divider"></div>
-    <div class="cover-prep">Prepared for</div>
-    <div class="cover-client">${clientName}</div>
-    <div class="cover-title">Intelligence-Driven Growth Framework</div>
-    <div class="cover-sub">A proposed engagement built from the modules most relevant to your situation — sequenced for dependency, designed for parallel execution, and configured for your specific audience.</div>
-    <div class="cover-stats">
-      <div><div class="cover-stat-label">Modules</div><div class="cover-stat-val">${selectedMods.length}</div><div class="cover-stat-unit">selected</div></div>
-      <div><div class="cover-stat-label">Phases</div><div class="cover-stat-val">${phases.length}</div><div class="cover-stat-unit">with parallel tracks</div></div>
-      <div><div class="cover-stat-label">Est. Timeline</div><div class="cover-stat-val">${parallelWeeks}+</div><div class="cover-stat-unit">weeks</div></div>
-      <div><div class="cover-stat-label">Problem Areas</div><div class="cover-stat-val">${problems.size}</div><div class="cover-stat-unit">addressed</div></div>
-    </div>
-    <div class="cover-date">Prepared ${today} · thecultureddesign.com</div>
-  </div>
-</div>
-
-<!-- SITUATION -->
-<div class="page-inner">
-  <div class="page-sidebar"></div>
-  <div class="page-lbt">Let's Build Together</div>
-  <div class="page-logo">The Cultured <span>Design |</span></div>
-
-  <div class="p-section">
-    <div class="p-section-label">The Situation</div>
-    <div class="p-section-title">Where This Engagement Begins</div>
-    <div class="p-section-desc">This engagement addresses ${problems.size} of the five failure modes in the Intelligence-Driven Growth Framework. Each problem area below represents a cluster of sub-problems that the selected modules are designed to resolve.</div>
-    <div class="sit-probs">${situationLines}</div>
-  </div>
-
-  <div class="p-section">
-    <div class="p-section-label">Engagement Overview</div>
-    <div class="p-section-title">The Shape of This Work</div>
-    <div class="p-summary">
-      <div class="p-stat"><div class="p-stat-label">Total Modules</div><div class="p-stat-val">${selectedMods.length}</div><div class="p-stat-note">Across ${problems.size} problem area${problems.size!==1?'s':''}</div></div>
-      <div class="p-stat"><div class="p-stat-label">Phases</div><div class="p-stat-val">${phases.length}</div><div class="p-stat-note">Parallel tracks where possible</div></div>
-      <div class="p-stat"><div class="p-stat-label">Calendar Time</div><div class="p-stat-val">${parallelWeeks}+</div><div class="p-stat-note">wks · Sequential max: ${minWeeks}+</div></div>
-      <div class="p-stat"><div class="p-stat-label">Sequential Max</div><div class="p-stat-val">${minWeeks}+</div><div class="p-stat-note">weeks if run end-to-end</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- ENGAGEMENT DETAIL -->
-<div class="page-inner">
-  <div class="page-sidebar"></div>
-  <div class="page-lbt">Let's Build Together</div>
-  <div class="page-logo">The Cultured <span>Design |</span></div>
-
-  <div class="p-section">
-    <div class="p-section-label">The Engagement</div>
-    <div class="p-section-title">Modules by Phase</div>
-    <div class="p-section-desc">Each phase groups modules that can run in parallel. Modules within a phase have no dependency on each other. Dependencies across phases are sequenced so each phase produces the inputs the next phase needs.</div>
-    ${phasesHtml}
-  </div>
-</div>
-
-<!-- GAPS + OUTCOMES -->
-<div class="page-inner">
-  <div class="page-sidebar"></div>
-  <div class="page-lbt">Let's Build Together</div>
-  <div class="page-logo">The Cultured <span>Design |</span></div>
-
-  ${gapsHtml}
-
-  <div class="p-section">
-    <div class="p-section-label">What This Engagement Produces</div>
-    <div class="p-section-title">Outcomes Across All Phases</div>
-    <div class="p-outcomes-grid">${allOutcomes}</div>
-  </div>
-</div>
-
-<!-- ABOUT TCD -->
-<div class="page-inner">
-  <div class="page-sidebar"></div>
-  <div class="page-lbt">Let's Build Together</div>
-  <div class="page-logo">The Cultured <span>Design |</span></div>
-
-  <div class="p-section">
-    <div class="p-section-label">About TCD</div>
-    <div class="p-section-title">Why The Cultured Design</div>
-  </div>
-
-  <div class="p-about">
-    <div class="p-about-title">We work at the intersection of strategy, technology, and human-centered design.</div>
-    <div class="p-about-text">We are not a traditional consulting firm. We partner with organizations navigating growth, complexity, and transformation — helping teams clarify what they are building and why it matters, align leadership around a shared direction, and translate strategy into real products, platforms, and services. We combine human-centered design with technical expertise to ensure solutions are not only well-designed but feasible, scalable, and built to last. Senior-led, end-to-end, and designed for action — not just alignment.</div>
-    <div class="p-contact">thecultureddesign.com</div>
-  </div>
-
-  <div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(0,0,0,0.08);font-size:11px;color:var(--ink4)">
-    Prepared for ${clientName} · ${today} · Intelligence-Driven Growth Framework · The Cultured Design
-  </div>
-</div>
-
-<script>
-window.onload = function() {
-  setTimeout(() => window.print(), 800);
-};
+showPage('home');updateTray();
 </script>
-</body>
-</html>`;
-
-  const win = window.open('', '_blank');
-  win.document.write(html);
-  win.document.close();
-}
-
-function closeRoadmap() {
-  document.getElementById('rdmOverlay').classList.remove('open');
-}
-
-// ── INIT ──────────────────────────────────────────────────────────────────────
-showPage('home');
-updateTray();
-updateFilterUI();
-</script>
-
-<!-- ROADMAP OVERLAY -->
-<div class="rdm-overlay" id="rdmOverlay">
-    <div class="rdm-nav">
-    <div>
-      <div class="rdm-nav-title">Engagement Roadmap</div>
-      <div class="rdm-nav-sub" id="rdmNavSub"></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
-      <label style="font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4)">Prepared for</label>
-      <input id="clientNameInput" type="text" placeholder="Client name..." style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:4px;color:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:13px;padding:6px 12px;width:180px;outline:none" />
-      <button onclick="exportProposal()" style="font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:var(--coral);color:#fff;border:none;padding:9px 18px;border-radius:4px;cursor:pointer;white-space:nowrap">Export Proposal →</button>
-      <div class="rdm-close" onclick="closeRoadmap()">← Back</div>
-    </div>
-  </div>
-  </div>
-  <div class="rdm-body" id="rdmBody"></div>
-</div>
 </body>
 </html>
