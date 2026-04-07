@@ -3,115 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Cultured Design — Intelligence-Driven Growth Framework</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a1a18;background:#fff;font-size:13px;line-height:1.6}
-.cover{min-height:100vh;display:flex;flex-direction:column;background:#1a1a18;position:relative;overflow:hidden;page-break-after:always}
-.cover-sidebar{position:absolute;left:0;top:0;bottom:0;width:6px;background:#e8784a}
-.cover-inner{position:relative;z-index:1;padding:72px 64px;display:flex;flex-direction:column;flex:1}
-.cover-tcd{font-weight:800;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:4px}
-.cover-tcd span{color:#e8784a}
-.cover-divider{width:48px;height:2px;background:#e8784a;margin:32px 0}
-.cover-prep{font-weight:700;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.38);margin-bottom:8px}
-.cover-client{font-weight:900;font-size:3rem;text-transform:uppercase;color:#fff;line-height:1;margin-bottom:24px}
-.cover-title{font-weight:700;font-size:1.1rem;text-transform:uppercase;letter-spacing:0.1em;color:#e8784a;margin-bottom:8px}
-.cover-sub{font-size:15px;color:rgba(255,255,255,0.5);max-width:480px;line-height:1.75}
-.cover-stats{display:flex;gap:40px;margin-top:auto;padding-top:48px;border-top:1px solid rgba(255,255,255,0.1)}
-.cover-stat-label{font-weight:700;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:4px}
-.cover-stat-val{font-weight:900;font-size:2rem;color:#fff;line-height:1}
-.cover-stat-unit{font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px}
-.cover-date{font-size:11px;color:rgba(255,255,255,0.28);margin-top:32px}
-.cover-lbt{position:absolute;top:28px;right:40px;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.2)}
-.page-inner{padding:52px 60px;background:#fff;min-height:100vh;position:relative;page-break-before:always}
-.page-sidebar{position:absolute;left:0;top:0;bottom:0;width:5px;background:#e8784a}
-.page-logo{font-weight:800;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#999;margin-bottom:40px}
-.page-logo span{color:#e8784a}
-.page-lbt{position:absolute;top:28px;right:40px;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#aaa}
-.p-section{margin-bottom:48px}
-.p-section-label{font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#e8784a;margin-bottom:6px}
-.p-section-title{font-weight:900;font-size:2rem;text-transform:uppercase;color:#1a1a18;line-height:1;margin-bottom:16px}
-.p-section-desc{font-size:14px;color:#666;line-height:1.85;font-weight:300;max-width:640px;margin-bottom:20px}
-.sit-probs{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
-.sit-prob{font-weight:700;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;padding:6px 14px;background:rgba(0,0,0,0.04);border-left:3px solid #e8784a;color:#333}
-.p-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:32px}
-.p-stat{background:#1a1a18;border-radius:6px;padding:16px 18px}
-.p-stat-label{font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:5px}
-.p-stat-val{font-weight:900;font-size:22px;color:#fff;line-height:1}
-.p-stat-note{font-size:10px;color:rgba(255,255,255,0.3);margin-top:3px}
-.p-phase{margin-bottom:28px;border:1px solid rgba(0,0,0,0.08);border-radius:6px;overflow:hidden;page-break-inside:avoid}
-.p-phase-header{display:flex;align-items:center;gap:14px;padding:14px 18px;background:#1a1a18}
-.p-phase-num{width:30px;height:30px;background:#e8784a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;color:#fff;flex-shrink:0}
-.p-phase-label{font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:0.08em;color:#fff}
-.p-phase-weeks{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}
-.p-phase-mods{padding:14px;display:flex;flex-direction:column;gap:10px;background:#f9f8f6}
-.p-mod-tile{background:#fff;border-radius:5px;border:1px solid rgba(0,0,0,0.08);border-left:3px solid #e8784a;padding:14px 16px}
-.p-mod-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px}
-.p-mod-id{font-weight:700;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#999;margin-bottom:2px}
-.p-mod-name{font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:0.04em;color:#1a1a18}
-.p-mod-right{text-align:right}
-.p-mod-tm{font-size:11px;color:#999;background:rgba(0,0,0,0.05);padding:3px 10px;border-radius:20px;white-space:nowrap;margin-bottom:4px;display:inline-block}
-.p-mod-auds{display:flex;gap:3px;flex-wrap:wrap;justify-content:flex-end}
-.p-aud-tag{font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:2px 7px;border-radius:20px;color:#fff}
-.p-aud-executive{background:#1858a8}.p-aud-product{background:#7040b0}.p-aud-engineering{background:#127858}.p-aud-gtm{background:#a04010}.p-aud-data{background:#0a6070}.p-aud-practitioners{background:#981848}
-.p-mod-sp{font-size:12px;color:#666;line-height:1.65;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,0.06)}
-.p-deliv-label{font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#e8784a;margin-bottom:6px}
-.p-delivs{margin-bottom:10px}
-.p-deliv-item{font-size:12px;color:#333;line-height:1.55;padding-left:12px;position:relative;margin-bottom:3px}
-.p-deliv-item::before{content:'—';position:absolute;left:0;color:#e8784a;font-size:10px}
-.p-mod-out-label{font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#999;margin-bottom:5px}
-.p-mod-out{font-size:12px;color:#333;line-height:1.65;font-style:italic}
-.p-mod-gap-flag{font-size:10px;color:#e8784a;font-weight:600;margin-top:8px}
-.p-phase-outcomes{padding:12px 18px;background:#1a1a18;border-top:1px solid rgba(255,255,255,0.06)}
-.p-phase-out-title{font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:8px}
-.p-phase-out-item{display:flex;gap:8px;align-items:flex-start;margin-bottom:5px}
-.p-phase-out-dot{width:4px;height:4px;background:#e8784a;border-radius:50%;margin-top:5px;flex-shrink:0}
-.p-phase-out-item div:last-child{font-size:11px;color:rgba(255,255,255,0.55);line-height:1.55}
-.p-gaps{display:flex;flex-direction:column;gap:12px}
-.p-gap-item{background:rgba(232,120,74,0.05);border:1px solid rgba(232,120,74,0.2);border-left:3px solid #e8784a;border-radius:6px;padding:14px 16px}
-.p-gap-flag{font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#e8784a;margin-bottom:5px}
-.p-gap-title{font-size:13px;font-weight:600;color:#1a1a18;margin-bottom:6px}
-.p-gap-req{color:#999;font-weight:400;font-size:11px}
-.p-gap-reason{font-size:12.5px;color:#333;line-height:1.65;margin-bottom:6px}
-.p-gap-rec{font-size:12px;color:#666;font-style:italic}
-.p-outcomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.p-out-item{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:rgba(0,0,0,0.02);border-radius:4px}
-.p-out-dot{width:5px;height:5px;background:#e8784a;border-radius:50%;margin-top:5px;flex-shrink:0}
-.p-out-item div:last-child{font-size:12.5px;color:#333;line-height:1.65}
-.p-about{background:#1a1a18;border-radius:6px;padding:28px 32px;margin-bottom:32px}
-.p-about-title{font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.08em;color:#fff;margin-bottom:10px}
-.p-about-text{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8}
-.p-contact{margin-top:16px;font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#e8784a}
-@media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.p-phase{page-break-inside:avoid}.p-mod-tile{page-break-inside:avoid}}
-@page{margin:0;size:letter}
-</style>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22%23e8784a%22/%3E%0A%20%20%3Cpath%20id%3D%22arc%22%20fill%3D%22none%22%20d%3D%22M%2012%2C50%20a%2038%2C38%200%201%2C1%2076%2C0%20a%2038%2C38%200%201%2C1%20-76%2C0%22/%3E%0A%20%20%3Ctext%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%229.5%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a18%22%20letter-spacing%3D%222%22%3E%0A%20%20%20%20%3CtextPath%20href%3D%22%23arc%22%20startOffset%3D%224%25%22%3ERESEARCH%20%C2%B7%20DESIGN%20%C2%B7%20BUILD%3C/textPath%3E%0A%20%20%3C/text%3E%0A%20%20%3Cline%20x1%3D%2238%22%20y1%3D%2262%22%20x2%3D%2262%22%20y2%3D%2238%22%20stroke%3D%22%231a1a18%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%3Cline%20x1%3D%2262%22%20y1%3D%2238%22%20x2%3D%2248%22%20y2%3D%2238%22%20stroke%3D%22%231a1a18%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%3Cline%20x1%3D%2262%22%20y1%3D%2238%22%20x2%3D%2262%22%20y2%3D%2252%22%20stroke%3D%22%231a1a18%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%0A%3C/svg%3E">
+<title>The Cultured Design — Growth Framework</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#dcdcd6;--bg2:#d2d2cc;--surface:#e8e8e2;--surface2:#c8c8c2;--ink:#1a1a18;--ink2:#333330;--ink3:#666660;--ink4:#999990;--coral:#e8784a;--coral-dark:#c85f30;--r:6px;--nav-h:64px;--filter-h:48px;--c-identity:#7040b0;--c-alignment:#1858a8;--c-signal:#127858;--c-reinvention:#a04010;--c-adoption:#981848;
---tag-exec:#1858a8;--tag-product:#7040b0;--tag-engineering:#127858;--tag-gtm:#a04010;--tag-data:#0a6070;--tag-practitioners:#981848}
+:root{--bg:#dcdcd6;--bg2:#d2d2cc;--surface:#e8e8e2;--surface2:#c8c8c2;--ink:#1a1a18;--ink2:#333330;--ink3:#666660;--ink4:#999990;--coral:#e8784a;--coral-dark:#c85f30;--r:6px;--nav-h:64px;--filter-h:48px;--c-identity:#7040b0;--c-alignment:#1858a8;--c-signal:#127858;--c-reinvention:#a04010;--c-adoption:#981848;--tag-exec:#1858a8;--tag-product:#7040b0;--tag-engineering:#127858;--tag-gtm:#a04010;--tag-data:#0a6070;--tag-practitioners:#981848}
 html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.6;min-height:100vh;overflow-x:hidden;position:relative}
+body{font-family:system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.6;min-height:100vh;overflow-x:hidden;position:relative}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='0 0 500 500'%3E%3Cg fill='none' stroke='%23888' stroke-width='0.7' opacity='0.15'%3E%3Ccircle cx='80' cy='80' r='42'/%3E%3Ccircle cx='80' cy='80' r='28'/%3E%3Ccircle cx='80' cy='80' r='10'/%3E%3Crect x='76' y='34' width='8' height='16' rx='2'/%3E%3Crect x='76' y='110' width='8' height='16' rx='2'/%3E%3Crect x='34' y='76' width='16' height='8' rx='2'/%3E%3Crect x='110' y='76' width='16' height='8' rx='2'/%3E%3Ccircle cx='350' cy='180' r='60'/%3E%3Ccircle cx='350' cy='180' r='40'/%3E%3Ccircle cx='350' cy='180' r='14'/%3E%3Crect x='345' y='114' width='10' height='22' rx='2'/%3E%3Crect x='345' y='244' width='10' height='22' rx='2'/%3E%3Crect x='284' y='175' width='22' height='10' rx='2'/%3E%3Crect x='414' y='175' width='22' height='10' rx='2'/%3E%3Ccircle cx='140' cy='380' r='38'/%3E%3Ccircle cx='140' cy='380' r='24'/%3E%3Ccircle cx='140' cy='380' r='9'/%3E%3Crect x='136' y='336' width='8' height='16' rx='2'/%3E%3Crect x='136' y='424' width='8' height='16' rx='2'/%3E%3Crect x='96' y='376' width='16' height='8' rx='2'/%3E%3Crect x='176' y='376' width='16' height='8' rx='2'/%3E%3Ccircle cx='430' cy='400' r='50'/%3E%3Ccircle cx='430' cy='400' r='34'/%3E%3Ccircle cx='430' cy='400' r='12'/%3E%3Crect x='425' y='344' width='10' height='20' rx='2'/%3E%3Crect x='425' y='436' width='10' height='20' rx='2'/%3E%3Crect x='374' y='395' width='20' height='10' rx='2'/%3E%3Crect x='456' y='395' width='20' height='10' rx='2'/%3E%3Cline x1='122' y1='80' x2='280' y2='180' stroke-dasharray='5,7'/%3E%3Cline x1='350' y1='240' x2='190' y2='380' stroke-dasharray='5,7'/%3E%3C/g%3E%3C/svg%3E");background-size:500px 500px;pointer-events:none;z-index:0}
-
-/* NAV */
 .nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:var(--ink);z-index:200;display:flex;align-items:stretch}
-.nav-logo{display:flex;align-items:center;padding:0 24px;border-right:1px solid rgba(255,255,255,0.1);cursor:pointer}
-.nav-logo-text{color:#fff;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;line-height:1.2}
+.nav-logo{display:flex;align-items:center;padding:0 16px;border-right:1px solid rgba(255,255,255,0.1);cursor:pointer;flex-shrink:0}
+.nav-logo-text{color:#fff;font-weight:800;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;line-height:1.2}
 .nav-logo-text span{color:var(--coral);font-size:20px;letter-spacing:0.03em;display:block}
 .nav-links{display:flex;align-items:stretch;flex:1;overflow-x:auto}
-.nav-link{display:flex;align-items:center;padding:0 16px;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.42);cursor:pointer;border-bottom:3px solid transparent!important;border-bottom-color:transparent!important;transition:color 0.2s;white-space:nowrap}
-.nav-link:hover{color:rgba(255,255,255,0.82);border-bottom-color:transparent}
-.nav-link.active{color:#fff!important;border-bottom-color:var(--coral)!important}.nav-link:not(.active){border-bottom-color:transparent!important}
-.nav-eng{display:flex;align-items:center;gap:10px;padding:0 20px;border-left:1px solid rgba(255,255,255,0.1);cursor:pointer;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.48);transition:color 0.2s;white-space:nowrap}
+.nav-link{display:flex;align-items:center;padding:0 12px;font-weight:700;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.42);cursor:pointer;border-bottom:3px solid transparent;transition:all 0.2s;white-space:nowrap}
+.nav-link:hover{color:rgba(255,255,255,0.82)}
+.nav-link.active{color:#fff;border-bottom-color:var(--coral)}
+.nav-eng{display:flex;align-items:center;gap:8px;padding:0 14px;border-left:1px solid rgba(255,255,255,0.1);cursor:pointer;font-weight:700;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.48);transition:color 0.2s;white-space:nowrap;flex-shrink:0}
 .nav-eng:hover{color:#fff}
 .eng-badge{background:var(--coral);color:#fff;font-size:10px;font-weight:700;width:20px;height:20px;border-radius:50%;display:none;align-items:center;justify-content:center}
 .eng-badge.on{display:flex}
-
-/* GLOBAL FILTER BAR */
-.filter-bar{position:fixed;top:var(--nav-h);left:0;right:0;height:var(--filter-h);background:rgba(26,26,24,0.97);z-index:190;display:flex;align-items:center;padding:0 24px;gap:12px;border-bottom:1px solid rgba(255,255,255,0.08)}
-.filter-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.35);white-space:nowrap;margin-right:4px}
+.filter-bar{position:fixed;top:64px;left:0;right:0;height:var(--filter-h);background:rgba(26,26,24,0.97);z-index:190;display:flex;align-items:center;padding:0 24px;gap:12px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.filter-label{font-weight:700;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);white-space:nowrap;margin-right:4px}
 .filter-tags{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;flex:1}
-.ftag{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:5px 12px;border-radius:20px;cursor:pointer;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.45);transition:all 0.2s;white-space:nowrap}
+.ftag{font-weight:700;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;cursor:pointer;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.45);transition:all 0.2s;white-space:nowrap}
 .ftag:hover{border-color:rgba(255,255,255,0.4);color:rgba(255,255,255,0.8)}
 .ftag.active{color:#fff;border-color:transparent}
 .ftag[data-tag="executive"].active{background:var(--tag-exec)}
@@ -120,16 +35,14 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .ftag[data-tag="gtm"].active{background:var(--tag-gtm)}
 .ftag[data-tag="data"].active{background:var(--tag-data)}
 .ftag[data-tag="practitioners"].active{background:var(--tag-practitioners)}
-.filter-clear{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);cursor:pointer;padding:5px 10px;border-radius:4px;transition:opacity 0.2s;opacity:0;pointer-events:none;white-space:nowrap}
+.filter-clear{font-weight:700;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);cursor:pointer;padding:5px 10px;border-radius:4px;transition:opacity 0.2s;opacity:0;pointer-events:none;white-space:nowrap}
 .filter-clear.visible{opacity:1;pointer-events:all}
 .filter-active-note{font-size:11px;color:rgba(255,255,255,0.28);white-space:nowrap}
 .filter-active-note strong{color:rgba(255,255,255,0.55)}
-
-/* TRAY */
-.tray{position:fixed;bottom:0;left:0;right:0;background:var(--ink);z-index:150;transform:translateY(100%);transition:transform 0.3s;border-top:3px solid var(--coral)}
+.tray{position:fixed;bottom:0;left:0;right:0;background:var(--ink);z-index:195;transform:translateY(100%);transition:transform 0.3s;border-top:3px solid var(--coral)}
 .tray.open{transform:translateY(0)}
 .tray-hd{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid rgba(255,255,255,0.1)}
-.tray-htitle{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--coral)}
+.tray-htitle{font-weight:800;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--coral)}
 .tray-hr{display:flex;gap:14px;align-items:center}
 .tray-clr{font-size:12px;color:rgba(255,255,255,0.32);cursor:pointer;transition:color 0.2s}
 .tray-clr:hover{color:rgba(255,255,255,0.7)}
@@ -146,107 +59,80 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .tray-ft{padding:12px 28px;border-top:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between}
 .tray-sum{font-size:12px;color:rgba(255,255,255,0.38)}
 .tray-sum strong{color:#fff}
-.tray-exp{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;background:var(--coral);color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;transition:background 0.2s}
-.tray-exp:hover{background:var(--coral-dark)}
-.tray-rdm{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.2);padding:8px 20px;border-radius:4px;cursor:pointer;transition:all 0.2s}
-.tray-rdm:hover{background:rgba(255,255,255,0.1);color:#fff}
-
-/* PAGES */
-.page{display:none;position:relative;z-index:1;padding-top:calc(var(--nav-h) + var(--filter-h));min-height:100vh}
+.tray-rdm{font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;background:var(--coral);color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;transition:background 0.2s}
+.tray-rdm:hover{background:var(--coral-dark)}
+.page{display:none;position:relative;z-index:1;padding-top:112px;min-height:100vh}
 .page.active{display:block}
-
-/* HOME */
-.home-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - var(--nav-h) - var(--filter-h))}
-.home-l{padding:56px 52px 56px 60px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(0,0,0,0.1)}
-.eyebrow{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.home-wrap{display:grid;grid-template-columns:55% 45%;min-height:calc(100vh - var(--nav-h) - var(--filter-h))}
+.home-l{padding:40px 36px 40px 40px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(0,0,0,0.1)}
+.eyebrow{font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::after{content:'';flex:1;height:1px;background:var(--coral);opacity:0.25}
-.home-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:5.4rem;line-height:0.9;text-transform:uppercase;color:var(--ink);margin-bottom:22px;letter-spacing:-0.01em}
+.home-title{font-weight:900;font-size:clamp(2.8rem,5vw,5.4rem);line-height:0.9;text-transform:uppercase;color:var(--ink);margin-bottom:22px;letter-spacing:-0.01em}
 .home-title em{color:var(--coral);font-style:normal}
 .home-desc{font-size:15px;color:var(--ink3);line-height:1.85;max-width:460px;font-weight:300}
 .home-cta{margin-top:24px;display:flex;gap:10px}
-.btn-p{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;background:var(--ink);color:#fff;padding:11px 26px;border:none;border-radius:4px;cursor:pointer;transition:background 0.2s}
+.btn-p{font-weight:700;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;background:var(--ink);color:#fff;padding:11px 26px;border:none;border-radius:4px;cursor:pointer;transition:background 0.2s}
 .btn-p:hover{background:var(--coral)}
-.btn-g{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;background:transparent;color:var(--ink3);padding:11px 18px;border:1px solid var(--bg2);border-radius:4px;cursor:pointer;transition:all 0.2s}
+.btn-g{font-weight:700;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;background:transparent;color:var(--ink3);padding:11px 18px;border:1px solid var(--bg2);border-radius:4px;cursor:pointer;transition:all 0.2s}
 .btn-g:hover{border-color:var(--ink3);color:var(--ink)}
-.home-r{padding:52px 48px;display:flex;flex-direction:column;justify-content:center}
-.home-r-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink4);margin-bottom:16px}
+.home-r{padding:40px 28px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.home-r-label{font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink4);margin-bottom:16px}
 .p-cards{display:flex;flex-direction:column;gap:1px}
-.pcard{display:flex;align-items:center;gap:14px;padding:14px 18px;cursor:pointer;transition:all 0.18s;border-left:3px solid transparent;border-radius:0 4px 4px 0}
+.pcard{display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;transition:all 0.18s;border-left:3px solid transparent;border-radius:0 4px 4px 0;min-width:0}
+.pc-body{flex:1;min-width:0;overflow:hidden}
 .pcard:hover{background:rgba(255,255,255,0.38)}
-.pcard.identity:hover{border-left-color:var(--c-identity)}
-.pcard.alignment:hover{border-left-color:var(--c-alignment)}
-.pcard.signal:hover{border-left-color:var(--c-signal)}
-.pcard.reinvention:hover{border-left-color:var(--c-reinvention)}
-.pcard.adoption:hover{border-left-color:var(--c-adoption)}
-.pc-n{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:26px;color:var(--bg2);min-width:32px;line-height:1;transition:color 0.18s}
+.pcard.identity:hover{border-left-color:var(--c-identity)}.pcard.alignment:hover{border-left-color:var(--c-alignment)}.pcard.signal:hover{border-left-color:var(--c-signal)}.pcard.reinvention:hover{border-left-color:var(--c-reinvention)}.pcard.adoption:hover{border-left-color:var(--c-adoption)}
+.pc-n{font-weight:900;font-size:22px;color:var(--bg2);min-width:28px;line-height:1;transition:color 0.18s;flex-shrink:0}
 .pcard:hover .pc-n{color:var(--coral)}
-.pcard.identity:hover .pc-n{color:var(--c-identity)}
-.pcard.alignment:hover .pc-n{color:var(--c-alignment)}
-.pcard.signal:hover .pc-n{color:var(--c-signal)}
-.pcard.reinvention:hover .pc-n{color:var(--c-reinvention)}
-.pcard.adoption:hover .pc-n{color:var(--c-adoption)}
-.pc-t{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink);margin-bottom:2px}
-.pc-s{font-size:12px;color:var(--ink3);font-style:italic}
-.pc-arr{font-size:15px;color:var(--ink4);margin-left:auto;opacity:0;transition:all 0.18s}
+.pcard.identity:hover .pc-n{color:var(--c-identity)}.pcard.alignment:hover .pc-n{color:var(--c-alignment)}.pcard.signal:hover .pc-n{color:var(--c-signal)}.pcard.reinvention:hover .pc-n{color:var(--c-reinvention)}.pcard.adoption:hover .pc-n{color:var(--c-adoption)}
+.pc-t{font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink);margin-bottom:2px}
+.pc-s{font-size:11px;color:var(--ink3);font-style:italic}
+.pc-arr{font-size:15px;color:var(--ink4);opacity:0;transition:all 0.18s}
 .pcard:hover .pc-arr{opacity:1}
-
-/* HOME FILTER PREVIEW — module count per problem updates with active filter */
-.pc-count{font-size:11px;color:var(--ink4);font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:600;letter-spacing:0.06em;margin-left:auto;margin-right:8px;transition:color 0.2s}
+.pc-count{font-size:10px;color:var(--ink4);font-weight:600;letter-spacing:0.04em;width:72px;text-align:right;flex-shrink:0;transition:color 0.2s}
 .pc-count.filtered{color:var(--coral)}
-
 .home-bottom{background:var(--ink);padding:40px 60px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px}
-.hb-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:8px}
-.hb-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.06em;color:#fff;margin-bottom:8px}
+.hb-label{font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:8px}
+.hb-title{font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.06em;color:#fff;margin-bottom:8px}
 .hb-text{font-size:13px;color:rgba(255,255,255,0.46);line-height:1.75;font-weight:300}
-
-/* INNER PAGES */
 .inner{position:relative}
 .sidebar{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--coral)}
-.lbt{position:absolute;top:20px;right:32px;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink4);z-index:2}
-.inner-hero{padding:40px 56px 32px 72px;border-bottom:1px solid rgba(0,0,0,0.1)}
-.crumb{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:600;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink4);cursor:pointer;margin-bottom:12px;display:inline-flex;align-items:center;gap:6px;transition:color 0.2s}
+.lbt{position:absolute;top:20px;right:32px;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink4);z-index:2}
+.inner-hero{padding:32px 40px 28px 52px;border-bottom:1px solid rgba(0,0,0,0.1)}
+.crumb{font-weight:600;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink4);cursor:pointer;margin-bottom:12px;display:inline-flex;align-items:center;gap:6px;transition:color 0.2s}
 .crumb:hover{color:var(--coral)}
-.prob-num{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:4px}
-.prob-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:3.6rem;text-transform:uppercase;color:var(--ink);line-height:0.93;margin-bottom:10px;letter-spacing:-0.01em}
+.prob-num{font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:4px}
+.prob-title{font-weight:900;font-size:clamp(2.2rem,4vw,3.6rem);text-transform:uppercase;color:var(--ink);line-height:0.93;margin-bottom:10px;letter-spacing:-0.01em}
 .prob-tagline{font-size:15px;color:var(--ink3);font-style:italic;margin-bottom:12px}
 .prob-desc{font-size:14px;color:var(--ink2);line-height:1.85;max-width:680px;font-weight:300}
 .prob-meta{display:flex;gap:24px;margin-top:16px;flex-wrap:wrap;align-items:center}
-.prob-meta-i{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:600;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink4)}
+.prob-meta-i{font-weight:600;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink4)}
 .prob-meta-i strong{color:var(--ink2)}
 .filter-status{font-size:12px;color:var(--coral);font-style:italic}
-
-/* SUBPROBLEMS */
-.sp-wrap{padding:24px 56px 56px 72px}
+.sp-wrap{padding:20px 40px 48px 52px}
 .sp-block{margin-bottom:5px;background:rgba(255,255,255,0.28);border-radius:var(--r);overflow:hidden;border:1px solid rgba(0,0,0,0.06)}
 .sp-block.dimmed{opacity:0.35}
 .sp-trig{display:flex;align-items:center;gap:14px;padding:16px 22px;cursor:pointer;transition:background 0.15s;border-left:4px solid transparent}
 .sp-trig:hover,.sp-trig.open{background:rgba(255,255,255,0.5)}
-.sp-code{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink4);min-width:50px}
+.sp-code{font-weight:700;font-size:10px;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink4);min-width:50px}
 .sp-ttitle{font-size:13.5px;font-weight:500;color:var(--ink);flex:1;line-height:1.35}
-.sp-mc{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:600;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink4);white-space:nowrap}
+.sp-mc{font-weight:600;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink4);white-space:nowrap}
 .sp-chv{font-size:12px;color:var(--ink4);transition:transform 0.22s;margin-left:8px}
 .sp-trig.open .sp-chv{transform:rotate(180deg)}
 .sp-bd{display:none;border-top:1px solid rgba(0,0,0,0.07);padding:18px 22px}
 .sp-bd.open{display:block}
 .sp-desc{font-size:13px;color:var(--ink3);line-height:1.8;font-weight:300;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid rgba(0,0,0,0.07)}
 .mods-stack{display:flex;flex-direction:column;gap:7px}
-
-/* MODULE CARDS */
 .mod-card{border-radius:var(--r);overflow:hidden;background:var(--bg);border:1px solid rgba(0,0,0,0.08);transition:opacity 0.25s}
 .mod-card.dimmed{opacity:0.28}
 .mod-trig{display:flex;align-items:center;gap:11px;padding:13px 16px;cursor:pointer;transition:background 0.15s}
 .mod-trig:hover,.mod-trig.open{background:rgba(255,255,255,0.6)}
-.mod-id{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink4);min-width:30px}
-.mod-nm{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink);flex:1}
+.mod-id{font-weight:700;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink4);min-width:30px}
+.mod-nm{font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink);flex:1}
 .mod-badges{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
 .mod-tm{font-size:11px;color:var(--ink4);background:var(--surface2);padding:3px 10px;border-radius:20px;white-space:nowrap;font-weight:500}
 .aud-tag{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 8px;border-radius:20px;color:#fff;white-space:nowrap}
-.aud-tag.executive{background:var(--tag-exec)}
-.aud-tag.product{background:var(--tag-product)}
-.aud-tag.engineering{background:var(--tag-engineering)}
-.aud-tag.gtm{background:var(--tag-gtm)}
-.aud-tag.data{background:var(--tag-data)}
-.aud-tag.practitioners{background:var(--tag-practitioners)}
+.aud-tag.executive{background:var(--tag-exec)}.aud-tag.product{background:var(--tag-product)}.aud-tag.engineering{background:var(--tag-engineering)}.aud-tag.gtm{background:var(--tag-gtm)}.aud-tag.data{background:var(--tag-data)}.aud-tag.practitioners{background:var(--tag-practitioners)}
 .mod-heart{font-size:19px;cursor:pointer;padding:4px 7px;border-radius:4px;color:var(--ink4);line-height:1;transition:all 0.14s;border:1px solid transparent}
 .mod-heart:hover{background:rgba(232,120,74,0.1);border-color:rgba(232,120,74,0.25)}
 .mod-heart.on{color:var(--coral)}
@@ -255,11 +141,11 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .mod-bd{display:none;border-top:1px solid rgba(0,0,0,0.07);padding:18px 16px}
 .mod-bd.open{display:block}
 .mod-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-bottom:14px}
-.mg-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral);margin-bottom:7px}
+.mg-label{font-weight:700;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral);margin-bottom:7px}
 .mg-text{font-size:13px;color:var(--ink2);line-height:1.7;font-weight:300}
 .mg-text strong{color:var(--ink);font-weight:600;display:block;margin-bottom:2px}
 .act-blk{background:rgba(0,0,0,0.04);border-radius:4px;padding:11px 14px;margin-top:2px}
-.act-tog{display:flex;align-items:center;gap:7px;cursor:pointer;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3)}
+.act-tog{display:flex;align-items:center;gap:7px;cursor:pointer;font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3)}
 .act-arr{font-size:10px;transition:transform 0.18s}
 .act-tog.open .act-arr{transform:rotate(90deg)}
 .act-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px;display:none}
@@ -268,97 +154,59 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .pairs-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;padding-top:11px;border-top:1px solid rgba(0,0,0,0.07)}
 .pair-i{font-size:11.5px;color:var(--ink4)}
 .pair-i strong{color:var(--ink3);font-weight:600}
-.pg-num{position:absolute;bottom:28px;right:28px;width:42px;height:42px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:15px;color:#fff;z-index:2}
-
-/* CAPS */
+.pg-num{position:absolute;bottom:28px;right:28px;width:42px;height:42px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:#fff;z-index:2}
 .caps-wrap{padding:24px 56px 56px 72px}
 .caps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .cap-card{background:rgba(255,255,255,0.32);border:1px solid rgba(0,0,0,0.07);border-radius:var(--r);padding:22px;border-top:3px solid var(--coral)}
-.cap-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink);margin-bottom:9px}
+.cap-title{font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink);margin-bottom:9px}
 .cap-desc{font-size:13px;color:var(--ink3);line-height:1.75;font-weight:300}
-
-@media(max-width:760px){.home-wrap{grid-template-columns:1fr}.home-r{display:none}.home-title{font-size:3.6rem}.home-bottom{grid-template-columns:1fr}.mod-grid{grid-template-columns:1fr}.caps-grid{grid-template-columns:1fr 1fr}.inner-hero,.sp-wrap,.caps-wrap{padding-left:28px}.filter-bar{gap:8px;padding:0 12px}}
-
-
-/* PHASE OUTCOMES */
-.rdm-phase-outcomes{margin-top:12px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.08)}
-.rdm-phase-out-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink4);margin-bottom:7px}
-.rdm-phase-out-item{display:flex;gap:7px;align-items:flex-start;margin-bottom:5px}
-.rdm-phase-out-dot{width:4px;height:4px;background:var(--coral);border-radius:50%;margin-top:6px;flex-shrink:0}
-.rdm-phase-out-text{font-size:11px;color:var(--ink3);line-height:1.55;font-weight:300}
-
-/* ENGAGEMENT OUTCOMES sub-label */
-.rdm-outcomes-sub{font-size:12px;color:rgba(255,255,255,0.35);margin-bottom:16px;margin-top:-8px;font-style:italic}
-
-/* GAP ADD BUTTON */
-.rdm-gap-add{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;background:var(--coral);color:#fff;border:none;padding:7px 14px;border-radius:4px;cursor:pointer;transition:all 0.2s;white-space:nowrap;flex-shrink:0;align-self:center}
-.rdm-gap-add:hover{background:var(--coral-dark)}
-.rdm-gap-add.added{background:var(--c-signal);cursor:default}
-
-/* ROADMAP OVERLAY */
-.rdm-overlay{display:none}
-
-.rdm-nav{background:var(--ink);display:flex;align-items:center;padding:16px 28px;gap:16px;flex-shrink:0;border-bottom:3px solid var(--coral);margin-bottom:24px;border-radius:var(--r);flex-wrap:wrap;gap:12px}
-.rdm-nav-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:18px;letter-spacing:0.08em;text-transform:uppercase;color:#fff;flex:1}
-.rdm-nav-sub{font-size:12px;color:rgba(255,255,255,0.4);font-style:italic}
-.rdm-close{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);cursor:pointer;padding:8px 16px;border:1px solid rgba(255,255,255,0.2);border-radius:4px;transition:all 0.2s}
-.rdm-close:hover{color:#fff;border-color:rgba(255,255,255,0.5)}
-.rdm-body{flex:1;overflow-y:auto;padding:32px 40px 60px}
-
-/* SUMMARY ROW */
-.rdm-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:32px}
+/* ROADMAP */
 .rdm-stat{background:var(--ink);border-radius:var(--r);padding:18px 20px}
-.rdm-stat-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:6px}
-.rdm-stat-val{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:26px;color:#fff;line-height:1}
+.rdm-stat-label{font-weight:700;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:6px}
+.rdm-stat-val{font-weight:900;font-size:26px;color:#fff;line-height:1}
 .rdm-stat-val span{font-size:13px;font-weight:400;color:rgba(255,255,255,0.4);margin-left:4px}
 .rdm-stat-note{font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px;line-height:1.4}
-
-/* DEPENDENCY GAPS */
-.rdm-gaps{margin-bottom:28px}
-.rdm-gaps-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.rdm-gap-item{background:rgba(232,120,74,0.08);border:1px solid rgba(232,120,74,0.25);border-left:3px solid var(--coral);border-radius:var(--r);padding:12px 16px;margin-bottom:6px;display:flex;align-items:flex-start;gap:12px}
+.rdm-gaps-title{font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:10px}
+.rdm-gap-item{background:rgba(232,120,74,0.08);border:1px solid rgba(232,120,74,0.25);border-left:3px solid var(--coral);border-radius:var(--r);padding:12px 16px;margin-bottom:6px;display:flex;align-items:flex-start;gap:12px;transition:opacity 0.25s,filter 0.25s}
 .rdm-gap-icon{font-size:14px;margin-top:1px;flex-shrink:0}
-.rdm-gap-content{}
-.rdm-gap-mod{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--coral);margin-bottom:3px}
-.rdm-gap-text{font-size:12.5px;color:var(--ink2);line-height:1.6}
+.rdm-gap-mod{font-weight:700;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--coral);margin-bottom:3px}
 .rdm-gap-why{font-size:12.5px;color:var(--ink2);line-height:1.65;margin:6px 0 4px}
 .rdm-gap-rec{font-size:12px;color:var(--ink3);margin-top:4px;font-style:italic}
-
-/* ROADMAP TIMELINE */
-.rdm-timeline-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
-.rdm-phases{display:flex;gap:0;overflow-x:auto;padding-bottom:12px}
-.rdm-phase{flex-shrink:0;min-width:220px;max-width:260px;border-right:2px dashed rgba(0,0,0,0.1);padding-right:20px;margin-right:20px}
+.rdm-gap-add{font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;background:var(--coral);color:#fff;border:none;padding:7px 14px;border-radius:4px;cursor:pointer;transition:all 0.2s;white-space:nowrap;flex-shrink:0;align-self:center}
+.rdm-gap-add:hover{background:var(--coral-dark)}
+.rdm-gap-add.added{background:var(--c-signal);cursor:default}
+.rdm-phases{display:flex;flex-direction:row;gap:0;overflow-x:auto;padding-bottom:20px;width:100%;-webkit-overflow-scrolling:touch}
+.rdm-phase{flex-shrink:0;width:260px;border-right:2px dashed rgba(0,0,0,0.1);padding-right:20px;margin-right:20px}
 .rdm-phase:last-child{border-right:none}
 .rdm-phase-header{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,0.1)}
-.rdm-phase-num{width:28px;height:28px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:900;font-size:13px;color:#fff;flex-shrink:0}
-.rdm-phase-label{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink)}
+.rdm-phase-num{width:28px;height:28px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;color:#fff;flex-shrink:0}
+.rdm-phase-label{font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink)}
 .rdm-phase-weeks{font-size:11px;color:var(--ink4);margin-left:auto;white-space:nowrap}
 .rdm-phase-mods{display:flex;flex-direction:column;gap:8px}
-.rdm-mod-tile{background:var(--surface);border:1px solid rgba(0,0,0,0.08);border-radius:6px;padding:12px 14px;border-left:3px solid var(--coral);position:relative}
-.rdm-mod-tile.has-gap{border-left-color:var(--coral);opacity:0.7}
-.rdm-mod-id{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:700;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:3px}
-.rdm-mod-name{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink);margin-bottom:4px;line-height:1.2}
+.rdm-mod-tile{background:var(--surface);border:1px solid rgba(0,0,0,0.08);border-radius:6px;padding:12px 14px;border-left:3px solid var(--coral)}
+.rdm-mod-id{font-weight:700;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:3px}
+.rdm-mod-name{font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink);margin-bottom:4px;line-height:1.2}
 .rdm-mod-time{font-size:11px;color:var(--ink4);margin-bottom:5px}
 .rdm-mod-aud{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:6px}
 .rdm-mod-out{font-size:11.5px;color:var(--ink3);line-height:1.55;font-weight:300}
-.rdm-phase-arrow{display:flex;align-items:center;justify-content:center;padding:0 4px;color:var(--ink4);font-size:22px;align-self:center;flex-shrink:0;margin-top:-20px}
-
-/* OUTCOMES */
-.rdm-outcomes{margin-top:32px;background:var(--ink);border-radius:var(--r);padding:28px 32px}
-.rdm-outcomes-title{font-family:'Arial Narrow','Arial Black',Impact,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:16px}
-.rdm-outcomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.rdm-outcome-item{display:flex;gap:10px;align-items:flex-start}
-.rdm-outcome-dot{width:6px;height:6px;background:var(--coral);border-radius:50%;margin-top:6px;flex-shrink:0}
+.rdm-phase-outcomes{margin-top:12px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.08)}
+.rdm-phase-out-title{font-weight:700;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink4);margin-bottom:7px}
+.rdm-phase-out-item{display:flex;gap:7px;align-items:flex-start;margin-bottom:5px}
+.rdm-phase-out-dot{width:4px;height:4px;background:var(--coral);border-radius:50%;margin-top:6px;flex-shrink:0}
+.rdm-phase-out-text{font-size:11px;color:var(--ink3);line-height:1.55;font-weight:300}
+.rdm-outcome-item{display:flex;gap:12px;align-items:flex-start}
+.rdm-outcome-dot{width:6px;height:6px;border-radius:50%;background:var(--coral);margin-top:6px;flex-shrink:0}
 .rdm-outcome-text{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.65;font-weight:300}
+.rdm-outcomes{background:var(--ink);border-radius:var(--r);padding:28px 32px;margin-top:32px}
+.rdm-outcomes-title{font-weight:800;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:8px}
+.rdm-outcomes-sub{font-size:12px;color:rgba(255,255,255,0.35);margin-bottom:16px;font-style:italic}
+.rdm-outcomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){.home-wrap{grid-template-columns:1fr}.home-r{display:none}.home-title{font-size:3.6rem}.home-bottom{grid-template-columns:1fr}.mod-grid{grid-template-columns:1fr}.caps-grid{grid-template-columns:1fr 1fr}.inner-hero,.sp-wrap,.caps-wrap{padding-left:28px}.filter-bar{gap:8px;padding:0 12px}}
 </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav class="nav">
-  <div class="nav-logo" onclick="showPage('home')">
-    <div class="nav-logo-text">The Cultured<span>Design |</span></div>
-  </div>
+  <div class="nav-logo" onclick="showPage('home')"><div class="nav-logo-text">The Cultured<span>Design |</span></div></div>
   <div class="nav-links">
     <div class="nav-link" data-page="home" onclick="showPage('home')">Framework</div>
     <div class="nav-link" data-page="identity" onclick="showPage('identity')">01 · Identity</div>
@@ -367,15 +215,11 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="nav-link" data-page="reinvention" onclick="showPage('reinvention')">04 · Reinvention</div>
     <div class="nav-link" data-page="adoption" onclick="showPage('adoption')">05 · Adoption</div>
     <div class="nav-link" data-page="capabilities" onclick="showPage('capabilities')">Capabilities</div>
+    <div class="nav-link" data-page="roadmap" id="roadmapNavLink" style="display:none" onclick="showPage('roadmap')">Roadmap</div>
   </div>
-  <div class="nav-link" data-page="roadmap" id="roadmapNavLink" style="display:none" onclick="showPage('roadmap')">Roadmap</div>
-  <div class="nav-eng" onclick="toggleTray()">
-    <span>Engagement</span>
-    <div class="eng-badge" id="engBadge">0</div>
-  </div>
+  <div class="nav-eng" onclick="toggleTray()"><span>Engagement</span><div class="eng-badge" id="engBadge">0</div></div>
 </nav>
 
-<!-- GLOBAL FILTER BAR -->
 <div class="filter-bar">
   <div class="filter-label">Filter by audience</div>
   <div class="filter-tags">
@@ -390,23 +234,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   <div class="filter-clear" id="filterClear" onclick="clearFilters()">Clear filters ×</div>
 </div>
 
-<!-- TRAY -->
 <div class="tray" id="tray">
-  <div class="tray-hd">
-    <div class="tray-htitle">Engagement Builder</div>
-    <div class="tray-hr">
-      <div class="tray-clr" onclick="clearEng()">Clear all</div>
-      <div class="tray-cls" onclick="toggleTray()">×</div>
-    </div>
-  </div>
-  <div class="tray-bd">
-    <div class="tray-empty" id="trayEmpty">No modules selected yet. Browse the framework and heart modules to add them here.</div>
-    <div class="tray-chips" id="trayChips"></div>
-  </div>
-  <div class="tray-ft">
-    <div class="tray-sum" id="traySum"><strong>0</strong> modules · <strong>0+</strong> weeks estimated</div>
-    <button class="tray-rdm" onclick="openRoadmap()">View Roadmap →</button>
-  </div>
+  <div class="tray-hd"><div class="tray-htitle">Engagement Builder</div><div class="tray-hr"><div class="tray-clr" onclick="clearEng()">Clear all</div><div class="tray-cls" onclick="toggleTray()">×</div></div></div>
+  <div class="tray-bd"><div class="tray-empty" id="trayEmpty">No modules selected yet. Browse the framework and heart modules to add them here.</div><div class="tray-chips" id="trayChips"></div></div>
+  <div class="tray-ft"><div class="tray-sum" id="traySum"><strong>0</strong> modules · <strong>0+</strong> weeks estimated</div><button class="tray-rdm" onclick="openRoadmap()">View Roadmap →</button></div>
 </div>
 
 <!-- HOME -->
@@ -416,19 +247,16 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
       <div class="eyebrow">Intelligence-Driven Growth Framework</div>
       <div class="home-title">Five<br>Problems.<br><em>One</em><br>Framework.</div>
       <div class="home-desc">Every organization is navigating the same five failure modes. The Intelligence-Driven Growth Framework maps every TCD engagement to one of five problem jobs: knowing who you are, knowing where you're going, knowing what you know, scaling what you've built, and earning your own people.<br><br>Filter by audience above to find the modules most relevant to your situation.</div>
-      <div class="home-cta">
-        <button class="btn-p" onclick="showPage('identity')">Start with Problem 01</button>
-        <button class="btn-g" onclick="showPage('capabilities')">View Capabilities</button>
-      </div>
+      <div class="home-cta"><button class="btn-p" onclick="showPage('identity')">Start with Problem 01</button><button class="btn-g" onclick="showPage('capabilities')">View Capabilities</button></div>
     </div>
     <div class="home-r">
       <div class="home-r-label">The Five Problems — select to explore</div>
       <div class="p-cards">
-        <div class="pcard identity" onclick="showPage('identity')"><div class="pc-n">01</div><div><div class="pc-t">The Identity Problem</div><div class="pc-s">Who you are before you can go anywhere</div></div><div class="pc-count" id="hcount-identity">6 modules</div><div class="pc-arr">→</div></div>
-        <div class="pcard alignment" onclick="showPage('alignment')"><div class="pc-n">02</div><div><div class="pc-t">The Alignment Problem</div><div class="pc-s">Where you're going and how everyone gets there</div></div><div class="pc-count" id="hcount-alignment">6 modules</div><div class="pc-arr">→</div></div>
-        <div class="pcard signal" onclick="showPage('signal')"><div class="pc-n">03</div><div><div class="pc-t">The Signal Problem</div><div class="pc-s">What you know and how it compounds</div></div><div class="pc-count" id="hcount-signal">7 modules</div><div class="pc-arr">→</div></div>
-        <div class="pcard reinvention" onclick="showPage('reinvention')"><div class="pc-n">04</div><div><div class="pc-t">The Reinvention Problem</div><div class="pc-s">What you've built and how it scales</div></div><div class="pc-count" id="hcount-reinvention">7 modules</div><div class="pc-arr">→</div></div>
-        <div class="pcard adoption" onclick="showPage('adoption')"><div class="pc-n">05</div><div><div class="pc-t">The Adoption Problem</div><div class="pc-s">How you earn the organization</div></div><div class="pc-count" id="hcount-adoption">4 modules</div><div class="pc-arr">→</div></div>
+        <div class="pcard identity" onclick="showPage('identity')"><div class="pc-n">01</div><div class="pc-body"><div class="pc-t">The Identity Problem</div><div class="pc-s">Who you are before you can go anywhere</div></div><div class="pc-count" id="hcount-identity">6 modules</div><div class="pc-arr">→</div></div>
+        <div class="pcard alignment" onclick="showPage('alignment')"><div class="pc-n">02</div><div class="pc-body"><div class="pc-t">The Alignment Problem</div><div class="pc-s">Where you're going and how everyone gets there</div></div><div class="pc-count" id="hcount-alignment">6 modules</div><div class="pc-arr">→</div></div>
+        <div class="pcard signal" onclick="showPage('signal')"><div class="pc-n">03</div><div class="pc-body"><div class="pc-t">The Signal Problem</div><div class="pc-s">What you know and how it compounds</div></div><div class="pc-count" id="hcount-signal">7 modules</div><div class="pc-arr">→</div></div>
+        <div class="pcard reinvention" onclick="showPage('reinvention')"><div class="pc-n">04</div><div class="pc-body"><div class="pc-t">The Reinvention Problem</div><div class="pc-s">What you've built and how it scales</div></div><div class="pc-count" id="hcount-reinvention">7 modules</div><div class="pc-arr">→</div></div>
+        <div class="pcard adoption" onclick="showPage('adoption')"><div class="pc-n">05</div><div class="pc-body"><div class="pc-t">The Adoption Problem</div><div class="pc-s">How you earn the organization</div></div><div class="pc-count" id="hcount-adoption">4 modules</div><div class="pc-arr">→</div></div>
       </div>
     </div>
   </div>
@@ -439,20 +267,47 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   </div>
 </div>
 
-<!-- PROBLEM PAGES -->
-<div class="page inner" id="page-identity"><div class="sidebar" style="background:var(--c-identity)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-identity)">Problem 01</div><div class="prob-title">The Identity<br>Problem</div><div class="prob-tagline">Who you are before you can go anywhere</div><div class="prob-desc">You can't align what you haven't defined. Identity is the foundation every other problem sits on — strategy, operating models, OKRs, GTM motions. Without a clear, shared answer to who you are and how you grow, every downstream system is built on assumption.</div><div class="prob-meta"><div class="prob-meta-i"><strong>6</strong> modules</div><div class="prob-meta-i"><strong>2–5 weeks</strong> per module</div><div class="filter-status" id="fstatus-identity" style="display:none"></div></div></div><div class="sp-wrap" id="sp-identity"></div><div class="pg-num">01</div></div>
+<div class="page inner" id="page-identity"><div class="sidebar" style="background:var(--c-identity)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-identity)">Problem 01</div><div class="prob-title">The Identity<br>Problem</div><div class="prob-tagline">Who you are before you can go anywhere</div><div class="prob-desc">You can't align what you haven't defined. Identity is the foundation every other problem sits on. Without a clear, shared answer to who you are and how you grow, every downstream system is built on assumption.</div><div class="prob-meta"><div class="prob-meta-i"><strong>6</strong> modules</div><div class="prob-meta-i"><strong>2–5 weeks</strong> per module</div><div class="filter-status" id="fstatus-identity" style="display:none"></div></div></div><div class="sp-wrap" id="sp-identity"></div><div class="pg-num">01</div></div>
 
-<div class="page inner" id="page-alignment"><div class="sidebar" style="background:var(--c-alignment)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-alignment)">Problem 02</div><div class="prob-title">The Alignment<br>Problem</div><div class="prob-tagline">Where you're going and how everyone gets there</div><div class="prob-desc">Strategy exists. Work is happening. But the connection between them is implicit — built on assumptions about shared understanding that evaporate under organizational complexity. The alignment problem isn't a culture problem. It's a systems problem.</div><div class="prob-meta"><div class="prob-meta-i"><strong>6</strong> modules</div><div class="prob-meta-i"><strong>2–6 weeks</strong> per module</div><div class="filter-status" id="fstatus-alignment" style="display:none"></div></div></div><div class="sp-wrap" id="sp-alignment"></div><div class="pg-num">02</div></div>
+<div class="page inner" id="page-alignment"><div class="sidebar" style="background:var(--c-alignment)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-alignment)">Problem 02</div><div class="prob-title">The Alignment<br>Problem</div><div class="prob-tagline">Where you're going and how everyone gets there</div><div class="prob-desc">Strategy exists. Work is happening. But the connection between them is implicit. The alignment problem isn't a culture problem. It's a systems problem.</div><div class="prob-meta"><div class="prob-meta-i"><strong>6</strong> modules</div><div class="prob-meta-i"><strong>2–6 weeks</strong> per module</div><div class="filter-status" id="fstatus-alignment" style="display:none"></div></div></div><div class="sp-wrap" id="sp-alignment"></div><div class="pg-num">02</div></div>
 
 <div class="page inner" id="page-signal"><div class="sidebar" style="background:var(--c-signal)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-signal)">Problem 03</div><div class="prob-title">The Signal<br>Problem</div><div class="prob-tagline">What you know and how it compounds</div><div class="prob-desc">Every team is running discovery. Almost none of it accumulates. The signal problem isn't about having more data — it's about designing the architecture that makes what you learn compound over time.</div><div class="prob-meta"><div class="prob-meta-i"><strong>7</strong> modules</div><div class="prob-meta-i"><strong>2–10 weeks</strong> per module</div><div class="filter-status" id="fstatus-signal" style="display:none"></div></div></div><div class="sp-wrap" id="sp-signal"></div><div class="pg-num">03</div></div>
 
-<div class="page inner" id="page-reinvention"><div class="sidebar" style="background:var(--c-reinvention)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-reinvention)">Problem 04</div><div class="prob-title">The Reinvention<br>Problem</div><div class="prob-tagline">What you've built and how it scales</div><div class="prob-desc">Teams are solving the same problems from scratch — not because they're unaware of what's been built, but because what's been built was never designed to be reused. The reinvention problem is an architecture problem.</div><div class="prob-meta"><div class="prob-meta-i"><strong>7</strong> modules</div><div class="prob-meta-i"><strong>2–10 weeks</strong> per module</div><div class="filter-status" id="fstatus-reinvention" style="display:none"></div></div></div><div class="sp-wrap" id="sp-reinvention"></div><div class="pg-num">04</div></div>
+<div class="page inner" id="page-reinvention"><div class="sidebar" style="background:var(--c-reinvention)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-reinvention)">Problem 04</div><div class="prob-title">The Reinvention<br>Problem</div><div class="prob-tagline">What you've built and how it scales</div><div class="prob-desc">Teams are solving the same problems from scratch — not because they're unaware of what's been built, but because what's been built was never designed to be reused.</div><div class="prob-meta"><div class="prob-meta-i"><strong>7</strong> modules</div><div class="prob-meta-i"><strong>2–10 weeks</strong> per module</div><div class="filter-status" id="fstatus-reinvention" style="display:none"></div></div></div><div class="sp-wrap" id="sp-reinvention"></div><div class="pg-num">04</div></div>
 
-<div class="page inner" id="page-adoption"><div class="sidebar" style="background:var(--c-adoption)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-adoption)">Problem 05</div><div class="prob-title">The Adoption<br>Problem</div><div class="prob-tagline">How you earn the organization</div><div class="prob-desc">The system is designed. The rollout is planned. Six weeks later, nobody's using it. Mandated adoption is borrowed trust. It runs out the moment the mandate author leaves the room. The only durable adoption is earned.</div><div class="prob-meta"><div class="prob-meta-i"><strong>4</strong> modules</div><div class="prob-meta-i"><strong>2–4 weeks</strong> per module</div><div class="filter-status" id="fstatus-adoption" style="display:none"></div></div></div><div class="sp-wrap" id="sp-adoption"></div><div class="pg-num">05</div></div>
+<div class="page inner" id="page-adoption"><div class="sidebar" style="background:var(--c-adoption)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--c-adoption)">Problem 05</div><div class="prob-title">The Adoption<br>Problem</div><div class="prob-tagline">How you earn the organization</div><div class="prob-desc">The system is designed. The rollout is planned. Six weeks later, nobody's using it. Mandated adoption is borrowed trust. The only durable adoption is earned.</div><div class="prob-meta"><div class="prob-meta-i"><strong>4</strong> modules</div><div class="prob-meta-i"><strong>2–4 weeks</strong> per module</div><div class="filter-status" id="fstatus-adoption" style="display:none"></div></div></div><div class="sp-wrap" id="sp-adoption"></div><div class="pg-num">05</div></div>
 
-<div class="page inner" id="page-capabilities"><div class="sidebar" style="background:var(--coral)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--coral)">TCD · How We Deliver</div><div class="prob-title">Cross-Cutting<br>Capabilities</div><div class="prob-tagline">The disciplines and methods behind every engagement</div><div class="prob-desc">These are not modules — they are the functional capabilities TCD applies across all five problems. Every engagement draws from a subset of these disciplines. They are the methods and the muscle behind every deliverable.</div></div><div class="caps-wrap"><div class="caps-grid" id="capsGrid"></div></div><div class="pg-num">06</div></div>
+<div class="page inner" id="page-capabilities"><div class="sidebar" style="background:var(--coral)"></div><div class="lbt">Let's Build Together</div><div class="inner-hero"><div class="crumb" onclick="showPage('home')">← Framework</div><div class="prob-num" style="color:var(--coral)">TCD · How We Deliver</div><div class="prob-title">Cross-Cutting<br>Capabilities</div><div class="prob-tagline">The disciplines and methods behind every engagement</div><div class="prob-desc">These are not modules — they are the functional capabilities TCD applies across all five problems. They are the methods and the muscle behind every deliverable.</div></div><div class="caps-wrap"><div class="caps-grid" id="capsGrid"></div></div><div class="pg-num">06</div></div>
+
+<!-- ROADMAP PAGE -->
+<div class="page" id="page-roadmap" style="padding-bottom:60px">
+  <div style="padding:0 32px 60px;overflow-x:hidden">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;padding-bottom:16px;border-bottom:3px solid var(--coral);flex-wrap:wrap;gap:12px">
+      <div><div style="font-weight:900;font-size:2.4rem;text-transform:uppercase;color:var(--ink);letter-spacing:-0.01em">Engagement Roadmap</div><div id="rdmNavSub" style="font-size:13px;color:var(--ink3);font-style:italic;margin-top:4px"></div></div>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <label style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink4)">Prepared for</label>
+        <input id="clientNameInput" type="text" placeholder="Client name..." style="border:1px solid rgba(0,0,0,0.2);border-radius:4px;font-size:13px;padding:6px 12px;width:180px;outline:none;background:var(--surface)" />
+        <button onclick="exportProposal()" style="font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:var(--coral);color:#fff;border:none;padding:9px 18px;border-radius:4px;cursor:pointer">Export Proposal</button>
+        <button onclick="closeRoadmap()" style="font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:transparent;border:1px solid rgba(0,0,0,0.2);padding:9px 16px;border-radius:4px;cursor:pointer;color:var(--ink3)">← Back</button>
+      </div>
+    </div>
+    <div id="rdmContent"></div>
+  </div>
+</div>
+
+<!-- PROPOSAL PAGE -->
+<div class="page" id="page-proposal" style="padding-bottom:60px">
+  <div style="max-width:960px;margin:0 auto;padding:0 32px 60px">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;padding-bottom:16px;border-bottom:3px solid var(--coral)">
+      <div><div style="font-weight:900;font-size:2rem;text-transform:uppercase;color:var(--ink)">Engagement Proposal</div><div id="proposalSubtitle" style="font-size:13px;color:var(--ink3);font-style:italic;margin-top:4px"></div></div>
+      <button onclick="closeRoadmap()" style="font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;background:transparent;border:1px solid rgba(0,0,0,0.2);padding:9px 16px;border-radius:4px;cursor:pointer;color:var(--ink3)">← Back to Roadmap</button>
+    </div>
+    <div id="proposalContent"></div>
+  </div>
+</div>
 
 <script>
+
 // ── DATA ─────────────────────────────────────────────────────────────────────
 // audience tags: executive, product, engineering, gtm, data, practitioners
 const D={
@@ -567,7 +422,9 @@ const CAPS=[
 // ── STATE ────────────────────────────────────────────────────────────────────
 const eng = new Map();
 const rendered = new Set();
-let activeFilters = new Set(); // global persistent filter state
+let activeFilters = new Set();
+// Stored roadmap state — set by openRoadmap(), read by exportProposal()
+let _rdmState = null; // global persistent filter state
 
 // ── FILTER LOGIC ─────────────────────────────────────────────────────────────
 function toggleFilter(tag) {
@@ -813,9 +670,10 @@ function updateTray() {
   document.getElementById('trayEmpty').style.display = n ? 'none' : 'block';
   const chips = document.getElementById('trayChips');
   chips.innerHTML = '';
-  let wks = 0;
+  let wksMin = 0, wksMax = 0;
   eng.forEach(m => {
-    const x = m.tm.match(/(\d+)/); if (x) wks += parseInt(x[1]);
+    const tw = m.tm.match(/(\d+)[^\d]*(\d+)?/);
+    if (tw) { wksMin += parseInt(tw[1]); wksMax += tw[2] ? parseInt(tw[2]) : parseInt(tw[1]); }
     const c = document.createElement('div');
     c.className = 'tray-chip';
     c.style.borderLeftColor = m.color;
@@ -828,7 +686,7 @@ function updateTray() {
     };
     chips.appendChild(c);
   });
-  document.getElementById('traySum').innerHTML = `<strong>${n}</strong> module${n!==1?'s':''} · <strong>${wks}+</strong> weeks estimated`;
+  document.getElementById('traySum').innerHTML = `<strong>${n}</strong> module${n!==1?'s':''} · <strong>${wksMin}–${wksMax}</strong> weeks est.`;
 }
 
 function clearEng() {
@@ -856,6 +714,7 @@ function exportEng() {
 
 // ── NAV ───────────────────────────────────────────────────────────────────────
 function showPage(key) {
+  // _rdmState is cleared by closeRoadmap() when leaving the roadmap flow
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
   document.getElementById('page-' + key)?.classList.add('active');
@@ -1007,21 +866,25 @@ const GAP_REASONS = {
   'AD-4:AD-3': "The Rollout Architecture defines the sequencing, stage gates, and institutionalization plan for how the system reaches the organization. The Adoption Pulse monitors whether that rollout is producing genuine adoption or surface compliance. Without a rollout architecture, there's no defined cohort structure to measure against — the pulse check has no baseline to compare to and no stage gates to validate.",
 };
 
-function openRoadmap() {
+function parseWeeks(tm) {
+  const m = tm.match(/(\d+)[^\d]*(\d+)?/);
+  if (!m) return {min:0, max:0};
+  return {min: parseInt(m[1]), max: m[2] ? parseInt(m[2]) : parseInt(m[1])};
+}
 
+function openRoadmap(opts) {
+  opts = opts || {};
   if (eng.size === 0) {
-    alert('No modules selected. Heart modules to build your engagement first.');
+    if (!opts.silent) alert('No modules selected. Heart modules to build your engagement first.');
     return;
   }
-  // Close tray
-  document.getElementById('tray').classList.remove('open');
-  // Store previous page for back button
-  const prevPage = document.querySelector('.page.active');
-  window._rdmPrevPage = prevPage ? prevPage.id.replace('page-','') : 'home';
-  // Show roadmap nav link
-  document.getElementById('roadmapNavLink').style.display = 'flex';
-  // Switch to roadmap page
-  showPage('roadmap');
+  if (!opts.silent) {
+    document.getElementById('tray').classList.remove('open');
+    const prevPage = document.querySelector('.page.active');
+    window._rdmPrevPage = prevPage ? prevPage.id.replace('page-','') : 'home';
+    document.getElementById('roadmapNavLink').style.display = 'flex';
+    showPage('roadmap');
+  }
   // Build content
   const container = document.getElementById('rdmContent');
   container.innerHTML = '';
@@ -1033,11 +896,12 @@ function openRoadmap() {
   //console.log('step 2: building phases');
 
   const selectedMods = [...eng.values()];
-  //console.log('step 2b: selectedMods=' + selectedMods.length);
   const phases = buildPhases(selectedMods);
-  //console.log('step 3: phases=' + phases.length);
   const gaps = findGaps(selectedMods);
-  //console.log('step 4: gaps=' + gaps.length);
+
+  // Store for proposal export — ensures proposal matches roadmap exactly
+  _rdmState = { selectedMods, phases, gaps };
+
 
   // Total time — sum of lower bounds
   let minWeeks = 0;
@@ -1046,17 +910,16 @@ function openRoadmap() {
     if (match) minWeeks += parseInt(match[1]);
   });
 
-  // Parallel time — longest critical path
-  let parallelWeeks = 0;
+  // Parallel time — range across phases
+  function epParseWeeks(tm) { const m = tm.match(/(\d+)[^\d]*(\d+)?/); if(!m) return {min:0,max:0}; return {min:parseInt(m[1]), max:m[2]?parseInt(m[2]):parseInt(m[1])}; }
+  let parallelMin = 0, parallelMax = 0, seqMin = 0, seqMax = 0;
   phases.forEach(phase => {
-    let maxPhaseWeeks = 0;
-    phase.forEach(m => {
-      const match = m.tm.match(/(\d+)/);
-      const w = match ? parseInt(match[1]) : 0;
-      if (w > maxPhaseWeeks) maxPhaseWeeks = w;
-    });
-    parallelWeeks += maxPhaseWeeks;
+    let phMin = 0, phMax = 0;
+    phase.forEach(m => { const w = epParseWeeks(m.tm); if(w.min>phMin) phMin=w.min; if(w.max>phMax) phMax=w.max; });
+    parallelMin += phMin; parallelMax += phMax;
   });
+  selectedMods.forEach(m => { const w = epParseWeeks(m.tm); seqMin += w.min; seqMax += w.max; });
+  const parallelWeeks = parallelMin; // keep for cover compat
 
   // Collect all unique outcomes
   const outcomes = selectedMods.map(m => m.out.replace(/<[^>]+>/g,''));
@@ -1065,191 +928,14 @@ function openRoadmap() {
   // Update nav sub
   // rdmNavSub now in page header
   const navSubEl = document.getElementById('rdmNavSub');
-  if(navSubEl) navSubEl.textContent = selectedMods.length + ' modules · ' + phases.length + ' phases · ' + parallelWeeks + '+ weeks';
+  if(navSubEl) navSubEl.textContent = selectedMods.length + ' modules · ' + phases.length + ' phases · ' + parallelMin + '–' + parallelMax + ' weeks';
 
   //console.log('step 6: building body');
   // Build body
   const body = container;
-  // Page header
-  const hdr = document.createElement('div');
-  hdr.style.cssText = 'display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:28px;padding-bottom:20px;border-bottom:3px solid var(--coral)';
-  hdr.innerHTML = '<div>' +
-    '<div style="font-family:Arial Narrow,Arial,sans-serif;font-weight:900;font-size:2.4rem;text-transform:uppercase;letter-spacing:-0.01em;color:var(--ink)">Engagement Roadmap</div>' +
-    '<div id="rdmNavSub" style="font-size:13px;color:var(--ink3);font-style:italic;margin-top:4px"></div>' +
-    '</div>' +
-    '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">' +
-    '<label style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink4)">Prepared for</label>' +
-    '<input id="clientNameInput" type="text" placeholder="Client name..." style="border:1px solid rgba(0,0,0,0.2);border-radius:4px;font-size:13px;padding:6px 12px;width:180px;outline:none;background:var(--surface)" />' +
-    '<button onclick="exportProposal()" style="font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:var(--coral);color:#fff;border:none;padding:9px 18px;border-radius:4px;cursor:pointer">Export Proposal</button>' +
-    '<button onclick="closeRoadmap()" style="font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:transparent;border:1px solid rgba(0,0,0,0.2);padding:9px 16px;border-radius:4px;cursor:pointer;color:var(--ink3)">← Back</button>' +
-    '</div>';
-  container.appendChild(hdr);
-
-  //console.log('step 7: summary stats');
-  // ── SUMMARY STATS ──
-  const summary = document.createElement('div');
-  summary.className = 'rdm-summary';
-  const problems = new Set();
-  selectedMods.forEach(m => {
-    Object.entries(D).forEach(([k,prob]) => {
-      prob.sps.forEach(sp => sp.mods.forEach(mm => { if(mm.id===m.id) problems.add(k); }));
-    });
-  });
-  const audiences = new Set();
-  selectedMods.forEach(m => m.aud.forEach(a => audiences.add(a)));
-
-  summary.innerHTML = `
-    <div class="rdm-stat">
-      <div class="rdm-stat-label">Total Modules</div>
-      <div class="rdm-stat-val">${selectedMods.length}</div>
-      <div class="rdm-stat-note">Across ${problems.size} problem area${problems.size!==1?'s':''}</div>
-    </div>
-    <div class="rdm-stat">
-      <div class="rdm-stat-label">Phases</div>
-      <div class="rdm-stat-val">${phases.length}</div>
-      <div class="rdm-stat-note">With parallel tracks where possible</div>
-    </div>
-    <div class="rdm-stat">
-      <div class="rdm-stat-label">Est. Calendar Time</div>
-      <div class="rdm-stat-val">${parallelWeeks}<span>+ weeks</span></div>
-      <div class="rdm-stat-note">Sequential max: ${minWeeks}+ weeks</div>
-    </div>
-    <div class="rdm-stat">
-      <div class="rdm-stat-label">Audiences Served</div>
-      <div class="rdm-stat-val">${audiences.size}</div>
-      <div class="rdm-stat-note">${[...audiences].join(', ')}</div>
-    </div>`;
-  body.appendChild(summary);
-
-  //console.log('step 8: gaps section');
-  // ── DEPENDENCY GAPS ──
-  if (gaps.length > 0) {
-    const gapSection = document.createElement('div');
-    gapSection.className = 'rdm-gaps';
-    gapSection.innerHTML = `<div class="rdm-gaps-title">⚠ Dependency Gaps (${gaps.length})</div>`;
-    gaps.forEach(g => {
-      const item = document.createElement('div');
-      item.className = 'rdm-gap-item';
-      const gapKey = g.module.id + ':' + g.missingId;
-      const gapReason = GAP_REASONS[gapKey] || '';
-      item.innerHTML = `
-        <div class="rdm-gap-icon">⚠</div>
-        <div class="rdm-gap-content">
-          <div class="rdm-gap-mod">${g.module.id} · ${g.module.n} <span style="color:var(--ink4);font-weight:400;font-size:10px">requires</span> ${g.missingId} · ${g.missingName}</div>
-          ${gapReason ? '<div class="rdm-gap-why">' + gapReason + '</div>' : ''}
-          <div class="rdm-gap-rec">→ ${g.rec}</div>
-        </div>
-        <button class="rdm-gap-add" data-id="${g.missingId}" onclick="addGapModule('${g.missingId}', this)">+ Add</button>`;
-      gapSection.appendChild(item);
-    });
-    body.appendChild(gapSection);
-  }
-
-  //console.log('step 9: timeline');
-  // ── TIMELINE ──
-  const tlLabel = document.createElement('div');
-  tlLabel.className = 'rdm-timeline-label';
-  tlLabel.textContent = 'Engagement Timeline';
-  body.appendChild(tlLabel);
-
-  const phasesWrap = document.createElement('div');
-  phasesWrap.className = 'rdm-phases';
-
-  phases.forEach((phase, idx) => {
-    // Phase weeks = max of modules in phase
-    let phaseWeeks = 0;
-    phase.forEach(m => {
-      const match = m.tm.match(/(\d+)/);
-      const w = match ? parseInt(match[1]) : 0;
-      if (w > phaseWeeks) phaseWeeks = w;
-    });
-
-    const phaseEl = document.createElement('div');
-    phaseEl.className = 'rdm-phase';
-
-    const header = document.createElement('div');
-    header.className = 'rdm-phase-header';
-    header.innerHTML = `
-      <div class="rdm-phase-num" style="background:var(--coral)">${idx+1}</div>
-      <div class="rdm-phase-label">${phaseLabel(idx, phases.length)}</div>
-      <div class="rdm-phase-weeks">${phaseWeeks}+ wks</div>`;
-
-    const modsEl = document.createElement('div');
-    modsEl.className = 'rdm-phase-mods';
-
-    phase.forEach(m => {
-      const hasGap = gaps.some(g => g.module.id === m.id);
-      const color = getModColor(m.id);
-      const audHTML = m.aud.map(a=>`<span class="aud-tag ${a}" style="font-size:9px;padding:2px 6px">${a}</span>`).join('');
-      const tile = document.createElement('div');
-      tile.className = 'rdm-mod-tile' + (hasGap ? ' has-gap' : '');
-      tile.style.borderLeftColor = color.replace('var(','').replace(')','').trim();
-      // Use inline style for CSS variable colors
-      tile.style.borderLeftColor = color;
-      tile.innerHTML = `
-        <div class="rdm-mod-id">${m.id}</div>
-        <div class="rdm-mod-name">${m.n}</div>
-        <div class="rdm-mod-time">${m.tm}</div>
-        <div class="rdm-mod-aud">${audHTML}</div>
-        <div class="rdm-mod-out">${m.out.replace(/<[^>]+>/g,'').substring(0,100)}${m.out.length>100?'…':''}</div>
-        ${hasGap ? '<div style="font-size:10px;color:var(--coral);margin-top:6px;font-weight:600">⚠ See dependency gap above</div>' : ''}`;
-      modsEl.appendChild(tile);
-    });
-
-    // Phase outcomes
-    const phaseOutEl = document.createElement('div');
-    phaseOutEl.className = 'rdm-phase-outcomes';
-    const phaseOutTitle = document.createElement('div');
-    phaseOutTitle.className = 'rdm-phase-out-title';
-    phaseOutTitle.textContent = 'Phase outcomes';
-    phaseOutEl.appendChild(phaseOutTitle);
-    phase.forEach(m => {
-      const oi = document.createElement('div');
-      oi.className = 'rdm-phase-out-item';
-      oi.innerHTML = `<div class="rdm-phase-out-dot"></div><div class="rdm-phase-out-text">${m.out.replace(/<[^>]+>/g,'')}</div>`;
-      phaseOutEl.appendChild(oi);
-    });
-
-    phaseEl.appendChild(header);
-    phaseEl.appendChild(modsEl);
-    phaseEl.appendChild(phaseOutEl);
-    phasesWrap.appendChild(phaseEl);
-
-    // Add arrow between phases
-    if (idx < phases.length - 1) {
-      const arrow = document.createElement('div');
-      arrow.className = 'rdm-phase-arrow';
-      arrow.textContent = '→';
-      phasesWrap.appendChild(arrow);
-    }
-  });
-
-  body.appendChild(phasesWrap);
-
-  // ── PHASE OUTCOMES (add to each phase) ──
-  // (handled inline in phase build below — see rdm-phase-outcomes)
-
-  //console.log('step 10: outcomes');
-  // ── ENGAGEMENT-LEVEL OUTCOMES ──
-  const outSection = document.createElement('div');
-  outSection.className = 'rdm-outcomes';
-  outSection.innerHTML = `
-    <div class="rdm-outcomes-title">What This Engagement Produces</div>
-    <div class="rdm-outcomes-sub">Across all ${phases.length} phases</div>
-    <div class="rdm-outcomes-grid" id="rdmOutGrid"></div>`;
-  body.appendChild(outSection);
-
-  const grid = outSection.querySelector('#rdmOutGrid');
-  outcomes.forEach(o => {
-    const item = document.createElement('div');
-    item.className = 'rdm-outcome-item';
-    item.innerHTML = `<div class="rdm-outcome-dot"></div><div class="rdm-outcome-text">${o}</div>`;
-    grid.appendChild(item);
-  });
-
-  //console.log('step 11: showing overlay');
-  // Roadmap built - scroll to top
-  window.scrollTo(0,0);
+  buildRoadmapContent(container, selectedMods, phases, gaps);
+  // Roadmap built - scroll to top (unless silent rebuild)
+  if (!opts.silent) window.scrollTo(0,0);
   } catch(err) {
     const errDiv = document.createElement('div');
     errDiv.style.cssText = 'background:#c00;color:#fff;padding:20px;margin:20px;font-size:13px;border-radius:8px;word-break:break-all;';
@@ -1262,60 +948,78 @@ function openRoadmap() {
 
 
 function addGapModule(modId, btn) {
+  if (!modId && btn) modId = btn.dataset ? btn.dataset.id : modId;
   const allMods = getAllModules();
   const mod = allMods[modId];
   if (!mod) return;
 
-  // Already added — just update button
-  if (eng.has(modId)) {
-    btn.textContent = '✓ Added';
-    btn.classList.add('added');
-    btn.disabled = true;
-    return;
+  // Already in engagement — still remove the gap item
+  if (!eng.has(modId)) {
+    const color = getModColor(modId);
+    eng.set(modId, {...mod, color});
+    const heartEl = document.querySelector('.mod-heart[data-id="' + modId + '"]');
+    if (heartEl) { heartEl.textContent = '♥'; heartEl.classList.add('on'); }
+    updateTray();
   }
 
-  // Add to engagement
-  const color = getModColor(modId);
-  eng.set(modId, {...mod, color});
-
-  // Update heart in DOM if rendered
-  const heartEl = document.querySelector('.mod-heart[data-id="' + modId + '"]');
-  if (heartEl) { heartEl.textContent = '♥'; heartEl.classList.add('on'); }
-
-  // Update tray count
-  updateTray();
-
-  // Update this button
-  btn.textContent = '✓ Added';
-  btn.classList.add('added');
-  btn.disabled = true;
-
-  // Update the gap item visually — dim it instead of re-rendering entire roadmap
+  // Disappear the gap item
   const gapItem = btn.closest('.rdm-gap-item');
   if (gapItem) {
-    gapItem.style.opacity = '0.5';
-    gapItem.style.pointerEvents = 'none';
+    gapItem.style.transition = 'opacity 0.25s';
+    gapItem.style.opacity = '0';
+    gapItem.style.overflow = 'hidden';
+    setTimeout(function() {
+      gapItem.style.display = 'none';
+      // rebuildRoadmap recomputes everything including gap count
+      rebuildRoadmap();
+    }, 300);
+  } else {
+    updateGapCount();
+    rebuildRoadmap();
   }
+}
 
-  // Update the gap count in the title
-  const remaining = document.querySelectorAll('.rdm-gap-add:not(.added)').length;
+function dismissGap(btn) {
+  const gapItem = btn.closest('.rdm-gap-item');
+  if (!gapItem) return;
+  if (gapItem.dataset.dismissed === 'true') {
+    // Revive
+    gapItem.dataset.dismissed = 'false';
+    gapItem.style.opacity = '1';
+    gapItem.style.filter = '';
+    gapItem.style.cursor = '';
+    btn.textContent = '✕ Dismiss';
+    btn.title = '';
+  } else {
+    // Dismiss — gray out, keep visible, make clickable to revive
+    gapItem.dataset.dismissed = 'true';
+    gapItem.style.opacity = '0.35';
+    gapItem.style.filter = 'grayscale(40%)';
+    gapItem.style.cursor = 'pointer';
+    btn.textContent = '↩ Revive';
+    btn.title = 'Click to restore this gap';
+    updateGapCount();
+  }
+}
+
+function updateGapCount() {
+  const all = document.querySelectorAll('.rdm-gap-item');
+  const dismissed = document.querySelectorAll('.rdm-gap-item[data-dismissed="true"]');
+  const hidden = document.querySelectorAll('.rdm-gap-item[style*="display: none"]');
+  const active = all.length - dismissed.length - hidden.length;
   const gapsTitle = document.querySelector('.rdm-gaps-title');
   if (gapsTitle) {
-    if (remaining === 0) {
+    if (active === 0 && all.length > 0) {
       gapsTitle.textContent = '✓ All dependency gaps resolved';
       gapsTitle.style.color = 'var(--c-signal)';
     } else {
-      gapsTitle.textContent = '⚠ Dependency Gaps (' + remaining + ')';
+      gapsTitle.textContent = '⚠ Dependency Gaps (' + active + ')';
+      gapsTitle.style.color = '';
     }
   }
 }
 
 
-function phaseLabel(idx, total) {
-  if (total === 1) return 'Full Engagement';
-  const labels = ['Foundation','Discovery','Design','Build','Activate','Sustain','Optimize'];
-  return labels[idx] || ('Phase ' + (idx + 1));
-}
 
 function exportProposal() {
   if (eng.size === 0) { alert('No modules selected.'); return; }
@@ -1323,17 +1027,26 @@ function exportProposal() {
   const clientName = document.getElementById('clientNameInput').value.trim() || 'Prospective Client';
   //console.log('ep step 1: dates');
     const today = new Date().toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric'});
-  const selectedMods = [...eng.values()];
-  const phases = buildPhases(selectedMods);
-  const gaps = findGaps(selectedMods);
+  // Must use stored roadmap state — proposal must match what roadmap showed
+  if (!_rdmState) {
+    // Recompute from current eng as fallback
+    const _mods = [...eng.values()];
+    _rdmState = { selectedMods: _mods, phases: buildPhases(_mods), gaps: findGaps(_mods) };
+  }
+  const selectedMods = _rdmState.selectedMods;
+  const phases = _rdmState.phases;
+  const gaps = _rdmState.gaps;
 
-  let minWeeks = 0;
-  selectedMods.forEach(m => { const x = m.tm.match(/(\d+)/); if(x) minWeeks += parseInt(x[1]); });
-  let parallelWeeks = 0;
+
+  // parseWeeks is defined at top level
+  let minWeeks = 0, maxWeeks = 0;
+  selectedMods.forEach(m => { const w = parseWeeks(m.tm); minWeeks += w.min; maxWeeks += w.max; });
+  // Parallel calendar time: sum of max per phase (conservative), using max module in each phase
+  let parallelMin = 0, parallelMax = 0;
   phases.forEach(phase => {
-    let mx = 0;
-    phase.forEach(m => { const x = m.tm.match(/(\d+)/); const w = x?parseInt(x[1]):0; if(w>mx) mx=w; });
-    parallelWeeks += mx;
+    let phMin = 0, phMax = 0;
+    phase.forEach(m => { const w = parseWeeks(m.tm); if(w.min > phMin) phMin = w.min; if(w.max > phMax) phMax = w.max; });
+    parallelMin += phMin; parallelMax += phMax;
   });
 
   const problems = new Set();
@@ -1567,7 +1280,7 @@ body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica
     <div class="cover-stats">
       <div><div class="cover-stat-label">Modules</div><div class="cover-stat-val">${selectedMods.length}</div><div class="cover-stat-unit">selected</div></div>
       <div><div class="cover-stat-label">Phases</div><div class="cover-stat-val">${phases.length}</div><div class="cover-stat-unit">with parallel tracks</div></div>
-      <div><div class="cover-stat-label">Est. Timeline</div><div class="cover-stat-val">${parallelWeeks}+</div><div class="cover-stat-unit">weeks</div></div>
+      <div><div class="cover-stat-label">Est. Timeline</div><div class="cover-stat-val">${parallelMin}+</div><div class="cover-stat-unit">weeks</div></div>
       <div><div class="cover-stat-label">Problem Areas</div><div class="cover-stat-val">${problems.size}</div><div class="cover-stat-unit">addressed</div></div>
     </div>
     <div class="cover-date">Prepared ${today} · thecultureddesign.com</div>
@@ -1593,7 +1306,7 @@ body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica
     <div class="p-summary">
       <div class="p-stat"><div class="p-stat-label">Total Modules</div><div class="p-stat-val">${selectedMods.length}</div><div class="p-stat-note">Across ${problems.size} problem area${problems.size!==1?'s':''}</div></div>
       <div class="p-stat"><div class="p-stat-label">Phases</div><div class="p-stat-val">${phases.length}</div><div class="p-stat-note">Parallel tracks where possible</div></div>
-      <div class="p-stat"><div class="p-stat-label">Calendar Time</div><div class="p-stat-val">${parallelWeeks}+</div><div class="p-stat-note">wks · Sequential max: ${minWeeks}+</div></div>
+      <div class="p-stat"><div class="p-stat-label">Calendar Time</div><div class="p-stat-val">${parallelMin}+</div><div class="p-stat-note">wks · Sequential max: ${minWeeks}+</div></div>
       <div class="p-stat"><div class="p-stat-label">Sequential Max</div><div class="p-stat-val">${minWeeks}+</div><div class="p-stat-note">weeks if run end-to-end</div></div>
     </div>
   </div>
@@ -1695,11 +1408,241 @@ function printProposalFrame() {
   }
 }
 
+function buildRoadmapContent(container, selectedMods, phases, gaps) {
+  const body = container;
+
+  // Compute week ranges and outcomes locally
+  let parallelMin = 0, parallelMax = 0, minWeeks = 0, maxWeeks = 0;
+  phases.forEach(ph => {
+    let mn = 0, mx = 0;
+    ph.forEach(m => { const w = parseWeeks(m.tm); if(w.min>mn) mn=w.min; if(w.max>mx) mx=w.max; });
+    parallelMin += mn; parallelMax += mx;
+  });
+  selectedMods.forEach(m => { const w = parseWeeks(m.tm); minWeeks += w.min; maxWeeks += w.max; });
+  const outcomes = selectedMods.map(m => m.out.replace(/<[^>]+>/g,''));
+  const problems = new Set();
+  selectedMods.forEach(m => {
+    Object.entries(D).forEach(([k,prob]) => {
+      prob.sps.forEach(sp => sp.mods.forEach(mm => { if(mm.id===m.id) problems.add(k); }));
+    });
+  });
+  const audiences = new Set();
+  selectedMods.forEach(m => m.aud.forEach(a => audiences.add(a)));
+
+
+  // Page header
+  
+
+  //console.log('step 7: summary stats');
+  // ── SUMMARY STATS ──
+  const summary = document.createElement('div');
+  summary.className = 'rdm-summary';
+
+  summary.innerHTML = `
+    <div class="rdm-stat">
+      <div class="rdm-stat-label">Total Modules</div>
+      <div class="rdm-stat-val">${selectedMods.length}</div>
+      <div class="rdm-stat-note">Across ${problems.size} problem area${problems.size!==1?'s':''}</div>
+    </div>
+    <div class="rdm-stat">
+      <div class="rdm-stat-label">Phases</div>
+      <div class="rdm-stat-val">${phases.length}</div>
+      <div class="rdm-stat-note">With parallel tracks where possible</div>
+    </div>
+    <div class="rdm-stat">
+      <div class="rdm-stat-label">Est. Calendar Time</div>
+      <div class="rdm-stat-val">${parallelMin}<span>+ weeks</span></div>
+      <div class="rdm-stat-note">Sequential max: ${minWeeks}+ weeks</div>
+    </div>
+    <div class="rdm-stat">
+      <div class="rdm-stat-label">Audiences Served</div>
+      <div class="rdm-stat-val">${audiences.size}</div>
+      <div class="rdm-stat-note">${[...audiences].join(', ')}</div>
+    </div>`;
+  body.appendChild(summary);
+
+  //console.log('step 8: gaps section');
+  // ── DEPENDENCY GAPS ──
+  if (gaps.length > 0) {
+    const gapSection = document.createElement('div');
+    gapSection.className = 'rdm-gaps';
+    gapSection.innerHTML = `<div class="rdm-gaps-title">⚠ Dependency Gaps (${gaps.length})</div>`;
+    gaps.forEach(g => {
+      const item = document.createElement('div');
+      item.className = 'rdm-gap-item';
+      const gapKey = g.module.id + ':' + g.missingId;
+      const gapReason = GAP_REASONS[gapKey] || '';
+      // Build using DOM to avoid onclick closure bugs
+      const gapIcon = document.createElement('div');
+      gapIcon.className = 'rdm-gap-icon'; gapIcon.textContent = '⚠';
+      const gapCont = document.createElement('div');
+      gapCont.className = 'rdm-gap-content';
+      gapCont.style.cssText = 'flex:1;min-width:0';
+      const gapMod = document.createElement('div');
+      gapMod.className = 'rdm-gap-mod';
+      gapMod.innerHTML = g.module.id + ' · ' + g.module.n + ' <span style="color:var(--ink4);font-weight:400;font-size:10px">requires</span> ' + g.missingId + ' · ' + g.missingName;
+      gapCont.appendChild(gapMod);
+      if (gapReason) { const w = document.createElement('div'); w.className = 'rdm-gap-why'; w.textContent = gapReason; gapCont.appendChild(w); }
+      const recEl = document.createElement('div');
+      recEl.className = 'rdm-gap-rec'; recEl.textContent = '→ ' + g.rec;
+      gapCont.appendChild(recEl);
+      const btnGrp = document.createElement('div');
+      btnGrp.style.cssText = 'display:flex;flex-direction:column;gap:6px;flex-shrink:0;align-self:center;margin-left:auto;min-width:90px';
+      const addBtn = document.createElement('button');
+      addBtn.className = 'rdm-gap-add'; addBtn.textContent = '+ Add'; addBtn.style.width = '90px';
+      const dismissBtn = document.createElement('button');
+      dismissBtn.textContent = '✕ Dismiss';
+      dismissBtn.style.cssText = 'font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:transparent;border:1px solid rgba(0,0,0,0.15);color:var(--ink4);padding:4px 10px;border-radius:4px;cursor:pointer;width:90px;text-align:center';
+      (function(id, ab) { ab.addEventListener('click', function(){ addGapModule(id, ab); }); })(g.missingId, addBtn);
+      dismissBtn.addEventListener('click', function(){ dismissGap(dismissBtn); });
+      btnGrp.appendChild(addBtn); btnGrp.appendChild(dismissBtn);
+      item.appendChild(gapIcon); item.appendChild(gapCont); item.appendChild(btnGrp);
+      gapSection.appendChild(item);
+    });
+    body.appendChild(gapSection);
+  }
+
+  //console.log('step 9: timeline');
+  // ── TIMELINE ──
+  const tlLabel = document.createElement('div');
+  tlLabel.className = 'rdm-timeline-label';
+  tlLabel.textContent = 'Engagement Timeline';
+  body.appendChild(tlLabel);
+
+  const phasesWrap = document.createElement('div');
+  phasesWrap.className = 'rdm-phases';
+
+  phases.forEach((phase, idx) => {
+    // Phase weeks = range across modules in phase (parallel = max, show range)
+    let phaseMin = 0, phaseMax = 0;
+    phase.forEach(m => { const w = parseWeeks(m.tm); if(w.min > phaseMin) phaseMin = w.min; if(w.max > phaseMax) phaseMax = w.max; });
+    const phaseWeeksLabel = phaseMin === phaseMax ? phaseMin + ' wks' : phaseMin + '–' + phaseMax + ' wks';
+
+    const phaseEl = document.createElement('div');
+    phaseEl.className = 'rdm-phase';
+
+    const header = document.createElement('div');
+    header.className = 'rdm-phase-header';
+    header.innerHTML = `
+      <div class="rdm-phase-num" style="background:var(--coral)">${idx+1}</div>
+      <div class="rdm-phase-label">${phaseLabel(idx, phases.length)}</div>
+      <div class="rdm-phase-weeks">${phaseWeeksLabel}${phase.length > 1 ? " · " + phase.length + " parallel" : ""}</div>`;
+
+    const modsEl = document.createElement('div');
+    modsEl.className = 'rdm-phase-mods';
+
+    phase.forEach(m => {
+      const hasGap = gaps.some(g => g.module.id === m.id);
+      const color = getModColor(m.id);
+      const audHTML = m.aud.map(a=>`<span class="aud-tag ${a}" style="font-size:9px;padding:2px 6px">${a}</span>`).join('');
+      const tile = document.createElement('div');
+      tile.className = 'rdm-mod-tile' + (hasGap ? ' has-gap' : '');
+      tile.style.borderLeftColor = color.replace('var(','').replace(')','').trim();
+      // Use inline style for CSS variable colors
+      tile.style.borderLeftColor = color;
+      tile.innerHTML = `
+        <div class="rdm-mod-id">${m.id}</div>
+        <div class="rdm-mod-name">${m.n}</div>
+        <div class="rdm-mod-time">${m.tm}</div>
+        <div class="rdm-mod-aud">${audHTML}</div>
+        <div class="rdm-mod-out">${m.out.replace(/<[^>]+>/g,'').substring(0,100)}${m.out.length>100?'…':''}</div>
+        ${hasGap ? '<div style="font-size:10px;color:var(--coral);margin-top:6px;font-weight:600">⚠ See dependency gap above</div>' : ''}`;
+      modsEl.appendChild(tile);
+    });
+
+    // Phase outcomes
+    const phaseOutEl = document.createElement('div');
+    phaseOutEl.className = 'rdm-phase-outcomes';
+    const phaseOutTitle = document.createElement('div');
+    phaseOutTitle.className = 'rdm-phase-out-title';
+    phaseOutTitle.textContent = 'Phase outcomes';
+    phaseOutEl.appendChild(phaseOutTitle);
+    phase.forEach(m => {
+      const oi = document.createElement('div');
+      oi.className = 'rdm-phase-out-item';
+      oi.innerHTML = `<div class="rdm-phase-out-dot"></div><div class="rdm-phase-out-text">${m.out.replace(/<[^>]+>/g,'')}</div>`;
+      phaseOutEl.appendChild(oi);
+    });
+
+    phaseEl.appendChild(header);
+    phaseEl.appendChild(modsEl);
+    phaseEl.appendChild(phaseOutEl);
+    phasesWrap.appendChild(phaseEl);
+
+    // Add arrow between phases
+    if (idx < phases.length - 1) {
+      const arrow = document.createElement('div');
+      arrow.className = 'rdm-phase-arrow';
+      arrow.textContent = '→';
+      phasesWrap.appendChild(arrow);
+    }
+  });
+
+  const phasesOuter = document.createElement('div');
+  phasesOuter.style.cssText = 'overflow-x:auto;width:100%;-webkit-overflow-scrolling:touch;margin-bottom:8px';
+  phasesOuter.appendChild(phasesWrap);
+  body.appendChild(phasesOuter);
+
+  // ── PHASE OUTCOMES (add to each phase) ──
+  // (handled inline in phase build below — see rdm-phase-outcomes)
+
+  //console.log('step 10: outcomes');
+  // ── ENGAGEMENT-LEVEL OUTCOMES ──
+  const outSection = document.createElement('div');
+  outSection.className = 'rdm-outcomes';
+  outSection.innerHTML = `
+    <div class="rdm-outcomes-title">What This Engagement Produces</div>
+    <div class="rdm-outcomes-sub">Across all ${phases.length} phases</div>
+    <div class="rdm-outcomes-grid" id="rdmOutGrid"></div>`;
+  body.appendChild(outSection);
+
+  const grid = outSection.querySelector('#rdmOutGrid');
+  outcomes.forEach(o => {
+    const item = document.createElement('div');
+    item.className = 'rdm-outcome-item';
+    item.innerHTML = `<div class="rdm-outcome-dot"></div><div class="rdm-outcome-text">${o}</div>`;
+    grid.appendChild(item);
+  });
+
+  //console.log('step 11: showing overlay');
+}
+
+function rebuildRoadmap() {
+  // Only re-render if roadmap page is currently visible
+  if (!document.getElementById('page-roadmap').classList.contains('active')) return;
+  // Capture scroll position BEFORE any DOM changes
+  const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+  // Recompute state
+  const selectedMods = [...eng.values()];
+  console.log('[REBUILD] eng.size=' + eng.size + ' selectedMods=' + selectedMods.length);
+  if (selectedMods.length === 0) return;
+  const phases = buildPhases(selectedMods);
+  const gaps = findGaps(selectedMods);
+  _rdmState = { selectedMods, phases, gaps };
+  // Update nav sub
+  const navSubEl = document.getElementById('rdmNavSub');
+  if (navSubEl) {
+    let phMin = 0, phMax = 0;
+    phases.forEach(ph => {
+      let mn = 0, mx = 0;
+      ph.forEach(m => { const w = parseWeeks(m.tm); if(w.min>mn) mn=w.min; if(w.max>mx) mx=w.max; });
+      phMin += mn; phMax += mx;
+    });
+    navSubEl.textContent = selectedMods.length + ' modules · ' + phases.length + ' phases · ' + phMin + '–' + phMax + ' weeks';
+  }
+  // Rebuild rdmContent directly — NO showPage, NO scrollTo
+  buildRoadmapContent(document.getElementById('rdmContent'), selectedMods, phases, gaps);
+  // Restore scroll after layout settles
+  setTimeout(function() { window.scrollTo(0, scrollY); }, 0);
+}
+
 function closeRoadmap() {
   const prev = window._rdmPrevPage || 'home';
   if (prev === 'roadmap') {
     showPage('roadmap');
   } else {
+    // Only clear _rdmState when fully leaving roadmap flow
+    _rdmState = null;
     document.getElementById('roadmapNavLink').style.display = 'none';
     showPage(prev);
   }
@@ -1710,29 +1653,5 @@ showPage('home');
 updateTray();
 updateFilterUI();
 </script>
-
-
-<!-- ROADMAP PAGE -->
-<div class="page" id="page-roadmap" style="padding-bottom:60px">
-  <div id="rdmContent" style="max-width:1100px;margin:0 auto;padding:0 32px 60px"></div>
-</div>
-
-
-<!-- PROPOSAL PAGE -->
-<div class="page" id="page-proposal" style="padding-bottom:60px">
-  <div style="max-width:900px;margin:0 auto;padding:0 32px 60px">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;padding-bottom:16px;border-bottom:3px solid var(--coral)">
-      <div>
-        <div style="font-family:'Arial Narrow',Arial,sans-serif;font-weight:900;font-size:2rem;text-transform:uppercase;color:var(--ink)">Engagement Proposal</div>
-        <div id="proposalSubtitle" style="font-size:13px;color:var(--ink3);font-style:italic;margin-top:4px"></div>
-      </div>
-      <button onclick="closeRoadmap()" style="font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;background:transparent;border:1px solid rgba(0,0,0,0.2);padding:9px 16px;border-radius:4px;cursor:pointer;color:var(--ink3)">← Back</button>
-    </div>
-    <div id="proposalContent"></div>
-  </div>
-</div>
-
-<!-- ROADMAP OVERLAY (disabled) -->
-<!-- overlay removed -->
 </body>
 </html>
