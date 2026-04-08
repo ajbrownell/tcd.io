@@ -232,7 +232,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="nav-link" data-page="capabilities" onclick="showPage('capabilities')">Capabilities</div>
     <div class="nav-link" data-page="roadmap" id="roadmapNavLink" style="display:none" onclick="showPage('roadmap')">Roadmap</div>
   </div>
-  <div class="nav-eng" id="internalToggleBtn" onclick="toggleInternal()" title="Toggle internal resource view" style="border-left:none;color:rgba(255,255,255,0.28);font-size:9px;letter-spacing:0.1em;padding:0 12px">⚙ INTERNAL</div>
+  <div class="nav-eng" id="internalToggleBtn" onclick="toggleInternal()" title="Toggle internal resource view" style="border-left:none;color:rgba(255,255,255,0.28);font-size:9px;letter-spacing:0.1em;padding:0 12px">⚙ CLIENT VIEW</div>
   <div class="nav-eng" onclick="toggleTray()"><span>Engagement</span><div class="eng-badge" id="engBadge">0</div></div>
 </nav>
 
@@ -714,10 +714,19 @@ function toggleInternal() {
   if (btn) {
     btn.style.color = _showInternal ? 'var(--coral)' : 'rgba(255,255,255,0.28)';
     btn.style.background = _showInternal ? 'rgba(232,120,74,0.12)' : '';
+    btn.title = _showInternal ? 'Internal view ON — price + activities hidden from client' : 'Toggle internal resource view';
   }
-  // Show/hide all internal panels
+  // Show internal resource panels
   document.querySelectorAll('.mod-internal').forEach(el => {
     el.style.display = _showInternal ? 'block' : 'none';
+  });
+  // Hide price pills from client view
+  document.querySelectorAll('.mod-price').forEach(el => {
+    el.style.display = _showInternal ? 'none' : '';
+  });
+  // Hide activities block from client view
+  document.querySelectorAll('.act-blk').forEach(el => {
+    el.style.display = _showInternal ? 'none' : '';
   });
 }
 
@@ -1115,8 +1124,8 @@ function exportProposal() {
     });
   });
 
-  const probNames = {identity:'The Identity Problem',alignment:'The Alignment Problem',signal:'The Signal Problem',reinvention:'The Reinvention Problem',adoption:'The Adoption Problem'};
-  const probColors = {identity:'#7040b0',alignment:'#1858a8',signal:'#127858',reinvention:'#a04010',adoption:'#981848'};
+  const probNames = {identity:'The Identity Problem',alignment:'The Alignment Problem',signal:'The Signal Problem',reinvention:'The Reinvention Problem',adoption:'The Adoption Problem',augmentation:'The AI Augmentation Problem'};
+  const probColors = {identity:'#7040b0',alignment:'#1858a8',signal:'#127858',reinvention:'#a04010',adoption:'#981848',augmentation:'#1a6b5c'};
 
   //console.log('ep step 3: situation lines');
     const situationLines = [...problems].map(k => `<span class="sit-prob" style="border-left:3px solid ${probColors[k]}">${probNames[k]}</span>`).join('');
@@ -1468,6 +1477,7 @@ function printProposalFrame() {
 }
 
 function buildRoadmapContent(container, selectedMods, phases, gaps) {
+  container.innerHTML = ''; // Clear before rebuild
   const body = container;
 
   // Compute week ranges and outcomes locally
@@ -1673,7 +1683,6 @@ function rebuildRoadmap() {
   const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
   // Recompute state
   const selectedMods = [...eng.values()];
-  console.log('[REBUILD] eng.size=' + eng.size + ' selectedMods=' + selectedMods.length);
   if (selectedMods.length === 0) return;
   const phases = buildPhases(selectedMods);
   const gaps = findGaps(selectedMods);
